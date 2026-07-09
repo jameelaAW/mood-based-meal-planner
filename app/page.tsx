@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import MoodPicker from "@/app/components/MoodPicker";
 import RecipeCard from "@/app/components/RecipeCard";
+import AuthNav from "@/app/components/AuthNav";
 import { moodAccent } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 
@@ -17,11 +18,16 @@ export default function Home() {
   const [activeMood, setActiveMood] = useState<string | null>(null);
   const [building, setBuilding] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [saved, setSaved] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [saveHint, setSaveHint] = useState<string | null>(null);
 
   async function handleSubmit(moodLabel: string, freeText: string) {
     setStatus("loading");
     setErrorMsg(null);
     setActiveMood(moodLabel);
+    setSaved(false);
+    setSaveHint(null);
     try {
       const res = await fetch("/api/suggest-meal", {
         method: "POST",
@@ -72,6 +78,33 @@ export default function Home() {
     }
   }
 
+  async function handleToggleSave() {
+    if (!meal) return;
+    setSaving(true);
+    setSaveHint(null);
+    try {
+      const res = await fetch("/api/saved-meals", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ meal_id: meal.id }),
+      });
+      const data = await res.json();
+      if (res.status === 401) {
+        setSaveHint("Sign in to save meals.");
+        return;
+      }
+      if (!res.ok) {
+        setSaveHint("Couldn't save that — please try again.");
+        return;
+      }
+      setSaved(data.saved);
+    } catch {
+      setSaveHint("Couldn't save that — please try again.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
   const accentVar = activeMood ? moodAccent(activeMood) : "--color-brand";
 
   return (
@@ -82,6 +115,9 @@ export default function Home() {
       }}
     >
       <div className="mx-auto max-w-lg">
+        <div className="mb-4">
+          <AuthNav />
+        </div>
         <header className="mb-10 text-center">
           <p className="font-mono text-xs uppercase tracking-wider text-paper-dim">Mood-based meal planner</p>
           <h1 className="mt-3 font-display text-4xl italic leading-tight">
@@ -115,7 +151,15 @@ export default function Home() {
 
         {status === "ready" && meal && (
           <div className="mt-8 animate-reveal-up">
-            <RecipeCard meal={meal} onBuildList={handleBuildList} building={building} />
+            <RecipeCard
+              meal={meal}
+              onBuildList={handleBuildList}
+              building={building}
+              saved={saved}
+              onToggleSave={handleToggleSave}
+              saving={saving}
+            />
+            {saveHint && <p className="mt-3 text-center text-xs text-paper-dim">{saveHint}</p>}
             {errorMsg && (
               <p className="mt-3 rounded-lg border border-red-400/30 bg-red-400/10 px-4 py-3 text-center text-sm text-red-200">
                 {errorMsg}

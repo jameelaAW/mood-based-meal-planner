@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 
   const { data: checkin, error: checkinError } = await supabase
     .from("mood_checkins")
-    .select("id, suggested_meal_id")
+    .select("id, suggested_meal_id, user_id")
     .eq("id", checkinId)
     .single();
 
@@ -41,6 +41,7 @@ export async function POST(req: Request) {
   const { data: list, error: listError } = await supabase
     .from("shopping_lists")
     .insert({
+      user_id: checkin.user_id,
       checkin_id: checkinId,
       week_label: currentWeekLabel(),
       status: "active",
@@ -59,6 +60,7 @@ export async function POST(req: Request) {
   }
 
   const itemsPayload = ingredients.map((ing) => ({
+    user_id: checkin.user_id,
     shopping_list_id: list.id,
     ingredient_name: ing.name,
     quantity: ing.qty ?? null,

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { getCurrentUserId } from "@/lib/auth";
 import { rankMeals } from "@/lib/rank";
 import { generateWhyItFits, interpretMood } from "@/lib/ai";
 import { MOOD_LABELS } from "@/lib/moods";
@@ -84,9 +85,12 @@ export async function POST(req: Request) {
     }
   }
 
+  const userId = await getCurrentUserId();
+
   const { data: checkin, error: checkinError } = await supabase
     .from("mood_checkins")
     .insert({
+      user_id: userId,
       mood_label: moodLabel,
       free_text: freeText,
       suggested_meal_id: winner.id,

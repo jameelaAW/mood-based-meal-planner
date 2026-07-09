@@ -4,17 +4,35 @@ export default function RecipeCard({
   meal,
   onBuildList,
   building,
+  saved,
+  onToggleSave,
+  saving,
 }: {
   meal: Meal;
   onBuildList: () => void;
   building: boolean;
+  saved?: boolean;
+  onToggleSave?: () => void;
+  saving?: boolean;
 }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-paper-dim/15 bg-ink-soft">
       {meal.image_url && (
         // Recipe photos come from Unsplash URLs stored in the DB (docs/ARCHITECTURE.md).
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={meal.image_url} alt={meal.title} className="h-56 w-full object-cover" />
+        <div className="relative">
+          <img src={meal.image_url} alt={meal.title} className="h-56 w-full object-cover" />
+          {onToggleSave && (
+            <button
+              onClick={onToggleSave}
+              disabled={saving}
+              aria-label={saved ? "Remove from saved meals" : "Save this meal"}
+              className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-ink/70 text-lg backdrop-blur transition hover:bg-ink disabled:opacity-60"
+            >
+              {saved ? "♥" : "♡"}
+            </button>
+          )}
+        </div>
       )}
       <div className="space-y-5 p-6">
         <div>
