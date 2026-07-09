@@ -66,6 +66,22 @@ export default function RecipeCard({
           </ul>
         </div>
 
+        {meal.instructions && (
+          <div>
+            <h3 className="mb-2 font-mono text-xs uppercase tracking-wider text-paper-dim">Method</h3>
+            <ol className="list-decimal space-y-1.5 pl-4 text-sm text-paper-dim marker:text-brand">
+              {meal.instructions
+                .split(/(?<=[.!])\s+(?=[A-Z])/)
+                .filter(Boolean)
+                .map((step, i) => (
+                  <li key={i} className="pl-1">
+                    {step.trim()}
+                  </li>
+                ))}
+            </ol>
+          </div>
+        )}
+
         <button
           onClick={onBuildList}
           disabled={building}
