@@ -1,1 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --color-ink: #211e26;
+  --color-ink-soft: #2b2732;
+  --color-paper: #f4efe6;
+  --color-paper-dim: #cfc8ba;
+  --color-brand: #d4a843;
+
+  --color-mood-stressed: #8aa68c;
+  --color-mood-sluggish: #d4a843;
+  --color-mood-sad: #7b87b0;
+  --color-mood-happy: #e8907c;
+  --color-mood-anxious: #c98fa0;
+  --color-mood-unfocused: #5fa8a0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: var(--color-brand);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
