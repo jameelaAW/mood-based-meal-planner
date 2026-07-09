@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { getCurrentUserId } from "@/lib/auth";
-import { rankMeals } from "@/lib/rank";
+import { pickMeal } from "@/lib/rank";
 import { generateWhyItFits, interpretMood } from "@/lib/ai";
 import { MOOD_LABELS } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
@@ -37,8 +37,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const ranked = rankMeals(meals as Meal[], moodLabel);
-  const winner = ranked[0];
+  const winner = pickMeal(meals as Meal[], moodLabel);
   if (!winner) {
     return NextResponse.json(
       { error: "no_match", message: "We don't have a match yet — try a different mood." },
