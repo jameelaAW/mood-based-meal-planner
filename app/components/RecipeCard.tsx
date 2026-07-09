@@ -28,7 +28,7 @@ export default function RecipeCard({
           </p>
         )}
 
-        <div className="grid grid-cols-4 gap-3 font-mono text-xs">
+        <div className="grid grid-cols-2 gap-3 font-mono text-xs sm:grid-cols-4">
           <Macro label="Cal" value={meal.calories} />
           <Macro label="Protein" value={meal.protein_g} suffix="g" />
           <Macro label="Carbs" value={meal.carbs_g} suffix="g" />
