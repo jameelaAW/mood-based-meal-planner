@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [code, setCode] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "verifying" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   async function handleEmailSignIn(e: React.FormEvent) {
@@ -13,16 +16,28 @@ export default function LoginPage() {
     setStatus("sending");
     setErrorMsg(null);
     const supabase = createClient();
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
-    });
+    const { error } = await supabase.auth.signInWithOtp({ email });
     if (error) {
       setErrorMsg(error.message);
       setStatus("error");
       return;
     }
     setStatus("sent");
+  }
+
+  async function handleVerifyCode(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("verifying");
+    setErrorMsg(null);
+    const supabase = createClient();
+    const { error } = await supabase.auth.verifyOtp({ email, token: code, type: "email" });
+    if (error) {
+      setErrorMsg(error.message);
+      setStatus("sent");
+      return;
+    }
+    router.push("/");
+    router.refresh();
   }
 
   async function handleGoogleSignIn() {
@@ -55,10 +70,40 @@ export default function LoginPage() {
           <span className="h-px flex-1 bg-paper-dim/15" /> or <span className="h-px flex-1 bg-paper-dim/15" />
         </div>
 
-        {status === "sent" ? (
-          <p className="rounded-lg border border-brand/30 bg-brand/10 px-4 py-4 text-center text-sm">
-            Check <span className="font-medium">{email}</span> for a sign-in link.
-          </p>
+        {status === "sent" || status === "verifying" ? (
+          <form onSubmit={handleVerifyCode} className="space-y-3">
+            <p className="text-center text-sm text-paper-dim">
+              We sent a code to <span className="font-medium text-paper">{email}</span>. Enter it below.
+            </p>
+            <input
+              type="text"
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              required
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+              placeholder="Enter code"
+              className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-center text-lg tracking-widest text-paper placeholder:text-paper-dim/60 placeholder:tracking-normal focus:border-brand"
+            />
+            <button
+              type="submit"
+              disabled={status === "verifying"}
+              className="w-full rounded-lg bg-brand py-3 font-medium text-ink transition hover:brightness-110 disabled:opacity-60"
+            >
+              {status === "verifying" ? "Verifying…" : "Verify code"}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setStatus("idle");
+                setCode("");
+                setErrorMsg(null);
+              }}
+              className="w-full text-center font-mono text-xs uppercase tracking-wider text-paper-dim hover:text-brand"
+            >
+              Use a different email
+            </button>
+          </form>
         ) : (
           <form onSubmit={handleEmailSignIn} className="space-y-3">
             <input
@@ -74,7 +119,7 @@ export default function LoginPage() {
               disabled={status === "sending"}
               className="w-full rounded-lg bg-brand py-3 font-medium text-ink transition hover:brightness-110 disabled:opacity-60"
             >
-              {status === "sending" ? "Sending link…" : "Email me a sign-in link"}
+              {status === "sending" ? "Sending code…" : "Email me a code"}
             </button>
           </form>
         )}
