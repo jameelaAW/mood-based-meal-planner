@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { getCurrentUserId } from "@/lib/auth";
 import { pickMeal } from "@/lib/rank";
-import { generateWhyItFits, interpretMood } from "@/lib/ai";
-import { MOOD_LABELS } from "@/lib/moods";
+import { classifyMoodLabel, generateWhyItFits, interpretMood } from "@/lib/ai";
+import { guessMoodFromText, MOOD_LABELS } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 
 export async function POST(req: Request) {
@@ -14,14 +14,30 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "invalid_json" }, { status: 400 });
   }
 
-  const moodLabel = (body.mood_label ?? "").trim().toLowerCase();
+  let moodLabel = (body.mood_label ?? "").trim().toLowerCase();
   const freeText = body.free_text?.trim() || null;
+  let moodLabelSource: "selected" | "ai" | "rule-based" = "selected";
 
   if (!moodLabel || !MOOD_LABELS.includes(moodLabel)) {
-    return NextResponse.json(
-      { error: "invalid_mood", message: "Pick one of the six moods." },
-      { status: 400 },
-    );
+    // No mood button picked — fall back to classifying the free text they typed
+    // ("indicate a mood not listed"). Requires free_text; otherwise there's
+    // nothing to go on.
+    if (!freeText) {
+      return NextResponse.json(
+        { error: "invalid_mood", message: "Pick a mood or describe how you feel." },
+        { status: 400 },
+      );
+    }
+
+    try {
+      const aiLabel = await classifyMoodLabel(freeText, MOOD_LABELS);
+      if (!MOOD_LABELS.includes(aiLabel)) throw new Error(`unexpected label: ${aiLabel}`);
+      moodLabel = aiLabel;
+      moodLabelSource = "ai";
+    } catch {
+      moodLabel = guessMoodFromText(freeText);
+      moodLabelSource = "rule-based";
+    }
   }
 
   const supabase = await createClient();
@@ -107,6 +123,8 @@ export async function POST(req: Request) {
 
   return NextResponse.json({
     checkin_id: checkin.id,
+    mood_label: moodLabel,
+    mood_label_source: moodLabelSource,
     meal: {
       ...winner,
       why_it_fits: whyItFits,

@@ -12,6 +12,7 @@ export default function MoodPicker({
 }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [freeText, setFreeText] = useState("");
+  const canSubmit = Boolean(selected) || freeText.trim().length > 0;
 
   return (
     <div className="space-y-5">
@@ -38,13 +39,13 @@ export default function MoodPicker({
       <input
         value={freeText}
         onChange={(e) => setFreeText(e.target.value)}
-        placeholder="Optional — say more about how you feel"
+        placeholder="Not feeling any of these? Describe your mood here"
         className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper placeholder:text-paper-dim/60 focus:border-brand"
       />
 
       <button
-        onClick={() => selected && onSubmit(selected, freeText)}
-        disabled={!selected || loading}
+        onClick={() => canSubmit && onSubmit(selected ?? "", freeText)}
+        disabled={!canSubmit || loading}
         className="w-full rounded-lg bg-brand py-3 font-medium text-ink transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
       >
         {loading ? "Finding your meal…" : "Suggest a meal"}

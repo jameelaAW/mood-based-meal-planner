@@ -48,6 +48,7 @@ export default function Home() {
 
       setMeal(data.meal);
       setCheckinId(data.checkin_id);
+      setActiveMood(data.mood_label ?? moodLabel);
       setStatus("ready");
     } catch {
       setErrorMsg("Something went wrong — please try again.");

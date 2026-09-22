@@ -61,6 +61,21 @@ export async function generateWhyItFits(
 }
 
 /**
+ * classify_mood_label(free_text) — for the "mood not listed" path: maps a
+ * free-text mood description onto one of the six canonical mood labels so
+ * the tag-filter matching in lib/rank.ts has something to match against.
+ * Caller must validate the result against MOOD_LABELS and fall back to
+ * guessMoodFromText() if it's missing, unexpected, or the call throws.
+ */
+export async function classifyMoodLabel(freeText: string, moodLabels: string[]): Promise<string> {
+  const system =
+    `Classify the user's free-text mood into exactly one of these labels: ${moodLabels.join(", ")}. ` +
+    "Reply with only the single label, lowercase, no punctuation, no explanation.";
+  const result = await chatComplete(system, freeText);
+  return result.trim().toLowerCase();
+}
+
+/**
  * interpret_mood(free_text) — turns a free-text mood note into a short
  * clinical-adjacent interpretation used for the ai_mood_interpretation field.
  */
