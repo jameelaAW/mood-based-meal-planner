@@ -135,11 +135,16 @@ export default function Home() {
         <MoodPicker
           onSubmit={handleSubmit}
           loading={status === "loading"}
-          moodOptions={moodOptionsForTier(CURRENT_USER_TIER)}
+          moodOptions={moodOptionsForTier("free")}
+          tier={CURRENT_USER_TIER}
         />
-        {CURRENT_USER_TIER === "free" && (
+        {CURRENT_USER_TIER === "free" ? (
           <p className="mt-3 text-center text-xs text-paper-dim">
             2 more moods (Anxious, Unfocused) and longer-prep recipes are on Pro.
+          </p>
+        ) : (
+          <p className="mt-3 text-center text-xs text-paper-dim">
+            Pro tip: type any mood in the box above — including Anxious or Unfocused.
           </p>
         )}
 

@@ -7,10 +7,12 @@ export default function MoodPicker({
   onSubmit,
   loading,
   moodOptions = MOOD_OPTIONS,
+  tier = "free",
 }: {
   onSubmit: (moodLabel: string, freeText: string) => void;
   loading: boolean;
   moodOptions?: MoodOption[];
+  tier?: "free" | "pro";
 }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [freeText, setFreeText] = useState("");
@@ -41,7 +43,11 @@ export default function MoodPicker({
       <input
         value={freeText}
         onChange={(e) => setFreeText(e.target.value)}
-        placeholder="Not feeling any of these? Describe your mood here"
+        placeholder={
+          tier === "pro"
+            ? "Not feeling any of these? Type any mood — even Anxious or Unfocused"
+            : "Not feeling any of these? Describe your mood here"
+        }
         className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper placeholder:text-paper-dim/60 focus:border-brand"
       />
 
