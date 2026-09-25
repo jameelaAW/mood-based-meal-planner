@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
-import { getCurrentUserId } from "@/lib/auth";
+import { getCurrentUserId, getCurrentUserTier } from "@/lib/auth";
 import { pickMeal } from "@/lib/rank";
 import { classifyMoodLabel, generateWhyItFits, interpretMood } from "@/lib/ai";
 import { guessMoodFromText, MOOD_LABELS } from "@/lib/moods";
@@ -41,8 +41,13 @@ export async function POST(req: Request) {
   }
 
   const supabase = await createClient();
+  const userTier = await getCurrentUserTier();
 
-  const { data: meals, error: mealsError } = await supabase.from("meals").select("*");
+  let mealsQuery = supabase.from("meals").select("*");
+  if (userTier !== "pro") {
+    mealsQuery = mealsQuery.eq("tier", "free");
+  }
+  const { data: meals, error: mealsError } = await mealsQuery;
   if (mealsError) {
     return NextResponse.json({ error: "db_error", message: mealsError.message }, { status: 500 });
   }

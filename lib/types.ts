@@ -23,6 +23,7 @@ export interface Meal {
   why_it_fits_source: string | null;
   why_it_fits_confidence: number | null;
   why_it_fits_review_status: string | null;
+  tier: "free" | "pro";
 }
 
 export interface MoodCheckin {
