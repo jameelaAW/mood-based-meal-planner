@@ -3,18 +3,28 @@ export interface MoodOption {
   name: string;
   emoji: string;
   accentVar: string;
+  tier: "free" | "pro";
 }
 
 export const MOOD_OPTIONS: MoodOption[] = [
-  { label: "stressed", name: "Stressed", emoji: "😤", accentVar: "--color-mood-stressed" },
-  { label: "sluggish", name: "Sluggish", emoji: "🥱", accentVar: "--color-mood-sluggish" },
-  { label: "sad", name: "Sad", emoji: "😔", accentVar: "--color-mood-sad" },
-  { label: "happy", name: "Happy", emoji: "😊", accentVar: "--color-mood-happy" },
-  { label: "anxious", name: "Anxious", emoji: "😬", accentVar: "--color-mood-anxious" },
-  { label: "unfocused", name: "Unfocused", emoji: "🌫️", accentVar: "--color-mood-unfocused" },
+  { label: "stressed", name: "Stressed", emoji: "😤", accentVar: "--color-mood-stressed", tier: "free" },
+  { label: "sluggish", name: "Sluggish", emoji: "🥱", accentVar: "--color-mood-sluggish", tier: "free" },
+  { label: "sad", name: "Sad", emoji: "😔", accentVar: "--color-mood-sad", tier: "free" },
+  { label: "happy", name: "Happy", emoji: "😊", accentVar: "--color-mood-happy", tier: "free" },
+  { label: "anxious", name: "Anxious", emoji: "😬", accentVar: "--color-mood-anxious", tier: "pro" },
+  { label: "unfocused", name: "Unfocused", emoji: "🌫️", accentVar: "--color-mood-unfocused", tier: "pro" },
 ];
 
 export const MOOD_LABELS = MOOD_OPTIONS.map((m) => m.label);
+export const FREE_MOOD_LABELS = MOOD_OPTIONS.filter((m) => m.tier === "free").map((m) => m.label);
+
+export function moodLabelsForTier(tier: "free" | "pro"): string[] {
+  return tier === "pro" ? MOOD_LABELS : FREE_MOOD_LABELS;
+}
+
+export function moodOptionsForTier(tier: "free" | "pro"): MoodOption[] {
+  return tier === "pro" ? MOOD_OPTIONS : MOOD_OPTIONS.filter((m) => m.tier === "free");
+}
 
 // "Adjacent mood" bonus per the Intelligence Layer scoring rule: tags that are
 // conceptually close to the selected mood_label but not an exact match.
@@ -44,12 +54,12 @@ const MOOD_KEYWORDS: Record<string, string[]> = {
   unfocused: ["unfocused", "distracted", "foggy", "scattered", "can't concentrate", "cant concentrate", "brain fog", "spacey", "unmotivated"],
 };
 
-export function guessMoodFromText(text: string): string {
+export function guessMoodFromText(text: string, allowedLabels: string[] = MOOD_LABELS): string {
   const haystack = text.toLowerCase();
-  let bestLabel = MOOD_LABELS[0];
+  let bestLabel = allowedLabels[0];
   let bestScore = 0;
 
-  for (const label of MOOD_LABELS) {
+  for (const label of allowedLabels) {
     const keywords = MOOD_KEYWORDS[label] ?? [];
     const score = keywords.reduce((sum, kw) => (haystack.includes(kw) ? sum + 1 : sum), 0);
     if (score > bestScore) {

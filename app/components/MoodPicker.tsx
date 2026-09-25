@@ -1,14 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { MOOD_OPTIONS } from "@/lib/moods";
+import { MOOD_OPTIONS, type MoodOption } from "@/lib/moods";
 
 export default function MoodPicker({
   onSubmit,
   loading,
+  moodOptions = MOOD_OPTIONS,
 }: {
   onSubmit: (moodLabel: string, freeText: string) => void;
   loading: boolean;
+  moodOptions?: MoodOption[];
 }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [freeText, setFreeText] = useState("");
@@ -17,7 +19,7 @@ export default function MoodPicker({
   return (
     <div className="space-y-5">
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {MOOD_OPTIONS.map((mood) => {
+        {moodOptions.map((mood) => {
           const isSelected = selected === mood.label;
           return (
             <button

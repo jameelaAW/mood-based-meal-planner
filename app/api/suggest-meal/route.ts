@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getCurrentUserId, getCurrentUserTier } from "@/lib/auth";
 import { pickMeal } from "@/lib/rank";
 import { classifyMoodLabel, generateWhyItFits, interpretMood } from "@/lib/ai";
-import { guessMoodFromText, MOOD_LABELS } from "@/lib/moods";
+import { guessMoodFromText, MOOD_LABELS, moodLabelsForTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 
 export async function POST(req: Request) {
@@ -14,14 +14,25 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "invalid_json" }, { status: 400 });
   }
 
+  const userTier = await getCurrentUserTier();
+  const allowedMoods = moodLabelsForTier(userTier);
+
   let moodLabel = (body.mood_label ?? "").trim().toLowerCase();
   const freeText = body.free_text?.trim() || null;
   let moodLabelSource: "selected" | "ai" | "rule-based" = "selected";
 
+  if (moodLabel && MOOD_LABELS.includes(moodLabel) && !allowedMoods.includes(moodLabel)) {
+    return NextResponse.json(
+      { error: "mood_requires_pro", message: "That mood is available on the Pro plan." },
+      { status: 403 },
+    );
+  }
+
   if (!moodLabel || !MOOD_LABELS.includes(moodLabel)) {
     // No mood button picked — fall back to classifying the free text they typed
     // ("indicate a mood not listed"). Requires free_text; otherwise there's
-    // nothing to go on.
+    // nothing to go on. Classification is restricted to this visitor's allowed
+    // moods so free-text can't be used to sneak into Pro-only moods.
     if (!freeText) {
       return NextResponse.json(
         { error: "invalid_mood", message: "Pick a mood or describe how you feel." },
@@ -30,18 +41,17 @@ export async function POST(req: Request) {
     }
 
     try {
-      const aiLabel = await classifyMoodLabel(freeText, MOOD_LABELS);
-      if (!MOOD_LABELS.includes(aiLabel)) throw new Error(`unexpected label: ${aiLabel}`);
+      const aiLabel = await classifyMoodLabel(freeText, allowedMoods);
+      if (!allowedMoods.includes(aiLabel)) throw new Error(`unexpected label: ${aiLabel}`);
       moodLabel = aiLabel;
       moodLabelSource = "ai";
     } catch {
-      moodLabel = guessMoodFromText(freeText);
+      moodLabel = guessMoodFromText(freeText, allowedMoods);
       moodLabelSource = "rule-based";
     }
   }
 
   const supabase = await createClient();
-  const userTier = await getCurrentUserTier();
 
   let mealsQuery = supabase.from("meals").select("*");
   if (userTier !== "pro") {

@@ -5,10 +5,14 @@ import { useRouter } from "next/navigation";
 import MoodPicker from "@/app/components/MoodPicker";
 import RecipeCard from "@/app/components/RecipeCard";
 import AuthNav from "@/app/components/AuthNav";
-import { moodAccent } from "@/lib/moods";
+import { moodAccent, moodOptionsForTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 
 type Status = "idle" | "loading" | "ready" | "no_match" | "error";
+
+// No billing/subscriptions table yet — every visitor is "free" until Pro
+// launches. Matches getCurrentUserTier() in lib/auth.ts; update both together.
+const CURRENT_USER_TIER: "free" | "pro" = "free";
 
 export default function Home() {
   const router = useRouter();
@@ -128,7 +132,16 @@ export default function Home() {
           </h1>
         </header>
 
-        <MoodPicker onSubmit={handleSubmit} loading={status === "loading"} />
+        <MoodPicker
+          onSubmit={handleSubmit}
+          loading={status === "loading"}
+          moodOptions={moodOptionsForTier(CURRENT_USER_TIER)}
+        />
+        {CURRENT_USER_TIER === "free" && (
+          <p className="mt-3 text-center text-xs text-paper-dim">
+            2 more moods (Anxious, Unfocused) and longer-prep recipes are on Pro.
+          </p>
+        )}
 
         {status === "loading" && (
           <div className="mt-8 animate-pulse space-y-4 rounded-2xl border border-paper-dim/15 bg-ink-soft p-6">
