@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MOOD_OPTIONS, type MoodOption } from "@/lib/moods";
+import { canUseFreeText, EXTENDED_MOOD_WORDS, MOOD_OPTIONS, type MoodOption, type PlanTier } from "@/lib/moods";
 
 export default function MoodPicker({
   onSubmit,
@@ -12,11 +12,12 @@ export default function MoodPicker({
   onSubmit: (moodLabel: string, freeText: string) => void;
   loading: boolean;
   moodOptions?: MoodOption[];
-  tier?: "free" | "pro";
+  tier?: PlanTier;
 }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [freeText, setFreeText] = useState("");
-  const canSubmit = Boolean(selected) || freeText.trim().length > 0;
+  const showFreeText = canUseFreeText(tier);
+  const canSubmit = Boolean(selected) || (showFreeText && freeText.trim().length > 0);
 
   return (
     <div className="space-y-5">
@@ -40,16 +41,37 @@ export default function MoodPicker({
         })}
       </div>
 
-      <input
-        value={freeText}
-        onChange={(e) => setFreeText(e.target.value)}
-        placeholder={
-          tier === "pro"
-            ? "Not feeling any of these? Type any mood — even Anxious or Unfocused"
-            : "Not feeling any of these? Describe your mood here"
-        }
-        className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper placeholder:text-paper-dim/60 focus:border-brand"
-      />
+      {showFreeText && (
+        <div className="space-y-2">
+          <select
+            value=""
+            onChange={(e) => {
+              if (e.target.value) {
+                setSelected(null);
+                setFreeText(e.target.value);
+              }
+            }}
+            className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper-dim focus:border-brand"
+          >
+            <option value="">Or pick a specific feeling…</option>
+            {EXTENDED_MOOD_WORDS.map((word) => (
+              <option key={word} value={word}>
+                {word.charAt(0).toUpperCase() + word.slice(1).replace("-", " ")}
+              </option>
+            ))}
+          </select>
+
+          <input
+            value={freeText}
+            onChange={(e) => {
+              setSelected(null);
+              setFreeText(e.target.value);
+            }}
+            placeholder="Not feeling any of these? Describe your mood here"
+            className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper placeholder:text-paper-dim/60 focus:border-brand"
+          />
+        </div>
+      )}
 
       <button
         onClick={() => canSubmit && onSubmit(selected ?? "", freeText)}

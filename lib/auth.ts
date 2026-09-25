@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import type { PlanTier } from "@/lib/moods";
 
 /** Returns the current session's user id, or null if the visitor is anonymous. */
 export async function getCurrentUserId(): Promise<string | null> {
@@ -10,11 +11,11 @@ export async function getCurrentUserId(): Promise<string | null> {
 }
 
 /**
- * Returns the current visitor's plan tier. There's no billing/subscriptions
- * table yet, so this always returns "free" until the Pro tier launches —
- * meals.tier = 'pro' rows stay excluded from matching for everyone in the
- * meantime rather than being given away for free.
+ * Returns the current visitor's plan tier (free / pro $3 / pro_plus $6).
+ * There's no billing/subscriptions table yet, so this always returns "free"
+ * until paid plans launch — meals.tier = 'pro' rows and the Pro-only moods
+ * stay excluded for everyone in the meantime rather than being given away.
  */
-export async function getCurrentUserTier(): Promise<"free" | "pro"> {
+export async function getCurrentUserTier(): Promise<PlanTier> {
   return "free";
 }

@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getCurrentUserId, getCurrentUserTier } from "@/lib/auth";
 import { pickMeal } from "@/lib/rank";
 import { classifyMoodLabel, generateWhyItFits, interpretMood } from "@/lib/ai";
-import { guessMoodFromText, MOOD_LABELS, moodLabelsForTier } from "@/lib/moods";
+import { canUseFreeText, guessMoodFromText, MOOD_LABELS, moodLabelsForTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 
 export async function POST(req: Request) {
@@ -18,7 +18,10 @@ export async function POST(req: Request) {
   const allowedMoods = moodLabelsForTier(userTier);
 
   let moodLabel = (body.mood_label ?? "").trim().toLowerCase();
-  const freeText = body.free_text?.trim() || null;
+  // The free-text box is a Pro-Plus feature — stripped for everyone else so
+  // it can't be used for mood classification or the AI copy it flavours,
+  // no matter what a direct API call sends.
+  const freeText = canUseFreeText(userTier) ? body.free_text?.trim() || null : null;
   let moodLabelSource: "selected" | "ai" | "rule-based" = "selected";
 
   if (moodLabel && MOOD_LABELS.includes(moodLabel) && !allowedMoods.includes(moodLabel)) {
@@ -34,10 +37,10 @@ export async function POST(req: Request) {
     // nothing to go on. Classification is restricted to this visitor's allowed
     // moods so free-text can't be used to sneak into Pro-only moods.
     if (!freeText) {
-      return NextResponse.json(
-        { error: "invalid_mood", message: "Pick a mood or describe how you feel." },
-        { status: 400 },
-      );
+      const message = canUseFreeText(userTier)
+        ? "Pick a mood or describe how you feel."
+        : "Pick a mood.";
+      return NextResponse.json({ error: "invalid_mood", message }, { status: 400 });
     }
 
     try {
@@ -53,20 +56,18 @@ export async function POST(req: Request) {
 
   const supabase = await createClient();
 
-  let mealsQuery = supabase.from("meals").select("*");
-  if (userTier !== "pro") {
-    mealsQuery = mealsQuery.eq("tier", "free");
-  }
-  const { data: meals, error: mealsError } = await mealsQuery;
+  const { data: allMeals, error: mealsError } = await supabase.from("meals").select("*");
   if (mealsError) {
     return NextResponse.json({ error: "db_error", message: mealsError.message }, { status: 500 });
   }
-  if (!meals || meals.length === 0) {
+  if (!allMeals || allMeals.length === 0) {
     return NextResponse.json(
       { error: "no_match", message: "No meals in the database yet." },
       { status: 404 },
     );
   }
+
+  const meals = userTier === "free" ? allMeals.filter((m) => m.tier === "free") : allMeals;
 
   const winner = pickMeal(meals as Meal[], moodLabel);
   if (!winner) {
@@ -75,6 +76,12 @@ export async function POST(req: Request) {
       { status: 404 },
     );
   }
+
+  // How many more recipes exist for this mood than this visitor's tier can
+  // reach — powers the "N more recipes — unlock with Pro" upsell.
+  const totalForMood = allMeals.filter((m) => m.mood_tags?.includes(moodLabel)).length;
+  const accessibleForMood = meals.filter((m) => m.mood_tags?.includes(moodLabel)).length;
+  const lockedMealCount = totalForMood - accessibleForMood;
 
   // Defaults: rule-based fallback (always valid per ARCHITECTURE.md "core runs without AI")
   let whyItFits = winner.why_it_fits ?? `${winner.title} is a solid pick for feeling ${moodLabel}.`;
@@ -140,6 +147,7 @@ export async function POST(req: Request) {
     checkin_id: checkin.id,
     mood_label: moodLabel,
     mood_label_source: moodLabelSource,
+    locked_meal_count: lockedMealCount,
     meal: {
       ...winner,
       why_it_fits: whyItFits,

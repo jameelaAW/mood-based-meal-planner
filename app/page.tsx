@@ -5,14 +5,14 @@ import { useRouter } from "next/navigation";
 import MoodPicker from "@/app/components/MoodPicker";
 import RecipeCard from "@/app/components/RecipeCard";
 import AuthNav from "@/app/components/AuthNav";
-import { moodAccent, moodOptionsForTier } from "@/lib/moods";
+import { moodAccent, moodOptionsForTier, type PlanTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 
 type Status = "idle" | "loading" | "ready" | "no_match" | "error";
 
-// No billing/subscriptions table yet — every visitor is "free" until Pro
-// launches. Matches getCurrentUserTier() in lib/auth.ts; update both together.
-const CURRENT_USER_TIER: "free" | "pro" = "free";
+// No billing/subscriptions table yet — every visitor is "free" until paid
+// plans launch. Matches getCurrentUserTier() in lib/auth.ts; update both together.
+const CURRENT_USER_TIER: PlanTier = "free";
 
 export default function Home() {
   const router = useRouter();
@@ -25,6 +25,7 @@ export default function Home() {
   const [saved, setSaved] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveHint, setSaveHint] = useState<string | null>(null);
+  const [lockedMealCount, setLockedMealCount] = useState(0);
 
   async function handleSubmit(moodLabel: string, freeText: string) {
     setStatus("loading");
@@ -53,6 +54,7 @@ export default function Home() {
       setMeal(data.meal);
       setCheckinId(data.checkin_id);
       setActiveMood(data.mood_label ?? moodLabel);
+      setLockedMealCount(data.locked_meal_count ?? 0);
       setStatus("ready");
     } catch {
       setErrorMsg("Something went wrong — please try again.");
@@ -135,16 +137,18 @@ export default function Home() {
         <MoodPicker
           onSubmit={handleSubmit}
           loading={status === "loading"}
-          moodOptions={moodOptionsForTier("free")}
+          moodOptions={moodOptionsForTier(CURRENT_USER_TIER)}
           tier={CURRENT_USER_TIER}
         />
-        {CURRENT_USER_TIER === "free" ? (
+        {CURRENT_USER_TIER === "free" && (
           <p className="mt-3 text-center text-xs text-paper-dim">
-            2 more moods (Anxious, Unfocused) and longer-prep recipes are on Pro.
+            2 more moods (Anxious, Unfocused) and longer-prep recipes are on Pro ($3/mo).
+            Describe any mood in your own words on Pro-Plus ($6/mo).
           </p>
-        ) : (
+        )}
+        {CURRENT_USER_TIER === "pro" && (
           <p className="mt-3 text-center text-xs text-paper-dim">
-            Pro tip: type any mood in the box above — including Anxious or Unfocused.
+            Describe any mood in your own words on Pro-Plus ($6/mo).
           </p>
         )}
 
@@ -178,6 +182,11 @@ export default function Home() {
               onToggleSave={handleToggleSave}
               saving={saving}
             />
+            {lockedMealCount > 0 && (
+              <p className="mt-3 rounded-lg border border-brand/20 bg-brand/5 px-4 py-3 text-center text-xs text-paper-dim">
+                {lockedMealCount} more recipe{lockedMealCount === 1 ? "" : "s"} for this mood — subscribe to unlock.
+              </p>
+            )}
             {saveHint && <p className="mt-3 text-center text-xs text-paper-dim">{saveHint}</p>}
             {errorMsg && (
               <p className="mt-3 rounded-lg border border-red-400/30 bg-red-400/10 px-4 py-3 text-center text-sm text-red-200">
