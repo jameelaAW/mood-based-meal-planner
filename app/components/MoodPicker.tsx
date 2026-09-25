@@ -16,8 +16,9 @@ export default function MoodPicker({
 }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [freeText, setFreeText] = useState("");
-  const showFreeText = canUseFreeText(tier);
-  const canSubmit = Boolean(selected) || (showFreeText && freeText.trim().length > 0);
+  const [showUpgradeHint, setShowUpgradeHint] = useState(false);
+  const unlocked = canUseFreeText(tier);
+  const canSubmit = Boolean(selected) || (unlocked && freeText.trim().length > 0);
 
   return (
     <div className="space-y-5">
@@ -41,17 +42,18 @@ export default function MoodPicker({
         })}
       </div>
 
-      {showFreeText && (
-        <div className="space-y-2">
+      <div className="space-y-2">
+        <div className="relative">
           <select
             value=""
+            disabled={!unlocked}
             onChange={(e) => {
               if (e.target.value) {
                 setSelected(null);
                 setFreeText(e.target.value);
               }
             }}
-            className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper-dim focus:border-brand"
+            className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper-dim focus:border-brand disabled:opacity-40"
           >
             <option value="">Or pick a specific feeling…</option>
             {EXTENDED_MOOD_WORDS.map((word) => (
@@ -60,18 +62,43 @@ export default function MoodPicker({
               </option>
             ))}
           </select>
+          {!unlocked && (
+            <button
+              type="button"
+              onClick={() => setShowUpgradeHint(true)}
+              className="absolute inset-0 cursor-not-allowed"
+              aria-label="Pick a specific feeling — requires Pro-Plus"
+            />
+          )}
+        </div>
 
+        <div className="relative">
           <input
             value={freeText}
+            disabled={!unlocked}
             onChange={(e) => {
               setSelected(null);
               setFreeText(e.target.value);
             }}
             placeholder="Not feeling any of these? Describe your mood here"
-            className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper placeholder:text-paper-dim/60 focus:border-brand"
+            className="w-full rounded-lg border border-paper-dim/15 bg-ink-soft px-4 py-3 text-sm text-paper placeholder:text-paper-dim/60 focus:border-brand disabled:opacity-40"
           />
+          {!unlocked && (
+            <button
+              type="button"
+              onClick={() => setShowUpgradeHint(true)}
+              className="absolute inset-0 cursor-not-allowed"
+              aria-label="Describe your mood — requires Pro-Plus"
+            />
+          )}
         </div>
-      )}
+
+        {!unlocked && showUpgradeHint && (
+          <p className="rounded-lg border border-brand/20 bg-brand/5 px-4 py-3 text-center text-xs text-paper-dim">
+            Describing your own mood is a Pro-Plus feature ($6/mo) — subscribe to unlock it.
+          </p>
+        )}
+      </div>
 
       <button
         onClick={() => canSubmit && onSubmit(selected ?? "", freeText)}
