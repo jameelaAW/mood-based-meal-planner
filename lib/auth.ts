@@ -10,12 +10,25 @@ export async function getCurrentUserId(): Promise<string | null> {
   return user?.id ?? null;
 }
 
+const ACTIVE_STATUSES = new Set(["active", "trialing"]);
+
 /**
- * Returns the current visitor's plan tier (free / pro $3 / pro_plus $6).
- * There's no billing/subscriptions table yet, so this always returns "free"
- * until paid plans launch — meals.tier = 'pro' rows and the Pro-only moods
- * stay excluded for everyone in the meantime rather than being given away.
+ * Returns the current visitor's plan tier (free / pro $3 / pro_plus $6),
+ * read from the subscriptions row Stripe's webhook keeps up to date.
+ * Anonymous visitors and anyone without an active/trialing subscription
+ * get "free".
  */
 export async function getCurrentUserTier(): Promise<PlanTier> {
-  return "free";
+  const userId = await getCurrentUserId();
+  if (!userId) return "free";
+
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("subscriptions")
+    .select("plan_tier, status")
+    .eq("user_id", userId)
+    .maybeSingle();
+
+  if (!data || !ACTIVE_STATUSES.has(data.status)) return "free";
+  return data.plan_tier as PlanTier;
 }

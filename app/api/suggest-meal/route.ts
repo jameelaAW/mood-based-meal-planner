@@ -18,7 +18,7 @@ export async function POST(req: Request) {
   const allowedMoods = moodLabelsForTier(userTier);
 
   let moodLabel = (body.mood_label ?? "").trim().toLowerCase();
-  // The free-text box is a Pro-Plus feature — stripped for everyone else so
+  // The free-text box is a Plus feature — stripped for everyone else so
   // it can't be used for mood classification or the AI copy it flavours,
   // no matter what a direct API call sends.
   const freeText = canUseFreeText(userTier) ? body.free_text?.trim() || null : null;

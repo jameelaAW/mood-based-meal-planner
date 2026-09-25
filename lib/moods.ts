@@ -1,5 +1,5 @@
 // Free: 4 built-in moods, buttons only. Pro: all 6 built-in moods, still
-// buttons only. Pro-Plus: all 6 built-in moods PLUS the free-text box to
+// buttons only. Plus: all 6 built-in moods PLUS the free-text box to
 // describe a mood beyond this fixed list.
 export type PlanTier = "free" | "pro" | "pro_plus";
 
@@ -23,8 +23,8 @@ export const MOOD_OPTIONS: MoodOption[] = [
 export const MOOD_LABELS = MOOD_OPTIONS.map((m) => m.label);
 export const FREE_MOOD_LABELS = MOOD_OPTIONS.filter((m) => m.tier === "free").map((m) => m.label);
 
-// Pro and Pro-Plus both get all 6 built-in moods as buttons; only Free is
-// capped at 4. What separates Pro from Pro-Plus is the free-text box itself
+// Pro and Plus both get all 6 built-in moods as buttons; only Free is
+// capped at 4. What separates Pro from Plus is the free-text box itself
 // (see canUseFreeText), not which built-in moods are selectable.
 export function moodLabelsForTier(tier: PlanTier): string[] {
   return tier === "free" ? FREE_MOOD_LABELS : MOOD_LABELS;
@@ -66,7 +66,7 @@ const MOOD_KEYWORDS: Record<string, string[]> = {
   unfocused: ["unfocused", "distracted", "foggy", "scattered", "can't concentrate", "cant concentrate", "brain fog", "spacey", "unmotivated"],
 };
 
-// Pro-Plus quick-pick dropdown: the "adjacent mood" synonyms above, minus any
+// Plus quick-pick dropdown: the "adjacent mood" synonyms above, minus any
 // word that's already a canonical mood name (those already have their own
 // button). Selecting one fills the free-text box with a word guaranteed to
 // score well in guessMoodFromText, since meals are tagged with these same
