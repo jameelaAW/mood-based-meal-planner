@@ -67,7 +67,7 @@ export default function MoodPicker({
               type="button"
               onClick={() => setShowUpgradeHint(true)}
               className="absolute inset-0 cursor-not-allowed"
-              aria-label="Pick a specific feeling — requires Plus"
+              aria-label="Pick a specific feeling — requires Full Access"
             />
           )}
         </div>
@@ -88,14 +88,14 @@ export default function MoodPicker({
               type="button"
               onClick={() => setShowUpgradeHint(true)}
               className="absolute inset-0 cursor-not-allowed"
-              aria-label="Describe your mood — requires Plus"
+              aria-label="Describe your mood — requires Full Access"
             />
           )}
         </div>
 
         {!unlocked && showUpgradeHint && (
           <p className="rounded-lg border border-brand/20 bg-brand/5 px-4 py-3 text-center text-xs text-paper-dim">
-            Describing your own mood is a Plus feature ($6/mo) — subscribe to unlock it.
+            Describing your own mood is a Full Access feature ($12 one-time) — unlock it to try it.
           </p>
         )}
       </div>

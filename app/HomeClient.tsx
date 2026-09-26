@@ -135,7 +135,7 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
 
         {justSubscribed && (
           <p className="mb-6 rounded-lg border border-brand/30 bg-brand/10 px-4 py-3 text-center text-sm">
-            You&rsquo;re subscribed! Your new plan is active.
+            You&rsquo;re in! Full Access is unlocked.
           </p>
         )}
 
@@ -147,22 +147,10 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
         />
         {tier === "free" && (
           <p className="mt-3 text-center text-xs text-paper-dim">
-            2 more moods (Anxious, Unfocused) and longer-prep recipes are on{" "}
+            2 more moods (Anxious, Unfocused), the full recipe catalog, and describing your own
+            mood are all on{" "}
             <a href="/pricing" className="text-brand hover:underline">
-              Pro ($3/mo)
-            </a>
-            . Describe any mood in your own words on{" "}
-            <a href="/pricing" className="text-brand hover:underline">
-              Plus ($6/mo)
-            </a>
-            .
-          </p>
-        )}
-        {tier === "pro" && (
-          <p className="mt-3 text-center text-xs text-paper-dim">
-            Describe any mood in your own words on{" "}
-            <a href="/pricing" className="text-brand hover:underline">
-              Plus ($6/mo)
+              Full Access ($12 one-time)
             </a>
             .
           </p>
@@ -202,7 +190,7 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
               <p className="mt-3 rounded-lg border border-brand/20 bg-brand/5 px-4 py-3 text-center text-xs text-paper-dim">
                 {lockedMealCount} more recipe{lockedMealCount === 1 ? "" : "s"} for this mood —{" "}
                 <a href="/pricing" className="font-medium text-brand hover:underline">
-                  subscribe to unlock
+                  get Full Access to unlock
                 </a>
                 .
               </p>

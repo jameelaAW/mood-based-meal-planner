@@ -2,24 +2,12 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getCurrentUserId } from "@/lib/auth";
-import { stripe, STRIPE_PRICE_IDS } from "@/lib/stripe";
+import { stripe, STRIPE_PRICE_FULL_ACCESS } from "@/lib/stripe";
 
 export async function POST(req: Request) {
   const userId = await getCurrentUserId();
   if (!userId) {
-    return NextResponse.json({ error: "auth_required", message: "Sign in to subscribe." }, { status: 401 });
-  }
-
-  let body: { plan?: string };
-  try {
-    body = await req.json();
-  } catch {
-    return NextResponse.json({ error: "invalid_json" }, { status: 400 });
-  }
-
-  const plan = body.plan;
-  if (plan !== "pro" && plan !== "pro_plus") {
-    return NextResponse.json({ error: "invalid_plan", message: "Unknown plan." }, { status: 400 });
+    return NextResponse.json({ error: "auth_required", message: "Sign in to buy Full Access." }, { status: 401 });
   }
 
   const supabase = await createClient();
@@ -63,13 +51,12 @@ export async function POST(req: Request) {
   const origin = new URL(req.url).origin;
   try {
     const session = await stripe.checkout.sessions.create({
-      mode: "subscription",
+      mode: "payment",
       customer: customerId,
-      line_items: [{ price: STRIPE_PRICE_IDS[plan], quantity: 1 }],
+      line_items: [{ price: STRIPE_PRICE_FULL_ACCESS, quantity: 1 }],
       success_url: `${origin}/?checkout=success`,
       cancel_url: `${origin}/pricing?checkout=cancelled`,
-      metadata: { supabase_user_id: userId, plan },
-      subscription_data: { metadata: { supabase_user_id: userId, plan } },
+      metadata: { supabase_user_id: userId },
     });
     return NextResponse.json({ url: session.url });
   } catch (err) {

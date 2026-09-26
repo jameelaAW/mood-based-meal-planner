@@ -10,13 +10,11 @@ export async function getCurrentUserId(): Promise<string | null> {
   return user?.id ?? null;
 }
 
-const ACTIVE_STATUSES = new Set(["active", "trialing"]);
-
 /**
- * Returns the current visitor's plan tier (free / pro $3 / pro_plus $6),
- * read from the subscriptions row Stripe's webhook keeps up to date.
- * Anonymous visitors and anyone without an active/trialing subscription
- * get "free".
+ * Returns the current visitor's plan tier (free / paid — one-time $12 "Full
+ * Access"), read from the subscriptions row Stripe's webhook keeps up to
+ * date. Anonymous visitors and anyone without a completed purchase get
+ * "free".
  */
 export async function getCurrentUserTier(): Promise<PlanTier> {
   const userId = await getCurrentUserId();
@@ -29,6 +27,6 @@ export async function getCurrentUserTier(): Promise<PlanTier> {
     .eq("user_id", userId)
     .maybeSingle();
 
-  if (!data || !ACTIVE_STATUSES.has(data.status)) return "free";
+  if (!data || data.status !== "active") return "free";
   return data.plan_tier as PlanTier;
 }

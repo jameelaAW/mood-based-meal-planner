@@ -18,15 +18,15 @@ export async function POST(req: Request) {
   const allowedMoods = moodLabelsForTier(userTier);
 
   let moodLabel = (body.mood_label ?? "").trim().toLowerCase();
-  // The free-text box is a Plus feature — stripped for everyone else so
-  // it can't be used for mood classification or the AI copy it flavours,
-  // no matter what a direct API call sends.
+  // The free-text box is a paid Full Access feature — stripped for free
+  // visitors so it can't be used for mood classification or the AI copy it
+  // flavours, no matter what a direct API call sends.
   const freeText = canUseFreeText(userTier) ? body.free_text?.trim() || null : null;
   let moodLabelSource: "selected" | "ai" | "rule-based" = "selected";
 
   if (moodLabel && MOOD_LABELS.includes(moodLabel) && !allowedMoods.includes(moodLabel)) {
     return NextResponse.json(
-      { error: "mood_requires_pro", message: "That mood is available on the Pro plan." },
+      { error: "mood_requires_paid", message: "That mood is available with Full Access." },
       { status: 403 },
     );
   }
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     // No mood button picked — fall back to classifying the free text they typed
     // ("indicate a mood not listed"). Requires free_text; otherwise there's
     // nothing to go on. Classification is restricted to this visitor's allowed
-    // moods so free-text can't be used to sneak into Pro-only moods.
+    // moods so free-text can't be used to sneak into paid-only moods.
     if (!freeText) {
       const message = canUseFreeText(userTier)
         ? "Pick a mood or describe how you feel."
