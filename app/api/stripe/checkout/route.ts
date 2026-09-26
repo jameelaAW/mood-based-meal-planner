@@ -35,6 +35,18 @@ export async function POST(req: Request) {
     .maybeSingle();
 
   let customerId = existing?.stripe_customer_id;
+  if (customerId) {
+    // A customer ID on file isn't guaranteed valid for the *current* Stripe
+    // key — e.g. it was created against test mode before switching to live,
+    // or was deleted in the Stripe dashboard. Verify before reusing it.
+    try {
+      const customer = await stripe.customers.retrieve(customerId);
+      if (customer.deleted) customerId = undefined;
+    } catch {
+      customerId = undefined;
+    }
+  }
+
   if (!customerId) {
     const customer = await stripe.customers.create({
       email: user?.email,
@@ -49,15 +61,22 @@ export async function POST(req: Request) {
   }
 
   const origin = new URL(req.url).origin;
-  const session = await stripe.checkout.sessions.create({
-    mode: "subscription",
-    customer: customerId,
-    line_items: [{ price: STRIPE_PRICE_IDS[plan], quantity: 1 }],
-    success_url: `${origin}/?checkout=success`,
-    cancel_url: `${origin}/pricing?checkout=cancelled`,
-    metadata: { supabase_user_id: userId, plan },
-    subscription_data: { metadata: { supabase_user_id: userId, plan } },
-  });
-
-  return NextResponse.json({ url: session.url });
+  try {
+    const session = await stripe.checkout.sessions.create({
+      mode: "subscription",
+      customer: customerId,
+      line_items: [{ price: STRIPE_PRICE_IDS[plan], quantity: 1 }],
+      success_url: `${origin}/?checkout=success`,
+      cancel_url: `${origin}/pricing?checkout=cancelled`,
+      metadata: { supabase_user_id: userId, plan },
+      subscription_data: { metadata: { supabase_user_id: userId, plan } },
+    });
+    return NextResponse.json({ url: session.url });
+  } catch (err) {
+    console.error("stripe checkout session creation failed:", err);
+    return NextResponse.json(
+      { error: "checkout_failed", message: "Couldn't start checkout — please try again." },
+      { status: 500 },
+    );
+  }
 }
