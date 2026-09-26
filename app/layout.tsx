@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import ServiceWorkerRegister from "@/app/components/ServiceWorkerRegister";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,6 +17,15 @@ export const metadata: Metadata = {
     title: "Mood-Based Meal Planner",
     description: "Tell us how you feel. We'll tell you what to eat — and build your shopping list.",
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Mood Planner",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#211e26",
 };
 
 export default function RootLayout({
@@ -28,6 +38,7 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <Analytics />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );
