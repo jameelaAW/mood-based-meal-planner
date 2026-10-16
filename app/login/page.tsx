@@ -40,14 +40,6 @@ export default function LoginPage() {
     router.refresh();
   }
 
-  async function handleGoogleSignIn() {
-    const supabase = createClient();
-    await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
-    });
-  }
-
   return (
     <main className="flex min-h-screen items-center justify-center bg-ink px-6 text-paper">
       <div className="w-full max-w-sm space-y-6">
@@ -57,17 +49,6 @@ export default function LoginPage() {
           <p className="mt-2 text-sm text-paper-dim">
             Save your mood history and favourite meals. You don&rsquo;t need an account to use the app itself.
           </p>
-        </div>
-
-        <button
-          onClick={handleGoogleSignIn}
-          className="w-full rounded-lg border border-paper-dim/20 bg-ink-soft py-3 font-medium text-paper transition hover:border-brand/40"
-        >
-          Continue with Google
-        </button>
-
-        <div className="flex items-center gap-3 text-xs text-paper-dim">
-          <span className="h-px flex-1 bg-paper-dim/15" /> or <span className="h-px flex-1 bg-paper-dim/15" />
         </div>
 
         {status === "sent" || status === "verifying" ? (
