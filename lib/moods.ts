@@ -1,4 +1,4 @@
-// Free: 4 built-in moods, buttons only. Paid ($12 one-time "Full Access"):
+// Free: 4 built-in moods, buttons only. Paid (SGD 12 one-time "Full Access"):
 // all 6 built-in moods PLUS the free-text box to describe a mood beyond
 // this fixed list.
 export type PlanTier = "free" | "paid";

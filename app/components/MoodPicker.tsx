@@ -95,7 +95,7 @@ export default function MoodPicker({
 
         {!unlocked && showUpgradeHint && (
           <p className="rounded-lg border border-brand/20 bg-brand/5 px-4 py-3 text-center text-xs text-paper-dim">
-            Describing your own mood is a Full Access feature ($12 one-time) — unlock it to try it.
+            Describing your own mood is a Full Access feature (SGD 12 one-time) — unlock it to try it.
           </p>
         )}
       </div>

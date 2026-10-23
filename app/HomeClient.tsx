@@ -150,7 +150,7 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
             2 more moods (Anxious, Unfocused), the full recipe catalog, and describing your own
             mood are all on{" "}
             <a href="/pricing" className="text-brand hover:underline">
-              Full Access ($12 one-time)
+              Full Access (SGD 12 one-time)
             </a>
             .
           </p>
