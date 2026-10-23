@@ -3,8 +3,8 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { isValidPayhipSignature, payhipPermalink, PAYHIP_PRODUCT_URL } from "@/lib/payhip";
 
 interface PayhipItem {
-  product_permalink?: string;
-  product_link?: string;
+  product_key?: string; // e.g. "taj5H"
+  product_permalink?: string; // e.g. "https://payhip.com/b/taj5H"
 }
 
 interface PayhipEvent {
@@ -16,10 +16,10 @@ interface PayhipEvent {
 }
 
 /**
- * Payhip webhook — set in Payhip under Settings → Developer → Webhooks to
- * https://<your-domain>/api/payhip/webhook with the "paid" and "refunded"
- * events ticked. Records Full Access purchases by buyer email; access is
- * picked up by getCurrentUserTier() on the buyer's next page load.
+ * Payhip webhook — set in Payhip under Settings → Developer to
+ * https://<your-domain>/api/payhip/webhook. Records Full Access purchases by
+ * buyer email; access is picked up by getCurrentUserTier() on the buyer's
+ * next page load.
  */
 export async function POST(req: Request) {
   let body: PayhipEvent;
@@ -38,7 +38,9 @@ export async function POST(req: Request) {
   const appPermalink = payhipPermalink(PAYHIP_PRODUCT_URL);
   const boughtApp =
     !!appPermalink &&
-    (body.items ?? []).some((i) => (i.product_permalink ?? i.product_link) === appPermalink);
+    (body.items ?? []).some(
+      (i) => i.product_key === appPermalink || payhipPermalink(i.product_permalink ?? "") === appPermalink,
+    );
   if (!boughtApp) return NextResponse.json({ ignored: true });
 
   const email = body.email?.trim().toLowerCase();
