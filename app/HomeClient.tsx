@@ -8,7 +8,7 @@ import AuthNav from "@/app/components/AuthNav";
 import { moodAccent, moodOptionsForTier, type PlanTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 
-type Status = "idle" | "loading" | "ready" | "no_match" | "error";
+type Status = "idle" | "loading" | "ready" | "no_match" | "error" | "limit";
 
 export default function HomeClient({ tier }: { tier: PlanTier }) {
   const router = useRouter();
@@ -23,6 +23,8 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
   const [saving, setSaving] = useState(false);
   const [saveHint, setSaveHint] = useState<string | null>(null);
   const [lockedMealCount, setLockedMealCount] = useState(0);
+  const [freeRemaining, setFreeRemaining] = useState<number | null>(null);
+  const [limitSignedIn, setLimitSignedIn] = useState(false);
 
   const justSubscribed = searchParams.get("checkout") === "success";
 
@@ -44,12 +46,19 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
         setStatus("no_match");
         return;
       }
+      if (res.status === 429 && data.error === "daily_limit") {
+        setLimitSignedIn(!!data.signed_in);
+        setFreeRemaining(0);
+        setStatus("limit");
+        return;
+      }
       if (!res.ok) {
         setErrorMsg(data.message ?? "Something went wrong — please try again.");
         setStatus("error");
         return;
       }
 
+      setFreeRemaining(typeof data.free_remaining === "number" ? data.free_remaining : null);
       setMeal(data.meal);
       setCheckinId(data.checkin_id);
       setActiveMood(data.mood_label ?? moodLabel);
@@ -170,6 +179,31 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
           </p>
         )}
 
+        {status === "limit" && (
+          <div className="mt-8 rounded-2xl border border-brand/30 bg-brand/10 px-5 py-6 text-center">
+            <p className="text-lg font-semibold">You&rsquo;ve used today&rsquo;s free meal ideas 🍲</p>
+            <p className="mt-2 text-sm text-paper-dim">
+              Free ideas reset at midnight. Want more right now? Full Access unlocks unlimited
+              ideas, all moods and the full recipe catalog.
+            </p>
+            <a
+              href="/pricing"
+              className="mt-4 inline-block rounded-full bg-brand px-5 py-2 text-sm font-medium text-ink hover:opacity-90"
+            >
+              Unlock Full Access – SGD 12 one-time
+            </a>
+            {!limitSignedIn && (
+              <p className="mt-3 text-xs text-paper-dim">
+                Already bought it?{" "}
+                <a href="/login" className="text-brand hover:underline">
+                  Sign in with your purchase email
+                </a>
+                .
+              </p>
+            )}
+          </div>
+        )}
+
         {status === "error" && errorMsg && (
           <p className="mt-8 rounded-lg border border-red-400/30 bg-red-400/10 px-4 py-4 text-center text-sm text-red-200">
             {errorMsg}
@@ -193,6 +227,16 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
                   get Full Access to unlock
                 </a>
                 .
+              </p>
+            )}
+            {tier === "free" && freeRemaining !== null && (
+              <p className="mt-3 text-center text-xs text-paper-dim">
+                {freeRemaining > 0
+                  ? `${freeRemaining} free idea${freeRemaining === 1 ? "" : "s"} left today.`
+                  : "That was your last free idea for today."}{" "}
+                <a href="/pricing" className="text-brand hover:underline">
+                  Go unlimited
+                </a>
               </p>
             )}
             {saveHint && <p className="mt-3 text-center text-xs text-paper-dim">{saveHint}</p>}

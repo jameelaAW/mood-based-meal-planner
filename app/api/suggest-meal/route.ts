@@ -5,6 +5,14 @@ import { pickMeal } from "@/lib/rank";
 import { classifyMoodLabel, generateWhyItFits, interpretMood } from "@/lib/ai";
 import { canUseFreeText, guessMoodFromText, MOOD_LABELS, moodLabelsForTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
+import { cookies } from "next/headers";
+import {
+  ANON_USES_COOKIE,
+  FREE_DAILY_LIMIT,
+  anonCookieValue,
+  countTodayForUser,
+  readAnonCount,
+} from "@/lib/limits";
 
 export async function POST(req: Request) {
   let body: { mood_label?: string; free_text?: string };
@@ -16,6 +24,29 @@ export async function POST(req: Request) {
 
   const userTier = await getCurrentUserTier();
   const allowedMoods = moodLabelsForTier(userTier);
+  const supabase = await createClient();
+  const userId = await getCurrentUserId();
+
+  // Free tier: FREE_DAILY_LIMIT suggestions per day (resets at SGT midnight).
+  // Checked before any AI call so capped visitors cost nothing.
+  const cookieStore = await cookies();
+  let usedToday = 0;
+  if (userTier === "free") {
+    usedToday = userId
+      ? await countTodayForUser(supabase, userId)
+      : readAnonCount(cookieStore.get(ANON_USES_COOKIE)?.value);
+    if (usedToday >= FREE_DAILY_LIMIT) {
+      return NextResponse.json(
+        {
+          error: "daily_limit",
+          signed_in: !!userId,
+          limit: FREE_DAILY_LIMIT,
+          message: `You've used today's ${FREE_DAILY_LIMIT} free meal ideas.`,
+        },
+        { status: 429 },
+      );
+    }
+  }
 
   let moodLabel = (body.mood_label ?? "").trim().toLowerCase();
   // The free-text box is a paid Full Access feature — stripped for free
@@ -53,8 +84,6 @@ export async function POST(req: Request) {
       moodLabelSource = "rule-based";
     }
   }
-
-  const supabase = await createClient();
 
   const { data: allMeals, error: mealsError } = await supabase.from("meals").select("*");
   if (mealsError) {
@@ -122,8 +151,6 @@ export async function POST(req: Request) {
     }
   }
 
-  const userId = await getCurrentUserId();
-
   const { data: checkin, error: checkinError } = await supabase
     .from("mood_checkins")
     .insert({
@@ -143,7 +170,21 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "db_error", message: checkinError.message }, { status: 500 });
   }
 
+  // Anonymous free visitors: bump the cookie counter only after a successful suggestion.
+  if (userTier === "free" && !userId) {
+    cookieStore.set(ANON_USES_COOKIE, anonCookieValue(usedToday + 1), {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production",
+      path: "/",
+      maxAge: 60 * 60 * 36,
+    });
+  }
+
+  const freeRemaining = userTier === "free" ? Math.max(0, FREE_DAILY_LIMIT - usedToday - 1) : null;
+
   return NextResponse.json({
+    free_remaining: freeRemaining,
     checkin_id: checkin.id,
     mood_label: moodLabel,
     mood_label_source: moodLabelSource,
