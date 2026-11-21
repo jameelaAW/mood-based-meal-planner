@@ -29,3 +29,12 @@ export function lockedRecipesForTier(tier: PlanTier): LockedRecipe[] {
 export function getRecipeById(id: string): Recipe | undefined {
   return ALL_RECIPES.find((r) => r.id === id);
 }
+
+export function recipesForMood(mood: string, tier: PlanTier): Recipe[] {
+  return recipesForTier(tier).filter((r) => r.mood === mood);
+}
+
+/** How many recipes for this mood sit behind Full Access for this visitor (free: 2, paid: 0). */
+export function lockedCountForMood(mood: string, tier: PlanTier): number {
+  return ALL_RECIPES.filter((r) => r.mood === mood && !canAccessRecipe(r, tier)).length;
+}

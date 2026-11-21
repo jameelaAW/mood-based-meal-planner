@@ -61,8 +61,9 @@ export default function PricingClient({
             <p className="mt-1 text-2xl font-medium">SGD 0</p>
             <ul className="mt-4 flex-1 space-y-2 text-sm text-paper-dim">
               <li>• 4 moods</li>
-              <li>• 2 recipes per mood</li>
-              <li>• Shopping list & check-off</li>
+              <li>• 8 recipes — 2 per mood</li>
+              <li>• 3 meal ideas per day</li>
+              <li>• Weekly plan, cook from what you have & shopping lists</li>
             </ul>
             <a
               href="/"
@@ -77,7 +78,8 @@ export default function PricingClient({
             <p className="mt-1 text-2xl font-medium">SGD 12 <span className="text-sm font-normal text-paper-dim">one-time</span></p>
             <ul className="mt-4 flex-1 space-y-2 text-sm text-paper-dim">
               <li>• All 6 moods</li>
-              <li>• Full recipe catalog, incl. longer-prep recipes</li>
+              <li>• All 24 recipes — 4 per mood (16 more than Free)</li>
+              <li>• Unlimited meal ideas per day</li>
               <li>• Describe any mood in your own words</li>
               <li>• Yours forever — no subscription</li>
             </ul>
@@ -96,18 +98,20 @@ export default function PricingClient({
                   Get Full Access — SGD 12
                 </a>
                 <p className="mt-3 text-center text-xs text-paper-dim">
+                  No sign-in needed to pay — checkout opens on Payhip.
                   {userEmail ? (
                     <>
-                      Pay with <span className="text-paper">{userEmail}</span> on the checkout page so
-                      it unlocks automatically.
+                      {" "}Use <span className="text-paper">{userEmail}</span> at checkout and Full Access
+                      unlocks here automatically.
                     </>
                   ) : (
                     <>
-                      Pay with the email you&rsquo;ll{" "}
+                      {" "}Afterwards,{" "}
                       <a href="/login" className="text-brand hover:underline">
                         sign in
                       </a>{" "}
-                      with — Full Access unlocks on that account.
+                      with the email you paid with to unlock Full Access and save your mood history and
+                      favourites.
                     </>
                   )}
                 </p>

@@ -10,6 +10,7 @@ export interface Recipe {
   mood: string;
   title: string;
   description: string;
+  why_it_fits: string;
   cuisine: string;
   halal: boolean;
   is_free: boolean;

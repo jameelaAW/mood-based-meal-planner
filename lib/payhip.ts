@@ -1,11 +1,10 @@
 import { createHash, timingSafeEqual } from "crypto";
 
-/**
- * Payhip product page for the SGD 12 one-time Full Access, e.g.
- * https://payhip.com/b/AbC12. Public (it's just a link), so NEXT_PUBLIC_.
- * When unset, the pricing page falls back to the existing Stripe checkout.
- */
-export const PAYHIP_PRODUCT_URL = process.env.NEXT_PUBLIC_PAYHIP_PRODUCT_URL?.trim() || "";
+import { PAYHIP_PRODUCT_URL } from "@/lib/payhip-url";
+
+// The product URL lives in lib/payhip-url.ts so client components can use it
+// without pulling in the Node crypto code below.
+export { PAYHIP_PRODUCT_URL };
 
 /** The product code at the end of the Payhip URL ("AbC12" above). */
 export function payhipPermalink(url: string = PAYHIP_PRODUCT_URL): string {

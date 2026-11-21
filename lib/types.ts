@@ -24,6 +24,10 @@ export interface Meal {
   why_it_fits_confidence: number | null;
   why_it_fits_review_status: string | null;
   tier: "free" | "pro";
+  /** Set when the meal comes from data/recipes.json (the shared catalog). */
+  recipe_id?: string;
+  /** Numbered method steps from data/recipes.json; preferred over `instructions`. */
+  steps?: string[];
 }
 
 export interface MoodCheckin {

@@ -2,9 +2,11 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { currentWeekLabel } from "@/lib/format";
 import type { Ingredient } from "@/lib/types";
+import { getCurrentUserTier } from "@/lib/auth";
+import { canAccessRecipe, getRecipeById } from "@/lib/recipes";
 
 export async function POST(req: Request) {
-  let body: { checkin_id?: string };
+  let body: { checkin_id?: string; recipe_id?: string };
   try {
     body = await req.json();
   } catch {
@@ -24,17 +26,27 @@ export async function POST(req: Request) {
     .eq("id", checkinId)
     .single();
 
-  if (checkinError || !checkin || !checkin.suggested_meal_id) {
+  if (checkinError || !checkin) {
     return NextResponse.json({ error: "checkin_not_found" }, { status: 404 });
   }
 
-  const { data: meal, error: mealError } = await supabase
-    .from("meals")
-    .select("id, ingredients")
-    .eq("id", checkin.suggested_meal_id)
-    .single();
+  let meal: { ingredients: unknown } | null = null;
+  if (checkin.suggested_meal_id) {
+    const { data } = await supabase
+      .from("meals")
+      .select("id, ingredients")
+      .eq("id", checkin.suggested_meal_id)
+      .single();
+    meal = data;
+  }
+  // Catalog recipes (data/recipes.json) can always be rebuilt from the file,
+  // even if their meals row couldn't be created.
+  if (!meal && body.recipe_id) {
+    const recipe = getRecipeById(body.recipe_id);
+    if (recipe && canAccessRecipe(recipe, await getCurrentUserTier())) meal = { ingredients: recipe.ingredients };
+  }
 
-  if (mealError || !meal) {
+  if (!meal) {
     return NextResponse.json({ error: "meal_not_found" }, { status: 404 });
   }
 

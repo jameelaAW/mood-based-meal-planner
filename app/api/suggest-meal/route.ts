@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { getCurrentUserId, getCurrentUserTier } from "@/lib/auth";
-import { pickMeal } from "@/lib/rank";
+import { lockedCountForMood, recipesForMood } from "@/lib/recipes";
+import { ensureMealRow, recipeToMeal } from "@/lib/recipe-meals";
 import { classifyMoodLabel, generateWhyItFits, interpretMood } from "@/lib/ai";
 import { canUseFreeText, guessMoodFromText, MOOD_LABELS, moodLabelsForTier } from "@/lib/moods";
-import type { Meal } from "@/lib/types";
 import { cookies } from "next/headers";
 import {
   ANON_USES_COOKIE,
@@ -15,7 +15,7 @@ import {
 } from "@/lib/limits";
 
 export async function POST(req: Request) {
-  let body: { mood_label?: string; free_text?: string };
+  let body: { mood_label?: string; free_text?: string; exclude_recipe_id?: string };
   try {
     body = await req.json();
   } catch {
@@ -85,37 +85,33 @@ export async function POST(req: Request) {
     }
   }
 
-  const { data: allMeals, error: mealsError } = await supabase.from("meals").select("*");
-  if (mealsError) {
-    return NextResponse.json({ error: "db_error", message: mealsError.message }, { status: 500 });
-  }
-  if (!allMeals || allMeals.length === 0) {
-    return NextResponse.json(
-      { error: "no_match", message: "No meals in the database yet." },
-      { status: 404 },
-    );
-  }
-
-  const meals = userTier === "free" ? allMeals.filter((m) => m.tier === "free") : allMeals;
-
-  const winner = pickMeal(meals as Meal[], moodLabel);
-  if (!winner) {
+  // Recipes come from data/recipes.json — the same catalog /plan and /cook
+  // use — so all three always agree. Free: the 2 free recipes for the mood;
+  // Full Access: all 4.
+  const candidates = recipesForMood(moodLabel, userTier);
+  if (candidates.length === 0) {
     return NextResponse.json(
       { error: "no_match", message: "We don't have a match yet — try a different mood." },
       { status: 404 },
     );
   }
+  // Avoid serving the recipe the visitor is already looking at when they ask again.
+  const fresh = candidates.filter((r) => r.id !== body.exclude_recipe_id);
+  const pool = fresh.length > 0 ? fresh : candidates;
+  const recipe = pool[Math.floor(Math.random() * pool.length)];
 
-  // How many more recipes exist for this mood than this visitor's tier can
-  // reach — powers the "N more recipes — unlock with Pro" upsell.
-  const totalForMood = allMeals.filter((m) => m.mood_tags?.includes(moodLabel)).length;
-  const accessibleForMood = meals.filter((m) => m.mood_tags?.includes(moodLabel)).length;
-  const lockedMealCount = totalForMood - accessibleForMood;
+  // "N more recipes for this mood with Full Access" — 2 on the free tier, 0 on paid.
+  const lockedMealCount = lockedCountForMood(moodLabel, userTier);
 
-  // Defaults: rule-based fallback (always valid per ARCHITECTURE.md "core runs without AI")
-  let whyItFits = winner.why_it_fits ?? `${winner.title} is a solid pick for feeling ${moodLabel}.`;
-  let whyItFitsSource = winner.why_it_fits_source ?? "rule-engine-v1";
-  let whyItFitsConfidence = winner.why_it_fits_confidence ?? 0.75;
+  // Mirror the recipe into the meals table so history, favourites and the
+  // single-meal shopping list (all keyed on a meals row) keep working.
+  const mealRowId = await ensureMealRow(supabase, recipe);
+  const winner = recipeToMeal(recipe, mealRowId);
+
+  // Default: the recipe's own copy (always valid per ARCHITECTURE.md "core runs without AI")
+  let whyItFits = recipe.why_it_fits;
+  let whyItFitsSource = "recipes-json-v1";
+  let whyItFitsConfidence = 0.8;
 
   let aiMoodInterpretation: string | null = null;
   let aiMoodSource: string | null = null;
@@ -126,17 +122,6 @@ export async function POST(req: Request) {
     whyItFits = aiWhy;
     whyItFitsSource = "openai-gpt4o";
     whyItFitsConfidence = 0.9;
-
-    // Best-effort: persist the freshly generated copy back onto the meal row.
-    await supabase
-      .from("meals")
-      .update({
-        why_it_fits: whyItFits,
-        why_it_fits_source: whyItFitsSource,
-        why_it_fits_confidence: whyItFitsConfidence,
-        why_it_fits_review_status: "unreviewed",
-      })
-      .eq("id", winner.id);
   } catch (err) {
     console.error("generate_why_it_fits fallback:", err);
   }
@@ -157,7 +142,7 @@ export async function POST(req: Request) {
       user_id: userId,
       mood_label: moodLabel,
       free_text: freeText,
-      suggested_meal_id: winner.id,
+      suggested_meal_id: mealRowId,
       ai_mood_interpretation: aiMoodInterpretation,
       ai_mood_interpretation_source: aiMoodSource,
       ai_mood_interpretation_confidence: aiMoodConfidence,

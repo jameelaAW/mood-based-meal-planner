@@ -15,6 +15,14 @@ export default function RecipeCard({
   onToggleSave?: () => void;
   saving?: boolean;
 }) {
+  // Catalog recipes (data/recipes.json) carry calories + protein only, and
+  // their method as a ready-made list of steps.
+  const hasFullMacros = meal.carbs_g != null || meal.fat_g != null;
+  const steps =
+    meal.steps && meal.steps.length > 0
+      ? meal.steps
+      : (meal.instructions ?? "").split(/(?<=[.!])\s+(?=[A-Z])/).filter(Boolean);
+
   return (
     <div className="overflow-hidden rounded-2xl border border-paper-dim/15 bg-ink-soft">
       {meal.image_url && (
@@ -35,9 +43,22 @@ export default function RecipeCard({
         </div>
       )}
       <div className="space-y-5 p-6">
-        <div>
-          <h2 className="font-display text-2xl italic">{meal.title}</h2>
-          {meal.description && <p className="mt-1 text-sm text-paper-dim">{meal.description}</p>}
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h2 className="font-display text-2xl italic">{meal.title}</h2>
+            {meal.description && <p className="mt-1 text-sm text-paper-dim">{meal.description}</p>}
+          </div>
+          {/* Recipes without a photo keep the save button, next to the title. */}
+          {!meal.image_url && onToggleSave && (
+            <button
+              onClick={onToggleSave}
+              disabled={saving}
+              aria-label={saved ? "Remove from saved meals" : "Save this meal"}
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-paper-dim/20 text-lg transition hover:border-brand/40 disabled:opacity-60"
+            >
+              {saved ? "♥" : "♡"}
+            </button>
+          )}
         </div>
 
         {meal.why_it_fits && (
@@ -46,11 +67,15 @@ export default function RecipeCard({
           </p>
         )}
 
-        <div className="grid grid-cols-2 gap-3 font-mono text-xs sm:grid-cols-4">
+        <div className={`grid grid-cols-2 gap-3 font-mono text-xs ${hasFullMacros ? "sm:grid-cols-4" : ""}`}>
           <Macro label="Cal" value={meal.calories} />
           <Macro label="Protein" value={meal.protein_g} suffix="g" />
-          <Macro label="Carbs" value={meal.carbs_g} suffix="g" />
-          <Macro label="Fat" value={meal.fat_g} suffix="g" />
+          {hasFullMacros && (
+            <>
+              <Macro label="Carbs" value={meal.carbs_g} suffix="g" />
+              <Macro label="Fat" value={meal.fat_g} suffix="g" />
+            </>
+          )}
         </div>
 
         <div>
@@ -66,18 +91,15 @@ export default function RecipeCard({
           </ul>
         </div>
 
-        {meal.instructions && (
+        {steps.length > 0 && (
           <div>
             <h3 className="mb-2 font-mono text-xs uppercase tracking-wider text-paper-dim">Method</h3>
             <ol className="list-decimal space-y-1.5 pl-4 text-sm text-paper-dim marker:text-brand">
-              {meal.instructions
-                .split(/(?<=[.!])\s+(?=[A-Z])/)
-                .filter(Boolean)
-                .map((step, i) => (
-                  <li key={i} className="pl-1">
-                    {step.trim()}
-                  </li>
-                ))}
+              {steps.map((step, i) => (
+                <li key={i} className="pl-1">
+                  {step.trim()}
+                </li>
+              ))}
             </ol>
           </div>
         )}

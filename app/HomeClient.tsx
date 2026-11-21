@@ -8,6 +8,8 @@ import AuthNav from "@/app/components/AuthNav";
 import FeatureNav from "@/app/components/FeatureNav";
 import { moodAccent, moodOptionsForTier, type PlanTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
+import { FREE_DAILY_LIMIT } from "@/lib/limits";
+import { PAYHIP_PRODUCT_URL } from "@/lib/payhip-url";
 
 type Status = "idle" | "loading" | "ready" | "no_match" | "error" | "limit";
 
@@ -39,7 +41,11 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
       const res = await fetch("/api/suggest-meal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ mood_label: moodLabel, free_text: freeText || undefined }),
+        body: JSON.stringify({
+          mood_label: moodLabel,
+          free_text: freeText || undefined,
+          exclude_recipe_id: meal?.recipe_id,
+        }),
       });
       const data = await res.json();
 
@@ -79,7 +85,7 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
       const res = await fetch("/api/generate-shopping-list", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ checkin_id: checkinId }),
+        body: JSON.stringify({ checkin_id: checkinId, recipe_id: meal?.recipe_id }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -161,12 +167,11 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
         />
         {tier === "free" && (
           <p className="mt-3 text-center text-xs text-paper-dim">
-            2 more moods (Anxious, Unfocused), the full recipe catalog, and describing your own
-            mood are all on{" "}
+            Free: 4 moods, 2 recipes per mood, {FREE_DAILY_LIMIT} meal ideas a day.{" "}
             <a href="/pricing" className="text-brand hover:underline">
               Full Access (SGD 12 one-time)
-            </a>
-            .
+            </a>{" "}
+            adds 2 more moods (Anxious, Unfocused), 16 more recipes and describing your own mood.
           </p>
         )}
 
@@ -189,21 +194,29 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
             <p className="text-lg font-semibold">You&rsquo;ve used today&rsquo;s free meal ideas 🍲</p>
             <p className="mt-2 text-sm text-paper-dim">
               Free ideas reset at midnight. Want more right now? Full Access unlocks unlimited
-              ideas, all moods and the full recipe catalog.
+              ideas, all 6 moods and all 24 recipes.
             </p>
             <a
-              href="/pricing"
+              href={PAYHIP_PRODUCT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-4 inline-block rounded-full bg-brand px-5 py-2 text-sm font-medium text-ink hover:opacity-90"
             >
-              Unlock Full Access – SGD 12 one-time
+              Get Full Access — SGD 12
             </a>
+            <p className="mt-3 text-xs text-paper-dim">
+              No sign-in needed to pay.{" "}
+              <a href="/pricing" className="text-brand hover:underline">
+                See what&rsquo;s included
+              </a>
+            </p>
             {!limitSignedIn && (
               <p className="mt-3 text-xs text-paper-dim">
                 Already bought it?{" "}
                 <a href="/login" className="text-brand hover:underline">
                   Sign in with your purchase email
-                </a>
-                .
+                </a>{" "}
+                to unlock it here.
               </p>
             )}
           </div>
@@ -227,9 +240,9 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
             />
             {lockedMealCount > 0 && (
               <p className="mt-3 rounded-lg border border-brand/20 bg-brand/5 px-4 py-3 text-center text-xs text-paper-dim">
-                {lockedMealCount} more recipe{lockedMealCount === 1 ? "" : "s"} for this mood —{" "}
+                {lockedMealCount} more recipe{lockedMealCount === 1 ? "" : "s"} for this mood with{" "}
                 <a href="/pricing" className="font-medium text-brand hover:underline">
-                  get Full Access to unlock
+                  Full Access
                 </a>
                 .
               </p>

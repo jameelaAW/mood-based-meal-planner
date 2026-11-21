@@ -14,7 +14,7 @@ export default async function PricingPage() {
     <PricingClient
       currentTier={tier}
       userEmail={user?.email ?? null}
-      payhipUrl={PAYHIP_PRODUCT_URL || null}
+      payhipUrl={PAYHIP_PRODUCT_URL}
     />
   );
 }
