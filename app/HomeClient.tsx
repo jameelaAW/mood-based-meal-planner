@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import MoodPicker from "@/app/components/MoodPicker";
 import RecipeCard from "@/app/components/RecipeCard";
 import AuthNav from "@/app/components/AuthNav";
+import FeatureNav from "@/app/components/FeatureNav";
 import { moodAccent, moodOptionsForTier, type PlanTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 
@@ -141,6 +142,10 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
             We&rsquo;ll tell you what to eat.
           </h1>
         </header>
+
+        <div className="mb-8">
+          <FeatureNav current="home" />
+        </div>
 
         {justSubscribed && (
           <p className="mb-6 rounded-lg border border-brand/30 bg-brand/10 px-4 py-3 text-center text-sm">

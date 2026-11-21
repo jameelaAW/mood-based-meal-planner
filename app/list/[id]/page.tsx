@@ -20,8 +20,12 @@ export default async function ShoppingListPage({ params }: { params: Promise<{ i
   return (
     <main className="min-h-screen px-6 py-16">
       <div className="mx-auto max-w-lg">
-        <Link href="/" className="font-mono text-xs uppercase tracking-wider text-paper-dim hover:text-brand">
-          ← Back
+        {/* Lists built from the weekly plan have no check-in — send those back to the plan. */}
+        <Link
+          href={list.checkin_id ? "/" : "/plan"}
+          className="font-mono text-xs uppercase tracking-wider text-paper-dim hover:text-brand"
+        >
+          {list.checkin_id ? "← Back" : "← Back to weekly plan"}
         </Link>
         <h1 className="mt-4 font-display text-3xl italic">Shopping list</h1>
         <p className="mt-1 text-sm text-paper-dim">{list.week_label}</p>

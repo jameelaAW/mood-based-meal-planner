@@ -1,0 +1,1855 @@
+[
+  {
+    "id": "stressed-soto-ayam",
+    "mood": "stressed",
+    "title": "Soto Ayam",
+    "description": "Turmeric chicken soup with rice cakes, beansprouts and a squeeze of lime.",
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": true,
+    "servings": 2,
+    "prep_minutes": 35,
+    "calories": 420,
+    "protein_g": 34,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "300 g",
+        "category": "Protein"
+      },
+      {
+        "name": "turmeric powder",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "lemongrass",
+        "qty": "1 stalk",
+        "category": "Produce"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 thumb",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "shallots",
+        "qty": "3",
+        "category": "Produce"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "800 ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "ketupat rice cakes",
+        "qty": "200 g",
+        "category": "Grains"
+      },
+      {
+        "name": "beansprouts",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "lime",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "fried shallots",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Blend the shallots, garlic and ginger into a rough paste.",
+      "Fry the paste in oil with turmeric and bruised lemongrass for 2 minutes until fragrant.",
+      "Add the stock and chicken, then simmer for 20 minutes until the chicken is cooked through.",
+      "Lift out the chicken, shred it, and season the broth with salt.",
+      "Divide rice cakes and blanched beansprouts between bowls, top with chicken and ladle over the hot broth.",
+      "Finish with fried shallots and a squeeze of lime."
+    ]
+  },
+  {
+    "id": "stressed-fish-porridge",
+    "mood": "stressed",
+    "title": "Teochew Fish Porridge",
+    "description": "Light rice porridge with tender fish slices, ginger and spring onion.",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": true,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 340,
+    "protein_g": 28,
+    "ingredients": [
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "white fish fillet",
+        "qty": "250 g",
+        "category": "Protein"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 thumb",
+        "category": "Produce"
+      },
+      {
+        "name": "spring onion",
+        "qty": "2 stalks",
+        "category": "Produce"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "1 litre",
+        "category": "Pantry"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame oil",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "white pepper",
+        "qty": "1 pinch",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Rinse the rice and simmer it in the stock for 20 minutes, stirring now and then, until soft and soupy.",
+      "Slice the fish thinly and toss with half the soy sauce and the white pepper.",
+      "Cut the ginger into fine matchsticks and add to the porridge.",
+      "Slide in the fish slices and cook gently for 3 minutes until just opaque.",
+      "Season with the remaining soy sauce, then top with spring onion and a few drops of sesame oil."
+    ]
+  },
+  {
+    "id": "stressed-steamed-egg-chicken",
+    "mood": "stressed",
+    "title": "Steamed Egg with Minced Chicken",
+    "description": "Silky savoury egg custard over minced chicken, served with warm rice.",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 410,
+    "protein_g": 30,
+    "ingredients": [
+      {
+        "name": "eggs",
+        "qty": "3",
+        "category": "Protein"
+      },
+      {
+        "name": "minced chicken",
+        "qty": "150 g",
+        "category": "Protein"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "250 ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame oil",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "spring onion",
+        "qty": "1 stalk",
+        "category": "Produce"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Season the minced chicken with half the soy sauce and spread it over the base of a shallow heatproof dish.",
+      "Beat the eggs gently with the stock (warm, not hot) and strain over the chicken.",
+      "Cover the dish with a plate and steam over low heat for 12-15 minutes until just set with a slight wobble.",
+      "Drizzle with the remaining soy sauce and sesame oil, scatter over spring onion, and serve with the rice."
+    ]
+  },
+  {
+    "id": "stressed-sayur-lodeh",
+    "mood": "stressed",
+    "title": "Sayur Lodeh with Rice",
+    "description": "Vegetables, tofu and tempeh simmered in a gentle coconut gravy.",
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 35,
+    "calories": 460,
+    "protein_g": 18,
+    "ingredients": [
+      {
+        "name": "cabbage",
+        "qty": "1/4 head",
+        "category": "Produce"
+      },
+      {
+        "name": "long beans",
+        "qty": "6",
+        "category": "Produce"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "firm tofu",
+        "qty": "200 g",
+        "category": "Protein"
+      },
+      {
+        "name": "tempeh",
+        "qty": "100 g",
+        "category": "Protein"
+      },
+      {
+        "name": "coconut milk",
+        "qty": "400 ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "turmeric powder",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "shallots",
+        "qty": "3",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "2 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "lemongrass",
+        "qty": "1 stalk",
+        "category": "Produce"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Pound or blend the shallots and garlic, then fry in oil with turmeric and bruised lemongrass until fragrant.",
+      "Pour in the coconut milk plus 200 ml water and bring to a gentle simmer.",
+      "Add the carrot and long beans and cook for 5 minutes, then add the cabbage, cubed tofu and tempeh.",
+      "Simmer for another 8-10 minutes until the vegetables are tender, and season with salt.",
+      "Serve ladled over the rice."
+    ]
+  },
+  {
+    "id": "sluggish-fish-bee-hoon",
+    "mood": "sluggish",
+    "title": "Sliced Fish Bee Hoon Soup",
+    "description": "Clear, gingery fish soup with rice vermicelli and leafy greens.",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": true,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 390,
+    "protein_g": 32,
+    "ingredients": [
+      {
+        "name": "white fish fillet",
+        "qty": "250 g",
+        "category": "Protein"
+      },
+      {
+        "name": "rice vermicelli",
+        "qty": "150 g",
+        "category": "Grains"
+      },
+      {
+        "name": "chye sim",
+        "qty": "1 bunch",
+        "category": "Produce"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 thumb",
+        "category": "Produce"
+      },
+      {
+        "name": "tomato",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "800 ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "evaporated milk",
+        "qty": "3 tbsp",
+        "category": "Dairy"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame oil",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "fried shallots",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Soak the vermicelli in hot water for 5 minutes, then drain.",
+      "Bring the stock to a simmer with sliced ginger and tomato wedges for 5 minutes.",
+      "Add the sliced fish and chye sim and cook for 3 minutes until the fish turns opaque.",
+      "Stir in the evaporated milk, soy sauce and sesame oil.",
+      "Divide the noodles between bowls, ladle over the soup and top with fried shallots."
+    ]
+  },
+  {
+    "id": "sluggish-black-pepper-beef",
+    "mood": "sluggish",
+    "title": "Black Pepper Beef Rice Bowl",
+    "description": "Quick-seared beef and capsicum in a punchy black pepper sauce over rice.",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": true,
+    "servings": 2,
+    "prep_minutes": 20,
+    "calories": 520,
+    "protein_g": 36,
+    "ingredients": [
+      {
+        "name": "beef sirloin",
+        "qty": "250 g",
+        "category": "Protein"
+      },
+      {
+        "name": "capsicum",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "black pepper",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "oyster sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cornflour",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Slice the beef thinly against the grain and toss with soy sauce and cornflour.",
+      "Sear the beef in hot oil for 1 minute per side, then set aside.",
+      "Stir-fry the onion, garlic and capsicum for 2 minutes until just softened.",
+      "Return the beef with the oyster sauce, coarsely cracked black pepper and a splash of water, and toss for 1 minute.",
+      "Serve straight over the rice."
+    ]
+  },
+  {
+    "id": "sluggish-nasi-goreng-kampung",
+    "mood": "sluggish",
+    "title": "Nasi Goreng Kampung",
+    "description": "Village-style fried rice with anchovies, kangkung, chilli and a fried egg.",
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 20,
+    "calories": 540,
+    "protein_g": 24,
+    "ingredients": [
+      {
+        "name": "cooked rice",
+        "qty": "3 cups",
+        "category": "Grains"
+      },
+      {
+        "name": "dried anchovies",
+        "qty": "3 tbsp",
+        "category": "Protein"
+      },
+      {
+        "name": "eggs",
+        "qty": "2",
+        "category": "Protein"
+      },
+      {
+        "name": "kangkung",
+        "qty": "1 bunch",
+        "category": "Produce"
+      },
+      {
+        "name": "shallots",
+        "qty": "3",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "2 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "red chilli",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "sambal belacan",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Fry the anchovies in oil until crisp, then lift out and set aside.",
+      "Pound the shallots, garlic and chilli, and fry the paste in the same oil with the sambal belacan until fragrant.",
+      "Add the rice and soy sauce and toss over high heat for 3 minutes.",
+      "Stir through the kangkung until just wilted.",
+      "Fry the eggs sunny-side up in a separate pan.",
+      "Serve the rice topped with an egg and the crispy anchovies."
+    ]
+  },
+  {
+    "id": "sluggish-thai-basil-chicken",
+    "mood": "sluggish",
+    "title": "Thai Basil Chicken with Fried Egg",
+    "description": "Fiery minced chicken stir-fry with holy basil, rice and a crispy egg.",
+    "cuisine": "Thai",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 15,
+    "calories": 510,
+    "protein_g": 35,
+    "ingredients": [
+      {
+        "name": "minced chicken",
+        "qty": "300 g",
+        "category": "Protein"
+      },
+      {
+        "name": "thai basil",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "4 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "red chilli",
+        "qty": "3",
+        "category": "Produce"
+      },
+      {
+        "name": "long beans",
+        "qty": "4",
+        "category": "Produce"
+      },
+      {
+        "name": "oyster sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "fish sauce",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sugar",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "eggs",
+        "qty": "2",
+        "category": "Protein"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Roughly chop the garlic and chilli and fry in hot oil for 30 seconds.",
+      "Add the minced chicken and break it up, cooking for 4 minutes until browned.",
+      "Add the chopped long beans, oyster sauce, soy sauce, fish sauce and sugar, and toss for 2 minutes.",
+      "Take off the heat and fold through the basil until wilted.",
+      "Fry the eggs until the edges are crisp and serve everything over rice."
+    ]
+  },
+  {
+    "id": "sad-tomato-egg-rice",
+    "mood": "sad",
+    "title": "Tomato Egg Rice Bowl",
+    "description": "Soft scrambled eggs in a sweet-tangy tomato sauce over steamed rice.",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": true,
+    "servings": 2,
+    "prep_minutes": 15,
+    "calories": 430,
+    "protein_g": 19,
+    "ingredients": [
+      {
+        "name": "eggs",
+        "qty": "4",
+        "category": "Protein"
+      },
+      {
+        "name": "tomato",
+        "qty": "3",
+        "category": "Produce"
+      },
+      {
+        "name": "spring onion",
+        "qty": "2 stalks",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "2 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "tomato ketchup",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sugar",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Beat the eggs with a pinch of salt and scramble in hot oil until just set, then tip out.",
+      "Fry the garlic, then add tomato wedges and cook for 3 minutes until they start to collapse.",
+      "Stir in the ketchup, sugar, soy sauce and 3 tbsp water and simmer for 2 minutes.",
+      "Return the eggs and fold gently through the sauce.",
+      "Spoon over the rice and top with spring onion."
+    ]
+  },
+  {
+    "id": "sad-chicken-macaroni-soup",
+    "mood": "sad",
+    "title": "Chicken Macaroni Soup",
+    "description": "The kopitiam classic: tender macaroni and shredded chicken in clear broth.",
+    "cuisine": "Singaporean",
+    "halal": true,
+    "is_free": true,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 400,
+    "protein_g": 30,
+    "ingredients": [
+      {
+        "name": "macaroni",
+        "qty": "150 g",
+        "category": "Grains"
+      },
+      {
+        "name": "chicken breast",
+        "qty": "250 g",
+        "category": "Protein"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "1 litre",
+        "category": "Pantry"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "2 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "spring onion",
+        "qty": "1 stalk",
+        "category": "Produce"
+      },
+      {
+        "name": "fried shallots",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "white pepper",
+        "qty": "1 pinch",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Bring the stock to a simmer with the smashed garlic.",
+      "Add the chicken breast and poach gently for 12 minutes, then lift out and shred.",
+      "Add the diced carrot and macaroni to the broth and cook for 8 minutes until tender.",
+      "Return the chicken and season with salt and white pepper.",
+      "Serve topped with fried shallots and spring onion."
+    ]
+  },
+  {
+    "id": "sad-ayam-masak-merah",
+    "mood": "sad",
+    "title": "Ayam Masak Merah with Rice",
+    "description": "Chicken braised in a rich, mildly spicy tomato-chilli gravy.",
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 40,
+    "calories": 560,
+    "protein_g": 36,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "400 g",
+        "category": "Protein"
+      },
+      {
+        "name": "tomato",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 thumb",
+        "category": "Produce"
+      },
+      {
+        "name": "chilli paste",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "tomato puree",
+        "qty": "3 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "tomato ketchup",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cinnamon stick",
+        "qty": "1",
+        "category": "Pantry"
+      },
+      {
+        "name": "star anise",
+        "qty": "1",
+        "category": "Pantry"
+      },
+      {
+        "name": "sugar",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Rub the chicken with salt and pan-fry in oil until golden on both sides, then set aside.",
+      "Blend the onion, garlic and ginger and fry the paste with the cinnamon and star anise for 3 minutes.",
+      "Add the chilli paste and cook until the oil separates, about 5 minutes.",
+      "Stir in the tomato puree, ketchup, sugar, tomato wedges and 150 ml water.",
+      "Return the chicken and simmer for 15 minutes until the gravy is thick and glossy, then serve with rice."
+    ]
+  },
+  {
+    "id": "sad-mee-rebus",
+    "mood": "sad",
+    "title": "Mee Rebus",
+    "description": "Yellow noodles in a thick, sweet-savoury sweet potato gravy with egg and lime.",
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 40,
+    "calories": 520,
+    "protein_g": 26,
+    "ingredients": [
+      {
+        "name": "yellow noodles",
+        "qty": "300 g",
+        "category": "Grains"
+      },
+      {
+        "name": "sweet potato",
+        "qty": "1 medium",
+        "category": "Produce"
+      },
+      {
+        "name": "beef mince",
+        "qty": "150 g",
+        "category": "Protein"
+      },
+      {
+        "name": "shallots",
+        "qty": "4",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "curry powder",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "fermented soybean paste",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "beef stock",
+        "qty": "600 ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "eggs",
+        "qty": "2",
+        "category": "Protein"
+      },
+      {
+        "name": "firm tofu",
+        "qty": "100 g",
+        "category": "Protein"
+      },
+      {
+        "name": "beansprouts",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "green chilli",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "lime",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Boil the sweet potato until soft, then mash smooth. Hard-boil the eggs.",
+      "Blend the shallots and garlic and fry in oil with the curry powder and soybean paste until fragrant.",
+      "Add the beef mince and brown it, then pour in the stock.",
+      "Whisk in the mashed sweet potato and simmer for 10 minutes until the gravy thickens.",
+      "Blanch the noodles and beansprouts and divide between bowls.",
+      "Ladle over the gravy and top with halved egg, fried tofu cubes, sliced green chilli and lime."
+    ]
+  },
+  {
+    "id": "happy-roti-john",
+    "mood": "happy",
+    "title": "Roti John",
+    "description": "Pan-toasted baguette with a spiced egg and minced chicken omelette.",
+    "cuisine": "Singaporean",
+    "halal": true,
+    "is_free": true,
+    "servings": 2,
+    "prep_minutes": 20,
+    "calories": 540,
+    "protein_g": 29,
+    "ingredients": [
+      {
+        "name": "baguette",
+        "qty": "1",
+        "category": "Grains"
+      },
+      {
+        "name": "eggs",
+        "qty": "3",
+        "category": "Protein"
+      },
+      {
+        "name": "minced chicken",
+        "qty": "150 g",
+        "category": "Protein"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "2 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "curry powder",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "chilli sauce",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "mayonnaise",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cucumber",
+        "qty": "1/2",
+        "category": "Produce"
+      },
+      {
+        "name": "butter",
+        "qty": "1 tbsp",
+        "category": "Dairy"
+      }
+    ],
+    "steps": [
+      "Fry the diced onion, garlic and minced chicken with the curry powder until cooked, then cool slightly.",
+      "Beat the eggs and stir in the chicken mixture with a pinch of salt.",
+      "Split the baguette lengthways without cutting all the way through.",
+      "Melt the butter in a wide pan, pour in the egg mixture and press the open baguette cut-side down onto it.",
+      "Cook for 3 minutes until set, then flip and toast the crust for 1 minute.",
+      "Fill with chilli sauce, mayonnaise and sliced cucumber, then slice and serve."
+    ]
+  },
+  {
+    "id": "happy-ayam-penyet",
+    "mood": "happy",
+    "title": "Ayam Penyet",
+    "description": "Crispy smashed fried chicken with fiery sambal, tofu, tempeh and rice.",
+    "cuisine": "Indonesian",
+    "halal": true,
+    "is_free": true,
+    "servings": 2,
+    "prep_minutes": 35,
+    "calories": 620,
+    "protein_g": 40,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "400 g",
+        "category": "Protein"
+      },
+      {
+        "name": "turmeric powder",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "coriander powder",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "red chilli",
+        "qty": "4",
+        "category": "Produce"
+      },
+      {
+        "name": "tomato",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "shallots",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "lime",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "firm tofu",
+        "qty": "100 g",
+        "category": "Protein"
+      },
+      {
+        "name": "tempeh",
+        "qty": "100 g",
+        "category": "Protein"
+      },
+      {
+        "name": "cucumber",
+        "qty": "1/2",
+        "category": "Produce"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "4 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Simmer the chicken for 15 minutes in just enough water with turmeric, coriander, crushed garlic and salt.",
+      "Drain and pat dry, then shallow-fry until deep golden and crisp. Fry the tofu and tempeh in the same oil.",
+      "Fry the chilli, shallots and tomato until soft, then pound with salt and lime juice into a coarse sambal.",
+      "Lightly smash the chicken with a pestle so it cracks open.",
+      "Serve with the sambal, tofu, tempeh, cucumber and rice."
+    ]
+  },
+  {
+    "id": "happy-prawn-hokkien-mee",
+    "mood": "happy",
+    "title": "Halal Prawn Hokkien Mee",
+    "description": "Wok-braised yellow noodles and bee hoon in prawn stock, with squid and lime.",
+    "cuisine": "Singaporean",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 35,
+    "calories": 560,
+    "protein_g": 34,
+    "ingredients": [
+      {
+        "name": "yellow noodles",
+        "qty": "200 g",
+        "category": "Grains"
+      },
+      {
+        "name": "rice vermicelli",
+        "qty": "100 g",
+        "category": "Grains"
+      },
+      {
+        "name": "prawns",
+        "qty": "250 g",
+        "category": "Protein"
+      },
+      {
+        "name": "squid",
+        "qty": "150 g",
+        "category": "Protein"
+      },
+      {
+        "name": "eggs",
+        "qty": "2",
+        "category": "Protein"
+      },
+      {
+        "name": "beansprouts",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "4 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "chives",
+        "qty": "1 bunch",
+        "category": "Produce"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "400 ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "fish sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "lime",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "sambal belacan",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Peel the prawns and simmer the shells and heads in the stock for 10 minutes, then strain.",
+      "Fry the garlic in hot oil, scramble in the eggs, then add both noodles and toss over high heat.",
+      "Pour in the prawn stock with the fish sauce and soy sauce, cover and braise for 4 minutes.",
+      "Add the prawns and sliced squid and cook for 3 minutes until just done.",
+      "Toss through the beansprouts and chives until the noodles are saucy but not soupy.",
+      "Serve with sambal and a wedge of lime."
+    ]
+  },
+  {
+    "id": "happy-japchae-beef",
+    "mood": "happy",
+    "title": "Japchae with Beef",
+    "description": "Glossy sweet potato glass noodles with beef and colourful vegetables.",
+    "cuisine": "Korean",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 480,
+    "protein_g": 26,
+    "ingredients": [
+      {
+        "name": "sweet potato glass noodles",
+        "qty": "150 g",
+        "category": "Grains"
+      },
+      {
+        "name": "beef sirloin",
+        "qty": "200 g",
+        "category": "Protein"
+      },
+      {
+        "name": "baby spinach",
+        "qty": "2 cups",
+        "category": "Produce"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "capsicum",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "shiitake mushrooms",
+        "qty": "4",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "3 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sugar",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame seeds",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Boil the glass noodles for 6 minutes, rinse under cold water and snip into shorter lengths.",
+      "Mix the soy sauce, sesame oil, sugar and minced garlic into a sauce.",
+      "Slice the beef thinly and marinate in 1 tbsp of the sauce.",
+      "Stir-fry the onion, carrot, capsicum and mushrooms in oil for 3 minutes, then set aside.",
+      "Sear the beef for 2 minutes, add the spinach to wilt, then return the vegetables.",
+      "Add the noodles and remaining sauce, toss until glossy and finish with sesame seeds."
+    ]
+  },
+  {
+    "id": "anxious-miso-tofu-soup",
+    "mood": "anxious",
+    "title": "Tofu & Spinach Miso Soup with Rice",
+    "description": "A gentle bowl of miso broth, silken tofu and greens with steamed rice.",
+    "cuisine": "Japanese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 15,
+    "calories": 330,
+    "protein_g": 20,
+    "ingredients": [
+      {
+        "name": "silken tofu",
+        "qty": "300 g",
+        "category": "Protein"
+      },
+      {
+        "name": "baby spinach",
+        "qty": "2 cups",
+        "category": "Produce"
+      },
+      {
+        "name": "miso paste (alcohol-free)",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "dried wakame",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "spring onion",
+        "qty": "2 stalks",
+        "category": "Produce"
+      },
+      {
+        "name": "shiitake mushrooms",
+        "qty": "4",
+        "category": "Produce"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Bring 700 ml water to a gentle simmer with the sliced mushrooms for 5 minutes.",
+      "Add the wakame and cubed tofu and warm through for 2 minutes.",
+      "Turn off the heat and dissolve the miso in a ladle of the broth before stirring it back in.",
+      "Stir in the spinach until just wilted.",
+      "Top with spring onion and serve alongside the rice."
+    ]
+  },
+  {
+    "id": "anxious-steamed-fish-ginger",
+    "mood": "anxious",
+    "title": "Steamed Fish with Ginger & Spring Onion",
+    "description": "Delicate steamed fish dressed with ginger, soy and hot oil.",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 420,
+    "protein_g": 36,
+    "ingredients": [
+      {
+        "name": "white fish fillet",
+        "qty": "350 g",
+        "category": "Protein"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 thumb",
+        "category": "Produce"
+      },
+      {
+        "name": "spring onion",
+        "qty": "3 stalks",
+        "category": "Produce"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame oil",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sugar",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "chye sim",
+        "qty": "1 bunch",
+        "category": "Produce"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Lay the fish on a plate over half the ginger slices and steam for 8-10 minutes until it flakes easily.",
+      "Blanch the chye sim for 1 minute and drain.",
+      "Mix the soy sauce, sugar and sesame oil with 1 tbsp hot water.",
+      "Pour off the steaming liquid, then top the fish with shredded ginger and spring onion.",
+      "Heat the cooking oil until shimmering, pour it over the aromatics, add the sauce and serve with rice and greens."
+    ]
+  },
+  {
+    "id": "anxious-dhal-chapati",
+    "mood": "anxious",
+    "title": "Dhal Curry with Chapati",
+    "description": "Creamy yellow lentils tempered with cumin and garlic, scooped up with chapati.",
+    "cuisine": "Indian",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 35,
+    "calories": 470,
+    "protein_g": 22,
+    "ingredients": [
+      {
+        "name": "yellow lentils",
+        "qty": "1 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "tomato",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 thumb",
+        "category": "Produce"
+      },
+      {
+        "name": "turmeric powder",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cumin seeds",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "curry leaves",
+        "qty": "1 sprig",
+        "category": "Produce"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "chapati",
+        "qty": "4",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Rinse the lentils and simmer with turmeric, diced carrot and 700 ml water for 25 minutes until soft.",
+      "Mash lightly with the back of a spoon and season with salt.",
+      "Heat the oil and fry the cumin seeds and curry leaves until they crackle.",
+      "Add the sliced onion, garlic and ginger and cook until golden, then add the chopped tomato.",
+      "Pour this tempering into the lentils and simmer for 3 more minutes.",
+      "Warm the chapati in a dry pan and serve alongside."
+    ]
+  },
+  {
+    "id": "anxious-yong-tau-foo",
+    "mood": "anxious",
+    "title": "Yong Tau Foo Clear Soup",
+    "description": "Fish-paste-stuffed tofu and vegetables in a light soybean broth.",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 360,
+    "protein_g": 27,
+    "ingredients": [
+      {
+        "name": "fish paste",
+        "qty": "200 g",
+        "category": "Protein"
+      },
+      {
+        "name": "firm tofu",
+        "qty": "200 g",
+        "category": "Protein"
+      },
+      {
+        "name": "okra",
+        "qty": "4",
+        "category": "Produce"
+      },
+      {
+        "name": "eggplant",
+        "qty": "1 small",
+        "category": "Produce"
+      },
+      {
+        "name": "red chilli",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "chye sim",
+        "qty": "1 bunch",
+        "category": "Produce"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "1 litre",
+        "category": "Pantry"
+      },
+      {
+        "name": "dried anchovies",
+        "qty": "2 tbsp",
+        "category": "Protein"
+      },
+      {
+        "name": "rice vermicelli",
+        "qty": "100 g",
+        "category": "Grains"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "fried shallots",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Simmer the anchovies in the stock for 10 minutes, then strain.",
+      "Cut the tofu into thick triangles and slit each piece, plus the okra, eggplant slices and chilli.",
+      "Stuff each pocket with fish paste.",
+      "Poach the stuffed pieces in the broth for 6-8 minutes until the fish paste is firm.",
+      "Soak the vermicelli in hot water for 5 minutes and blanch the chye sim.",
+      "Serve noodles and greens in bowls with the stuffed pieces, broth, soy sauce and fried shallots."
+    ]
+  },
+  {
+    "id": "unfocused-teriyaki-salmon-soba",
+    "mood": "unfocused",
+    "title": "Teriyaki Salmon Soba",
+    "description": "Pan-seared salmon in a honey-soy glaze over chilled soba and edamame.",
+    "cuisine": "Japanese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 20,
+    "calories": 540,
+    "protein_g": 38,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "qty": "300 g",
+        "category": "Protein"
+      },
+      {
+        "name": "soba noodles",
+        "qty": "160 g",
+        "category": "Grains"
+      },
+      {
+        "name": "edamame",
+        "qty": "1/2 cup",
+        "category": "Protein"
+      },
+      {
+        "name": "cucumber",
+        "qty": "1/2",
+        "category": "Produce"
+      },
+      {
+        "name": "spring onion",
+        "qty": "2 stalks",
+        "category": "Produce"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "3 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 thumb",
+        "category": "Produce"
+      },
+      {
+        "name": "sesame oil",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame seeds",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the soba for 4 minutes, rinse under cold water and drain well.",
+      "Mix the soy sauce, honey and grated ginger into a glaze (no mirin or sake needed).",
+      "Sear the salmon skin-side down in oil for 4 minutes, flip and cook 2 minutes more.",
+      "Pour in two-thirds of the glaze and let it bubble until sticky.",
+      "Toss the soba with the remaining glaze, sesame oil, edamame and cucumber.",
+      "Top with the salmon, spring onion and sesame seeds."
+    ]
+  },
+  {
+    "id": "unfocused-sambal-egg-tempeh",
+    "mood": "unfocused",
+    "title": "Sambal Egg & Tempeh Brown Rice Bowl",
+    "description": "Jammy eggs and crisp tempeh in sambal tumis over nutty brown rice.",
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 500,
+    "protein_g": 27,
+    "ingredients": [
+      {
+        "name": "eggs",
+        "qty": "4",
+        "category": "Protein"
+      },
+      {
+        "name": "tempeh",
+        "qty": "200 g",
+        "category": "Protein"
+      },
+      {
+        "name": "brown rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "long beans",
+        "qty": "6",
+        "category": "Produce"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "2 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "chilli paste",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "tomato",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "tamarind paste",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sugar",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the brown rice. Boil the eggs for 7 minutes, cool and peel.",
+      "Slice the tempeh and pan-fry in oil until golden, then set aside.",
+      "Fry the sliced onion and garlic, add the chilli paste and cook for 5 minutes until the oil separates.",
+      "Stir in the chopped tomato, tamarind, sugar and a splash of water and simmer for 3 minutes.",
+      "Add the long beans, tempeh and halved eggs and coat in the sambal.",
+      "Serve over the brown rice."
+    ]
+  },
+  {
+    "id": "unfocused-assam-pedas",
+    "mood": "unfocused",
+    "title": "Assam Pedas Fish",
+    "description": "Mackerel in a hot-and-sour tamarind gravy with okra and tomato.",
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 440,
+    "protein_g": 34,
+    "ingredients": [
+      {
+        "name": "mackerel",
+        "qty": "400 g",
+        "category": "Protein"
+      },
+      {
+        "name": "okra",
+        "qty": "6",
+        "category": "Produce"
+      },
+      {
+        "name": "tomato",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "shallots",
+        "qty": "4",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 thumb",
+        "category": "Produce"
+      },
+      {
+        "name": "lemongrass",
+        "qty": "1 stalk",
+        "category": "Produce"
+      },
+      {
+        "name": "chilli paste",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "tamarind paste",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "turmeric powder",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sugar",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Blend the shallots, garlic and ginger and fry in oil with the chilli paste, turmeric and bruised lemongrass.",
+      "Cook for 5 minutes until fragrant and the oil separates.",
+      "Add the tamarind mixed with 500 ml water and bring to a simmer.",
+      "Add the okra and tomato wedges and cook for 4 minutes.",
+      "Slide in the mackerel and simmer for 6-8 minutes until cooked through, season with sugar and salt, and serve with rice."
+    ]
+  },
+  {
+    "id": "unfocused-thunder-tea-rice",
+    "mood": "unfocused",
+    "title": "Thunder Tea Rice Bowl",
+    "description": "Hakka lei cha: brown rice with chopped greens, tofu, peanuts and a herby tea broth.",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 35,
+    "calories": 460,
+    "protein_g": 24,
+    "ingredients": [
+      {
+        "name": "brown rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "long beans",
+        "qty": "6",
+        "category": "Produce"
+      },
+      {
+        "name": "chye sim",
+        "qty": "1 bunch",
+        "category": "Produce"
+      },
+      {
+        "name": "cabbage",
+        "qty": "1/4 head",
+        "category": "Produce"
+      },
+      {
+        "name": "firm tofu",
+        "qty": "200 g",
+        "category": "Protein"
+      },
+      {
+        "name": "roasted peanuts",
+        "qty": "4 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "dried anchovies",
+        "qty": "2 tbsp",
+        "category": "Protein"
+      },
+      {
+        "name": "thai basil",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "mint leaves",
+        "qty": "1/2 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "green tea leaves",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame seeds",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "cooking oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Cook the brown rice.",
+      "Finely chop the long beans, chye sim and cabbage and stir-fry each briefly with a little garlic and salt.",
+      "Dice and pan-fry the tofu until golden, and fry the anchovies until crisp.",
+      "Blend the basil, mint, tea leaves, sesame seeds and half the peanuts with 300 ml hot water into a green broth.",
+      "Arrange the vegetables, tofu, anchovies and remaining peanuts over the rice.",
+      "Serve the tea broth on the side to pour over."
+    ]
+  }
+]
