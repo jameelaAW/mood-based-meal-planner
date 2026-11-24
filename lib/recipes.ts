@@ -38,3 +38,23 @@ export function recipesForMood(mood: string, tier: PlanTier): Recipe[] {
 export function lockedCountForMood(mood: string, tier: PlanTier): number {
   return ALL_RECIPES.filter((r) => r.mood === mood && !canAccessRecipe(r, tier)).length;
 }
+
+export interface CatalogStats {
+  /** Recipes on the free tier (2 per free mood). */
+  free: number;
+  /** Every recipe — what Full Access unlocks. */
+  total: number;
+  /** Recipes per mood with Full Access. */
+  perMood: number;
+  /** Free recipes per free mood. */
+  freePerMood: number;
+}
+
+/** Counts for upgrade copy, derived from recipes.json so they can't drift. */
+export function catalogStats(): CatalogStats {
+  const free = recipesForTier("free").length;
+  const total = ALL_RECIPES.length;
+  const moods = new Set(ALL_RECIPES.map((r) => r.mood)).size || 1;
+  const freeMoods = new Set(recipesForTier("free").map((r) => r.mood)).size || 1;
+  return { free, total, perMood: Math.round(total / moods), freePerMood: Math.round(free / freeMoods) };
+}

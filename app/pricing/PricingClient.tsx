@@ -1,5 +1,7 @@
 "use client";
 
+import type { CatalogStats } from "@/lib/recipes";
+
 import { useState } from "react";
 import type { PlanTier } from "@/lib/moods";
 
@@ -9,10 +11,12 @@ export default function PricingClient({
   currentTier,
   userEmail,
   payhipUrl,
+  stats,
 }: {
   currentTier: PlanTier;
   userEmail: string | null;
   payhipUrl: string | null;
+  stats: CatalogStats;
 }) {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -61,7 +65,7 @@ export default function PricingClient({
             <p className="mt-1 text-2xl font-medium">SGD 0</p>
             <ul className="mt-4 flex-1 space-y-2 text-sm text-paper-dim">
               <li>• 4 moods</li>
-              <li>• 8 recipes — 2 per mood</li>
+              <li>• {stats.free} recipes — {stats.freePerMood} per mood</li>
               <li>• 3 meal ideas per day</li>
               <li>• Weekly plan, cook from what you have & shopping lists</li>
             </ul>
@@ -78,7 +82,9 @@ export default function PricingClient({
             <p className="mt-1 text-2xl font-medium">SGD 12 <span className="text-sm font-normal text-paper-dim">one-time</span></p>
             <ul className="mt-4 flex-1 space-y-2 text-sm text-paper-dim">
               <li>• All 6 moods</li>
-              <li>• All 24 recipes — 4 per mood (16 more than Free)</li>
+              <li>
+                • All {stats.total} recipes — {stats.perMood} per mood ({stats.total - stats.free} more than Free)
+              </li>
               <li>• Unlimited meal ideas per day</li>
               <li>• Describe any mood in your own words</li>
               <li>• Yours forever — no subscription</li>

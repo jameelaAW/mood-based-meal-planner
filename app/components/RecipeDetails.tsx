@@ -4,6 +4,23 @@ import type { Recipe } from "@/lib/recipe-utils";
 export default function RecipeDetails({ recipe, missing }: { recipe: Recipe; missing?: string[] }) {
   return (
     <div className="space-y-4 border-t border-paper-dim/15 pt-4">
+      {recipe.image_url && (
+        <figure>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={recipe.image_url} alt={recipe.title} loading="lazy" className="h-44 w-full rounded-lg object-cover" />
+          {recipe.image_credit && (
+            <figcaption className="mt-1 text-right text-[10px] text-paper-dim/70">
+              {recipe.image_credit_url ? (
+                <a href={recipe.image_credit_url} target="_blank" rel="noopener noreferrer" className="hover:text-paper">
+                  Photo: {recipe.image_credit}
+                </a>
+              ) : (
+                <>Photo: {recipe.image_credit}</>
+              )}
+            </figcaption>
+          )}
+        </figure>
+      )}
       <div>
         <h4 className="mb-2 font-mono text-xs uppercase tracking-wider text-paper-dim">
           Ingredients · serves {recipe.servings}

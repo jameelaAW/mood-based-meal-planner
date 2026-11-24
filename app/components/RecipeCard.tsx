@@ -29,7 +29,26 @@ export default function RecipeCard({
         // Recipe photos come from Unsplash URLs stored in the DB (docs/ARCHITECTURE.md).
         // eslint-disable-next-line @next/next/no-img-element
         <div className="relative">
-          <img src={meal.image_url} alt={meal.title} className="h-56 w-full object-cover" />
+          <img
+            src={meal.image_url}
+            alt={meal.title}
+            className="h-56 w-full object-cover"
+            onError={(e) => {
+              // A photo host being down shouldn't leave a broken-image icon.
+              (e.currentTarget.parentElement as HTMLElement).style.display = "none";
+            }}
+          />
+          {meal.image_credit && (
+            <span className="absolute bottom-0 right-0 max-w-[85%] truncate rounded-tl-md bg-ink/70 px-2 py-0.5 text-[10px] text-paper-dim backdrop-blur">
+              {meal.image_credit_url ? (
+                <a href={meal.image_credit_url} target="_blank" rel="noopener noreferrer" className="hover:text-paper">
+                  Photo: {meal.image_credit}
+                </a>
+              ) : (
+                <>Photo: {meal.image_credit}</>
+              )}
+            </span>
+          )}
           {onToggleSave && (
             <button
               onClick={onToggleSave}

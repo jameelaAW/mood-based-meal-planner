@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import AuthNav from "@/app/components/AuthNav";
 import FeatureNav from "@/app/components/FeatureNav";
 import RecipeDetails from "@/app/components/RecipeDetails";
+import RecipePhoto from "@/app/components/RecipePhoto";
 import { MOOD_OPTIONS, moodAccent, moodOptionsForTier, type PlanTier } from "@/lib/moods";
 import {
   DAY_KEYS,
@@ -238,8 +239,13 @@ export default function PlanClient({
 
                 {recipe && entry ? (
                   <div className="mt-4">
-                    <p className="font-medium text-paper">{recipe.title}</p>
-                    <p className="mt-0.5 text-sm text-paper-dim">{recipe.description}</p>
+                    <div className="flex items-start gap-3">
+                      <RecipePhoto recipe={recipe} />
+                      <div className="min-w-0">
+                        <p className="font-medium text-paper">{recipe.title}</p>
+                        <p className="mt-0.5 text-sm text-paper-dim">{recipe.description}</p>
+                      </div>
+                    </div>
                     <p className="mt-2 font-mono text-xs text-paper-dim">
                       {recipe.calories} cal · {recipe.protein_g}g protein · {recipe.prep_minutes} min · {recipe.cuisine}
                     </p>

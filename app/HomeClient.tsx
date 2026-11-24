@@ -9,11 +9,12 @@ import FeatureNav from "@/app/components/FeatureNav";
 import { moodAccent, moodOptionsForTier, type PlanTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 import { FREE_DAILY_LIMIT } from "@/lib/limits";
+import type { CatalogStats } from "@/lib/recipes";
 import { PAYHIP_PRODUCT_URL } from "@/lib/payhip-url";
 
 type Status = "idle" | "loading" | "ready" | "no_match" | "error" | "limit";
 
-export default function HomeClient({ tier }: { tier: PlanTier }) {
+export default function HomeClient({ tier, stats }: { tier: PlanTier; stats: CatalogStats }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [status, setStatus] = useState<Status>("idle");
@@ -167,11 +168,12 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
         />
         {tier === "free" && (
           <p className="mt-3 text-center text-xs text-paper-dim">
-            Free: 4 moods, 2 recipes per mood, {FREE_DAILY_LIMIT} meal ideas a day.{" "}
+            Free: 4 moods, {stats.freePerMood} recipes per mood, {FREE_DAILY_LIMIT} meal ideas a day.{" "}
             <a href="/pricing" className="text-brand hover:underline">
               Full Access (SGD 12 one-time)
             </a>{" "}
-            adds 2 more moods (Anxious, Unfocused), 16 more recipes and describing your own mood.
+            adds 2 more moods (Anxious, Unfocused), {stats.total - stats.free} more recipes and describing your own
+            mood.
           </p>
         )}
 
@@ -194,7 +196,7 @@ export default function HomeClient({ tier }: { tier: PlanTier }) {
             <p className="text-lg font-semibold">You&rsquo;ve used today&rsquo;s free meal ideas 🍲</p>
             <p className="mt-2 text-sm text-paper-dim">
               Free ideas reset at midnight. Want more right now? Full Access unlocks unlimited
-              ideas, all 6 moods and all 24 recipes.
+              ideas, all 6 moods and all {stats.total} recipes.
             </p>
             <a
               href={PAYHIP_PRODUCT_URL}

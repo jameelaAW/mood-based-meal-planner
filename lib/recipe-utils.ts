@@ -11,6 +11,11 @@ export interface Recipe {
   title: string;
   description: string;
   why_it_fits: string;
+  /** Verified photo of this dish (Wikimedia Commons or Unsplash). */
+  image_url: string | null;
+  /** Photo credit shown under the image, e.g. "Name / Wikimedia Commons, CC BY-SA 4.0". */
+  image_credit: string | null;
+  image_credit_url: string | null;
   cuisine: string;
   halal: boolean;
   is_free: boolean;
@@ -18,8 +23,13 @@ export interface Recipe {
   prep_minutes: number;
   calories: number;
   protein_g: number;
+  /** Only on recipes from the original catalog. */
+  carbs_g?: number | null;
+  fat_g?: number | null;
   ingredients: Ingredient[];
   steps: string[];
+  /** "original-catalog" for meals brought back from the first version of the app. */
+  source?: string;
 }
 
 /** What a free visitor is allowed to know about a recipe they can't open. */

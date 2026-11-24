@@ -2,6 +2,7 @@ import PricingClient from "@/app/pricing/PricingClient";
 import { createClient } from "@/lib/supabase/server";
 import { getCurrentUserTier } from "@/lib/auth";
 import { PAYHIP_PRODUCT_URL } from "@/lib/payhip";
+import { catalogStats } from "@/lib/recipes";
 
 export default async function PricingPage() {
   const tier = await getCurrentUserTier();
@@ -15,6 +16,7 @@ export default async function PricingPage() {
       currentTier={tier}
       userEmail={user?.email ?? null}
       payhipUrl={PAYHIP_PRODUCT_URL}
+      stats={catalogStats()}
     />
   );
 }

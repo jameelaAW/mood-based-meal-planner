@@ -28,6 +28,9 @@ export interface Meal {
   recipe_id?: string;
   /** Numbered method steps from data/recipes.json; preferred over `instructions`. */
   steps?: string[];
+  /** Photo credit for image_url (licence attribution), when known. */
+  image_credit?: string | null;
+  image_credit_url?: string | null;
 }
 
 export interface MoodCheckin {

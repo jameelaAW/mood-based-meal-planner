@@ -5,6 +5,7 @@ import Link from "next/link";
 import AuthNav from "@/app/components/AuthNav";
 import FeatureNav from "@/app/components/FeatureNav";
 import RecipeDetails from "@/app/components/RecipeDetails";
+import RecipePhoto from "@/app/components/RecipePhoto";
 import { MOOD_OPTIONS, moodAccent, type PlanTier } from "@/lib/moods";
 import {
   DAY_KEYS,
@@ -228,7 +229,8 @@ export default function CookClient({
                   return (
                     <li key={recipe.id} className="rounded-2xl border border-paper-dim/15 bg-ink-soft p-4">
                       <div className="flex items-start justify-between gap-3">
-                        <div>
+                        <RecipePhoto recipe={recipe} size={56} />
+                        <div className="min-w-0 flex-1">
                           <h3 className="font-medium text-paper">{recipe.title}</h3>
                           <p className="mt-0.5 font-mono text-xs text-paper-dim">
                             {mood ? `${mood.emoji} ${mood.name} · ` : ""}

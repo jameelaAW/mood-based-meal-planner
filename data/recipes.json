@@ -5,6 +5,9 @@
     "title": "Soto Ayam",
     "description": "Turmeric chicken soup with rice cakes, beansprouts and a squeeze of lime.",
     "why_it_fits": "A warm, turmeric-scented broth slows you down, and lean chicken keeps you steady without feeling heavy.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Soto_Ayam_home-made.JPG/960px-Soto_Ayam_home-made.JPG",
+    "image_credit": "Gunawan Kartapranata / Wikimedia Commons, CC BY-SA 3.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Soto_Ayam_home-made.JPG",
     "cuisine": "Malay",
     "halal": true,
     "is_free": true,
@@ -89,6 +92,9 @@
     "title": "Teochew Fish Porridge",
     "description": "Light rice porridge with tender fish slices, ginger and spring onion.",
     "why_it_fits": "Soft, plain and easy to digest — a bowl that asks nothing of you on a day that already asks a lot.",
+    "image_url": "https://images.unsplash.com/photo-1590133377962-a18b71fd78ea?w=960&q=80&auto=format&fit=crop",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": "https://unsplash.com/photos/soup-with-sliced-lemon-on-white-ceramic-bowl-CyLk-M8YM-s",
     "cuisine": "Chinese",
     "halal": true,
     "is_free": true,
@@ -152,6 +158,9 @@
     "title": "Steamed Egg with Minced Chicken",
     "description": "Silky savoury egg custard over minced chicken, served with warm rice.",
     "why_it_fits": "Silky, gentle and protein-rich; simple comfort food that settles rather than stimulates.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/%E8%92%B8%E6%B0%B4%E8%9B%8B_-_%E5%9F%BA%E9%9A%86%E8%8C%B6%E9%A4%90%E5%BB%B3.jpg/960px-%E8%92%B8%E6%B0%B4%E8%9B%8B_-_%E5%9F%BA%E9%9A%86%E8%8C%B6%E9%A4%90%E5%BB%B3.jpg",
+    "image_credit": "Andy Li / Wikimedia Commons, CC0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:%E8%92%B8%E6%B0%B4%E8%9B%8B_-_%E5%9F%BA%E9%9A%86%E8%8C%B6%E9%A4%90%E5%BB%B3.jpg",
     "cuisine": "Chinese",
     "halal": true,
     "is_free": false,
@@ -210,6 +219,9 @@
     "title": "Sayur Lodeh with Rice",
     "description": "Vegetables, tofu and tempeh simmered in a gentle coconut gravy.",
     "why_it_fits": "A mild coconut gravy full of vegetables — nourishing, unhurried and calming to cook.",
+    "image_url": "https://images.unsplash.com/photo-1559561723-c3f4195835db?w=960&q=80&auto=format&fit=crop",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": "https://unsplash.com/photos/vegetable-soup-in-gray-bowl-NfoGcdYy_sw",
     "cuisine": "Malay",
     "halal": true,
     "is_free": false,
@@ -294,6 +306,9 @@
     "title": "Sliced Fish Bee Hoon Soup",
     "description": "Clear, gingery fish soup with rice vermicelli and leafy greens.",
     "why_it_fits": "Light protein and a gingery broth lift your energy without the heaviness that makes a slump worse.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Fish_soup_bee_hoon_at_Food_Junction%2C_May_26%2C_2013.jpg",
+    "image_credit": "Bonkers The Clown / Wikimedia Commons, CC BY-SA 3.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Fish_soup_bee_hoon_at_Food_Junction%2C_May_26%2C_2013.jpg",
     "cuisine": "Chinese",
     "halal": true,
     "is_free": true,
@@ -367,6 +382,9 @@
     "title": "Black Pepper Beef Rice Bowl",
     "description": "Quick-seared beef and capsicum in a punchy black pepper sauce over rice.",
     "why_it_fits": "Iron-rich beef and a peppery kick wake you up, with rice for steady fuel.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/%E9%BB%91%E6%A4%92%E7%89%9B%E8%82%89%E9%A5%AD_Black_Pepper_Beef_on_rice_-_Hongyun_Chinese_Restaurant_AUD8.50_%283450250738%29.jpg/960px-%E9%BB%91%E6%A4%92%E7%89%9B%E8%82%89%E9%A5%AD_Black_Pepper_Beef_on_rice_-_Hongyun_Chinese_Restaurant_AUD8.50_%283450250738%29.jpg",
+    "image_credit": "Alpha from Melbourne, Australia / Wikimedia Commons, CC BY-SA 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:%E9%BB%91%E6%A4%92%E7%89%9B%E8%82%89%E9%A5%AD_Black_Pepper_Beef_on_rice_-_Hongyun_Chinese_Restaurant_AUD8.50_%283450250738%29.jpg",
     "cuisine": "Chinese",
     "halal": true,
     "is_free": true,
@@ -441,6 +459,9 @@
     "title": "Nasi Goreng Kampung",
     "description": "Village-style fried rice with anchovies, kangkung, chilli and a fried egg.",
     "why_it_fits": "Bold sambal heat, crunchy anchovies and an egg on top — a plate with enough punch to shake off a slow day.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/MOZA_Restaurant_KL_%282022%29_-_nasi_goreng_kampung.jpg/960px-MOZA_Restaurant_KL_%282022%29_-_nasi_goreng_kampung.jpg",
+    "image_credit": "Chainwit. / Wikimedia Commons, CC BY 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:MOZA_Restaurant_KL_%282022%29_-_nasi_goreng_kampung.jpg",
     "cuisine": "Malay",
     "halal": true,
     "is_free": false,
@@ -515,6 +536,9 @@
     "title": "Thai Basil Chicken with Fried Egg",
     "description": "Fiery minced chicken stir-fry with holy basil, rice and a crispy egg.",
     "why_it_fits": "Chilli, basil and plenty of protein, ready in 15 minutes when you have little energy to cook.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/DFC_0804_A_plate_of_steamed_white_rice_topped_with_a_runny_fried_egg_served_alongside_stir-fried_minced_chicken_with_basil_and_sliced_cucumber.jpg/960px-DFC_0804_A_plate_of_steamed_white_rice_topped_with_a_runny_fried_egg_served_alongside_stir-fried_minced_chicken_with_basil_and_sliced_cucumber.jpg",
+    "image_credit": "PattayaPatrol / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:DFC_0804_A_plate_of_steamed_white_rice_topped_with_a_runny_fried_egg_served_alongside_stir-fried_minced_chicken_with_basil_and_sliced_cucumber.jpg",
     "cuisine": "Thai",
     "halal": true,
     "is_free": false,
@@ -599,6 +623,9 @@
     "title": "Tomato Egg Rice Bowl",
     "description": "Soft scrambled eggs in a sweet-tangy tomato sauce over steamed rice.",
     "why_it_fits": "Sweet, soft and familiar — the kind of home cooking that feels like being looked after.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/%E7%95%AA%E8%8C%84%E7%82%92%E8%9B%8B2.PNG/960px-%E7%95%AA%E8%8C%84%E7%82%92%E8%9B%8B2.PNG",
+    "image_credit": "Wikimedia Commons contributor / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:%E7%95%AA%E8%8C%84%E7%82%92%E8%9B%8B2.PNG",
     "cuisine": "Chinese",
     "halal": true,
     "is_free": true,
@@ -668,6 +695,9 @@
     "title": "Chicken Macaroni Soup",
     "description": "The kopitiam classic: tender macaroni and shredded chicken in clear broth.",
     "why_it_fits": "A kopitiam classic: warm, mild broth and soft pasta for a gentle lift on a low day.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Homemade_chicken_soup.JPG/960px-Homemade_chicken_soup.JPG",
+    "image_credit": "BrokenSphere / Wikimedia Commons, CC BY-SA 3.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Homemade_chicken_soup.JPG",
     "cuisine": "Singaporean",
     "halal": true,
     "is_free": true,
@@ -731,6 +761,9 @@
     "title": "Ayam Masak Merah with Rice",
     "description": "Chicken braised in a rich, mildly spicy tomato-chilli gravy.",
     "why_it_fits": "Rich, sweet-spicy gravy over rice is deep comfort food that meets a heavy mood halfway.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ayam_masak_merah.jpg/960px-Ayam_masak_merah.jpg",
+    "image_credit": "Ahmad Shazlan / Wikimedia Commons, CC0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Ayam_masak_merah.jpg",
     "cuisine": "Malay",
     "halal": true,
     "is_free": false,
@@ -820,6 +853,9 @@
     "title": "Mee Rebus",
     "description": "Yellow noodles in a thick, sweet-savoury sweet potato gravy with egg and lime.",
     "why_it_fits": "A thick, sweet-savoury gravy and all the toppings make this a properly comforting bowl.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mee_Rebus_by_Banej%2C_Singapore_October_2017.jpg/960px-Mee_Rebus_by_Banej%2C_Singapore_October_2017.jpg",
+    "image_credit": "Banej / Wikimedia Commons, CC BY-SA 3.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Mee_Rebus_by_Banej%2C_Singapore_October_2017.jpg",
     "cuisine": "Malay",
     "halal": true,
     "is_free": false,
@@ -914,6 +950,9 @@
     "title": "Roti John",
     "description": "Pan-toasted baguette with a spiced egg and minced chicken omelette.",
     "why_it_fits": "Fun, messy and made for sharing — a good mood deserves something a little playful.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Roti_John_-_preparation.jpg",
+    "image_credit": "stef yau from Seattle, USA / Wikimedia Commons, CC BY 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Roti_John_-_preparation.jpg",
     "cuisine": "Singaporean",
     "halal": true,
     "is_free": true,
@@ -988,6 +1027,9 @@
     "title": "Ayam Penyet",
     "description": "Crispy smashed fried chicken with fiery sambal, tofu, tempeh and rice.",
     "why_it_fits": "Crispy chicken and fiery sambal: a lively plate that matches high spirits.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Ayam_penyet_Ria.jpg",
+    "image_credit": "D.W. Fisher-Freberg / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Ayam_penyet_Ria.jpg",
     "cuisine": "Indonesian",
     "halal": true,
     "is_free": true,
@@ -1077,6 +1119,9 @@
     "title": "Halal Prawn Hokkien Mee",
     "description": "Wok-braised yellow noodles and bee hoon in prawn stock, with squid and lime.",
     "why_it_fits": "A hawker favourite worth savouring, with bright lime and seafood to keep the mood up.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Newton_HokkienMee.JPG/960px-Newton_HokkienMee.JPG",
+    "image_credit": "Jpatokal / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Newton_HokkienMee.JPG",
     "cuisine": "Singaporean",
     "halal": true,
     "is_free": false,
@@ -1171,6 +1216,9 @@
     "title": "Japchae with Beef",
     "description": "Glossy sweet potato glass noodles with beef and colourful vegetables.",
     "why_it_fits": "Colourful, glossy and celebratory — a dish that looks as upbeat as you feel.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Korean_cuisine_japchae_2.jpg/960px-Korean_cuisine_japchae_2.jpg",
+    "image_credit": "Wikimedia Commons contributor / Wikimedia Commons, CC BY-SA 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Korean_cuisine_japchae_2.jpg",
     "cuisine": "Korean",
     "halal": true,
     "is_free": false,
@@ -1260,6 +1308,9 @@
     "title": "Tofu & Spinach Miso Soup with Rice",
     "description": "A gentle bowl of miso broth, silken tofu and greens with steamed rice.",
     "why_it_fits": "A warm, quiet bowl with magnesium-rich tofu and greens gives restless energy somewhere soft to land.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Miso_Soup_001.jpg/960px-Miso_Soup_001.jpg",
+    "image_credit": "Ocdp / Wikimedia Commons, CC0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Miso_Soup_001.jpg",
     "cuisine": "Japanese",
     "halal": true,
     "is_free": false,
@@ -1319,6 +1370,9 @@
     "title": "Steamed Fish with Ginger & Spring Onion",
     "description": "Delicate steamed fish dressed with ginger, soy and hot oil.",
     "why_it_fits": "Clean, delicate flavours and gentle steaming make a calm meal with nothing to rush.",
+    "image_url": "https://images.unsplash.com/photo-1760504526044-840cade997b2?w=960&q=80&auto=format&fit=crop",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": "https://unsplash.com/photos/steamed-fish-with-chili-and-black-beans-rn0WM4No-5A",
     "cuisine": "Chinese",
     "halal": true,
     "is_free": false,
@@ -1388,6 +1442,9 @@
     "title": "Dhal Curry with Chapati",
     "description": "Creamy yellow lentils tempered with cumin and garlic, scooped up with chapati.",
     "why_it_fits": "Slow-release lentils and warm spices are grounding, and tearing chapati by hand slows the pace.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Dal_tadka_and_chapati.jpg/960px-Dal_tadka_and_chapati.jpg",
+    "image_credit": "Wind Hashira / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Dal_tadka_and_chapati.jpg",
     "cuisine": "Indian",
     "halal": true,
     "is_free": false,
@@ -1467,6 +1524,9 @@
     "title": "Yong Tau Foo Clear Soup",
     "description": "Fish-paste-stuffed tofu and vegetables in a light soybean broth.",
     "why_it_fits": "A clear, light broth with simple stuffed vegetables is soothing and easy on a nervous stomach.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/2019_01_Yen_tafo.jpg/960px-2019_01_Yen_tafo.jpg",
+    "image_credit": "Takeaway / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:2019_01_Yen_tafo.jpg",
     "cuisine": "Chinese",
     "halal": true,
     "is_free": false,
@@ -1546,6 +1606,9 @@
     "title": "Teriyaki Salmon Soba",
     "description": "Pan-seared salmon in a honey-soy glaze over chilled soba and edamame.",
     "why_it_fits": "Omega-3-rich salmon and slow-release soba give steady fuel for clearer thinking.",
+    "image_url": "https://images.unsplash.com/photo-1509402308-817902776267?w=960&q=80&auto=format&fit=crop",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": "https://unsplash.com/photos/roast-meat-top-with-slice-limes-a2scGjpiI5E",
     "cuisine": "Japanese",
     "halal": true,
     "is_free": false,
@@ -1625,6 +1688,9 @@
     "title": "Sambal Egg & Tempeh Brown Rice Bowl",
     "description": "Jammy eggs and crisp tempeh in sambal tumis over nutty brown rice.",
     "why_it_fits": "Eggs, tempeh and brown rice give lasting protein and fibre, so your attention doesn't dip an hour later.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Sambal_Tumis_Telur.jpg/960px-Sambal_Tumis_Telur.jpg",
+    "image_credit": "Mdsheth1986 / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Sambal_Tumis_Telur.jpg",
     "cuisine": "Malay",
     "halal": true,
     "is_free": false,
@@ -1704,6 +1770,9 @@
     "title": "Assam Pedas Fish",
     "description": "Mackerel in a hot-and-sour tamarind gravy with okra and tomato.",
     "why_it_fits": "Oily fish for omega-3s and a sharp, sour-spicy gravy that wakes up a foggy head.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ASAM_PEDAS_IKAN_PARI.jpg/960px-ASAM_PEDAS_IKAN_PARI.jpg",
+    "image_credit": "Elly Suhailee / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:ASAM_PEDAS_IKAN_PARI.jpg",
     "cuisine": "Malay",
     "halal": true,
     "is_free": false,
@@ -1793,6 +1862,9 @@
     "title": "Thunder Tea Rice Bowl",
     "description": "Hakka lei cha: brown rice with chopped greens, tofu, peanuts and a herby tea broth.",
     "why_it_fits": "Greens, herbs, nuts and brown rice in one bowl — steady energy with nothing to cause a crash.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Lei_Cha_in_Vegeterian_Restaurant.jpg/960px-Lei_Cha_in_Vegeterian_Restaurant.jpg",
+    "image_credit": "Encik Tekateki / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Lei_Cha_in_Vegeterian_Restaurant.jpg",
     "cuisine": "Chinese",
     "halal": true,
     "is_free": false,
@@ -1875,5 +1947,2703 @@
       "Arrange the vegetables, tofu, anchovies and remaining peanuts over the rice.",
       "Serve the tea broth on the side to pour over."
     ]
+  },
+  {
+    "id": "sluggish-beef-broccoli-stir-fry",
+    "mood": "sluggish",
+    "title": "Beef & Broccoli Stir-Fry",
+    "description": "Quick-seared beef strips with broccoli in a savoury garlic-ginger sauce.",
+    "why_it_fits": "Iron-rich beef and quick-release rice carbs combat fatigue and restore alertness fast.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Beef_and_broccoli_stir_fry.jpg/960px-Beef_and_broccoli_stir_fry.jpg",
+    "image_credit": "Joy / Wikimedia Commons, CC BY 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Beef_and_broccoli_stir_fry.jpg",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 18,
+    "calories": 520,
+    "protein_g": 40,
+    "carbs_g": 42,
+    "fat_g": 18,
+    "ingredients": [
+      {
+        "name": "beef sirloin",
+        "qty": "200g",
+        "category": "Protein"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": "2 cups",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "2 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "soy sauce",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      }
+    ],
+    "steps": [
+      "Sear beef strips 2 min per side, set aside.",
+      "Stir-fry garlic, ginger, broccoli.",
+      "Return beef, add soy sauce, toss.",
+      "Serve over rice."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "stressed-beef-pho",
+    "mood": "stressed",
+    "title": "Beef Pho",
+    "description": "Vietnamese beef noodle soup with a fragrant star anise and cinnamon broth.",
+    "why_it_fits": "The ritual of a slow-sipped aromatic broth gives racing thoughts something steady to follow.",
+    "image_url": "https://images.unsplash.com/photo-1631709497146-a239ef373cf1?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Vietnamese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 420,
+    "protein_g": 32,
+    "carbs_g": 46,
+    "fat_g": 10,
+    "ingredients": [
+      {
+        "name": "rice noodles",
+        "qty": "200g",
+        "category": "Grains"
+      },
+      {
+        "name": "beef sirloin",
+        "qty": "150g thinly sliced",
+        "category": "Protein"
+      },
+      {
+        "name": "beef broth",
+        "qty": "800ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "star anise",
+        "qty": "2",
+        "category": "Pantry"
+      },
+      {
+        "name": "cinnamon stick",
+        "qty": "1",
+        "category": "Pantry"
+      },
+      {
+        "name": "thai basil",
+        "qty": "handful",
+        "category": "Produce"
+      },
+      {
+        "name": "bean sprouts",
+        "qty": "1 cup",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Simmer broth with star anise and cinnamon for 20 minutes.",
+      "Pour the hot broth over thinly sliced raw beef and noodles to gently cook the beef through.",
+      "Top with basil and beansprouts."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sluggish-beef-rendang-with-steamed-rice",
+    "mood": "sluggish",
+    "title": "Beef Rendang with Steamed Rice",
+    "description": "Slow-cooked beef in coconut milk and aromatic spices until deeply caramelised.",
+    "why_it_fits": "Iron-rich beef slow-cooked to tender restores energy that a quick meal can't match.",
+    "image_url": "https://images.unsplash.com/photo-1620700668269-d3ad2a88f27e?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 90,
+    "calories": 560,
+    "protein_g": 34,
+    "carbs_g": 40,
+    "fat_g": 30,
+    "ingredients": [
+      {
+        "name": "beef chuck",
+        "qty": "250g",
+        "category": "Protein"
+      },
+      {
+        "name": "coconut milk",
+        "qty": "400ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "lemongrass",
+        "qty": "2 stalks",
+        "category": "Produce"
+      },
+      {
+        "name": "galangal",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "kaffir lime leaves",
+        "qty": "3",
+        "category": "Pantry"
+      },
+      {
+        "name": "shallots",
+        "qty": "4",
+        "category": "Produce"
+      },
+      {
+        "name": "steamed rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      }
+    ],
+    "steps": [
+      "Blend shallots, lemongrass, and galangal into a paste.",
+      "Simmer beef in coconut milk with the paste for 90 minutes until the sauce reduces and the beef is deeply tender.",
+      "Serve over rice."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "happy-berry-yogurt-parfait",
+    "mood": "happy",
+    "title": "Berry & Yogurt Parfait",
+    "description": "Layered Greek yogurt, mixed berries, and honeyed granola.",
+    "why_it_fits": "A light, celebratory dish that matches a bright mood without any post-meal slump.",
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 5,
+    "calories": 320,
+    "protein_g": 18,
+    "carbs_g": 44,
+    "fat_g": 8,
+    "ingredients": [
+      {
+        "name": "greek yogurt",
+        "qty": "1 cup",
+        "category": "Dairy"
+      },
+      {
+        "name": "mixed berries",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "granola",
+        "qty": "1/2 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Layer yogurt, berries, and granola in a glass.",
+      "Drizzle with honey."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "unfocused-bibimbap-with-beef-bulgogi",
+    "mood": "unfocused",
+    "title": "Bibimbap with Beef Bulgogi",
+    "description": "Warm rice bowl with marinated beef bulgogi, sautéed vegetables, and a fried egg.",
+    "why_it_fits": "The colour, variety, and protein in one mixed bowl gives scattered focus something to gather around.",
+    "image_url": "https://images.unsplash.com/photo-1741295017668-c8132acd6fc0?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Korean",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 560,
+    "protein_g": 36,
+    "carbs_g": 52,
+    "fat_g": 20,
+    "ingredients": [
+      {
+        "name": "beef sirloin",
+        "qty": "180g",
+        "category": "Protein"
+      },
+      {
+        "name": "steamed rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "spinach",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "shiitake mushrooms",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "egg",
+        "qty": "1",
+        "category": "Protein"
+      },
+      {
+        "name": "gochujang",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Marinate and sear beef bulgogi-style.",
+      "Sauté each vegetable individually and season lightly.",
+      "Assemble everything over rice with a fried egg and a spoon of gochujang."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "unfocused-blueberry-walnut-brain-boost-bowl",
+    "mood": "unfocused",
+    "title": "Blueberry Walnut Brain-Boost Bowl",
+    "description": "Greek yoghurt bowl with blueberries, walnuts, and a drizzle of honey.",
+    "why_it_fits": "Antioxidant-rich blueberries and omega-3s from walnuts support sharper, clearer thinking.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Blueberry_oatmeal_2.jpg/960px-Blueberry_oatmeal_2.jpg",
+    "image_credit": "Shisma / Wikimedia Commons, CC BY 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Blueberry_oatmeal_2.jpg",
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 5,
+    "calories": 320,
+    "protein_g": 20,
+    "carbs_g": 32,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "greek yoghurt",
+        "qty": "1 cup",
+        "category": "Dairy"
+      },
+      {
+        "name": "blueberries",
+        "qty": "1/2 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "walnuts",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "chia seeds",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Spoon yoghurt into a bowl.",
+      "Top with blueberries, walnuts, chia seeds, and a drizzle of honey."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sad-butter-chicken-with-basmati-rice",
+    "mood": "sad",
+    "title": "Butter Chicken with Basmati Rice",
+    "description": "Creamy tomato-based chicken curry with warm garam masala, served over basmati rice.",
+    "why_it_fits": "Rich, warm spice and cream deliver the kind of deep comfort that meets a melancholy mood halfway.",
+    "image_url": "https://images.unsplash.com/photo-1768179669433-bd9d52949c20?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Indian",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 540,
+    "protein_g": 34,
+    "carbs_g": 46,
+    "fat_g": 26,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "220g",
+        "category": "Protein"
+      },
+      {
+        "name": "tomato puree",
+        "qty": "200ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "cream",
+        "qty": "100ml",
+        "category": "Dairy"
+      },
+      {
+        "name": "garam masala",
+        "qty": "1.5 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "butter",
+        "qty": "2 tbsp",
+        "category": "Dairy"
+      },
+      {
+        "name": "basmati rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      }
+    ],
+    "steps": [
+      "Marinate and sear chicken.",
+      "Simmer in tomato puree, cream, butter, and garam masala until thick and glossy.",
+      "Serve over basmati rice."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "anxious-chamomile-almond-overnight-oats",
+    "mood": "anxious",
+    "title": "Chamomile & Almond Overnight Oats",
+    "description": "Overnight oats soaked in chamomile tea and almond milk, topped with sliced almonds.",
+    "why_it_fits": "Chamomile and slow-release oats work together to ease nervous energy before it builds.",
+    "image_url": "https://images.unsplash.com/photo-1682622110332-d50f50b7146d?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 5,
+    "calories": 340,
+    "protein_g": 11,
+    "carbs_g": 46,
+    "fat_g": 11,
+    "ingredients": [
+      {
+        "name": "rolled oats",
+        "qty": "80g",
+        "category": "Grains"
+      },
+      {
+        "name": "almond milk",
+        "qty": "180ml",
+        "category": "Dairy"
+      },
+      {
+        "name": "chamomile tea",
+        "qty": "1/4 cup brewed",
+        "category": "Pantry"
+      },
+      {
+        "name": "sliced almonds",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Mix oats, almond milk, and brewed chamomile.",
+      "Refrigerate overnight.",
+      "Top with sliced almonds and honey."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "stressed-chamomile-honey-rice-pudding",
+    "mood": "stressed",
+    "title": "Chamomile Honey Rice Pudding",
+    "description": "Creamy rice pudding slow-cooked with chamomile-infused milk and honey.",
+    "why_it_fits": "Chamomile has a mild calming effect and warm milk-based comfort food lowers physical tension.",
+    "image_url": "https://images.unsplash.com/photo-1665529555367-8a4672d97641?w=960&q=80&auto=format&fit=crop",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": "https://unsplash.com/photos/a-plate-of-food-VeRTm8WMTNM",
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 340,
+    "protein_g": 9,
+    "carbs_g": 58,
+    "fat_g": 7,
+    "ingredients": [
+      {
+        "name": "short-grain rice",
+        "qty": "1/2 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "whole milk",
+        "qty": "2 cups",
+        "category": "Dairy"
+      },
+      {
+        "name": "chamomile tea bags",
+        "qty": "2",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cinnamon",
+        "qty": "1/4 tsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Steep chamomile in warm milk 5 min, remove bags.",
+      "Simmer rice in the milk 25 min, stirring often.",
+      "Stir in honey and cinnamon."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "anxious-chamomile-turkey-meatballs-with-brown-rice",
+    "mood": "anxious",
+    "title": "Chamomile Turkey Meatballs with Brown Rice",
+    "description": "Gently spiced turkey meatballs simmered in a mild tomato sauce, served over brown rice.",
+    "why_it_fits": "Lean protein and a slow-simmered sauce make a grounding, unhurried meal that eases a restless mind.",
+    "image_url": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 420,
+    "protein_g": 32,
+    "carbs_g": 46,
+    "fat_g": 11,
+    "ingredients": [
+      {
+        "name": "ground turkey",
+        "qty": "200g",
+        "category": "Protein"
+      },
+      {
+        "name": "breadcrumbs",
+        "qty": "1/4 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "crushed tomatoes",
+        "qty": "1 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "garlic",
+        "qty": "1 clove",
+        "category": "Produce"
+      },
+      {
+        "name": "brown rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "parsley",
+        "qty": "1 tbsp",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Mix turkey with breadcrumbs and garlic, form meatballs.",
+      "Simmer in crushed tomatoes 15 min.",
+      "Serve over rice, top with parsley."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "stressed-chicken-congee",
+    "mood": "stressed",
+    "title": "Chicken Congee",
+    "description": "Silky rice porridge simmered with shredded chicken, ginger, and scallions.",
+    "why_it_fits": "A soft, spoonable dish that asks nothing of you — easy to digest when everything feels like a lot.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Cantonese_rice_porridge.JPG",
+    "image_credit": "Shoestring (Wikivoyage) / Wikimedia Commons, CC BY-SA 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Cantonese_rice_porridge.JPG",
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 35,
+    "calories": 340,
+    "protein_g": 26,
+    "carbs_g": 44,
+    "fat_g": 8,
+    "ingredients": [
+      {
+        "name": "rice",
+        "qty": "3/4 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "chicken breast",
+        "qty": "180g",
+        "category": "Protein"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 tbsp sliced",
+        "category": "Pantry"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "1.2L",
+        "category": "Pantry"
+      },
+      {
+        "name": "scallions",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "sesame oil",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Simmer rice in stock with ginger for 30-35 minutes, stirring occasionally, until thick and creamy.",
+      "Stir in shredded poached chicken.",
+      "Top with scallions and a drizzle of sesame oil."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "unfocused-chicken-katsu-curry-rice",
+    "mood": "unfocused",
+    "title": "Chicken Katsu Curry Rice",
+    "description": "Crispy breaded chicken cutlet with a mild Japanese curry sauce over rice.",
+    "why_it_fits": "A satisfying crunch-then-comfort combination gives a distracted mind one clear thing to focus on.",
+    "image_url": "https://images.unsplash.com/photo-1723208841184-3d91ba244c60?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Japanese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 580,
+    "protein_g": 36,
+    "carbs_g": 60,
+    "fat_g": 20,
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "qty": "200g",
+        "category": "Protein"
+      },
+      {
+        "name": "panko breadcrumbs",
+        "qty": "1 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "japanese curry roux",
+        "qty": "2 cubes",
+        "category": "Pantry"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "steamed rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      }
+    ],
+    "steps": [
+      "Bread the chicken with panko and pan-fry until golden and crisp.",
+      "Simmer curry roux with carrot and onion until thick.",
+      "Slice the chicken over rice and ladle the curry sauce on top."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sad-chicken-laksa",
+    "mood": "sad",
+    "title": "Chicken Laksa",
+    "description": "Creamy coconut curry noodle soup with shredded chicken, tofu puffs, and beansprouts.",
+    "why_it_fits": "A rich, warming bowl of comfort food that feels like being taken care of on a low day.",
+    "image_url": "https://images.unsplash.com/photo-1768703321790-e09a80a46f2c?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Peranakan",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 480,
+    "protein_g": 30,
+    "carbs_g": 46,
+    "fat_g": 20,
+    "ingredients": [
+      {
+        "name": "rice vermicelli noodles",
+        "qty": "150g",
+        "category": "Grains"
+      },
+      {
+        "name": "chicken breast",
+        "qty": "180g",
+        "category": "Protein"
+      },
+      {
+        "name": "coconut milk",
+        "qty": "400ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "laksa paste",
+        "qty": "3 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "tofu puffs",
+        "qty": "6",
+        "category": "Protein"
+      },
+      {
+        "name": "beansprouts",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "coriander",
+        "qty": "handful",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Simmer laksa paste with coconut milk and stock.",
+      "Add poached shredded chicken and tofu puffs.",
+      "Serve over noodles with beansprouts and coriander."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "happy-chicken-satay-with-peanut-sauce",
+    "mood": "happy",
+    "title": "Chicken Satay with Peanut Sauce",
+    "description": "Char-grilled marinated chicken skewers with a rich peanut dipping sauce.",
+    "why_it_fits": "A vibrant, sociable dish that matches and sustains an already bright, energetic mood.",
+    "image_url": "https://images.unsplash.com/photo-1755434315388-16387508c1fb?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 18,
+    "calories": 460,
+    "protein_g": 36,
+    "carbs_g": 30,
+    "fat_g": 22,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "220g",
+        "category": "Protein"
+      },
+      {
+        "name": "turmeric",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "lemongrass",
+        "qty": "1 stalk",
+        "category": "Produce"
+      },
+      {
+        "name": "peanut sauce",
+        "qty": "4 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "steamed rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "cucumber",
+        "qty": "1/2",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Marinate chicken in turmeric and lemongrass.",
+      "Skewer and grill until charred at the edges.",
+      "Serve with peanut sauce, rice, and cucumber."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sad-chicken-tikka-with-basmati-rice",
+    "mood": "sad",
+    "title": "Chicken Tikka with Basmati Rice",
+    "description": "Yogurt-marinated grilled chicken tikka with warm spices over basmati rice.",
+    "why_it_fits": "Warm spices and a hearty, familiar dish offer grounding comfort on a low day.",
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Indian",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 470,
+    "protein_g": 36,
+    "carbs_g": 44,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "200g",
+        "category": "Protein"
+      },
+      {
+        "name": "plain yogurt",
+        "qty": "1/4 cup",
+        "category": "Dairy"
+      },
+      {
+        "name": "garam masala",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "basmati rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "coriander",
+        "qty": "handful",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Marinate chicken in yogurt and garam masala 20 min.",
+      "Grill or pan-sear until cooked through.",
+      "Serve over basmati rice with coriander."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sad-dark-chocolate-banana-smoothie-bowl",
+    "mood": "sad",
+    "title": "Dark Chocolate Banana Smoothie Bowl",
+    "description": "Thick banana smoothie bowl with cacao, topped with berries and granola.",
+    "why_it_fits": "Cacao supports serotonin production; the ritual of a topped bowl adds a small moment of self-care.",
+    "image_url": "https://images.unsplash.com/photo-1649069041246-457021025dea?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 10,
+    "calories": 360,
+    "protein_g": 8,
+    "carbs_g": 62,
+    "fat_g": 9,
+    "ingredients": [
+      {
+        "name": "frozen banana",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "cacao powder",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "almond milk",
+        "qty": "1/4 cup",
+        "category": "Dairy"
+      },
+      {
+        "name": "mixed berries",
+        "qty": "1/2 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "granola",
+        "qty": "1/4 cup",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Blend frozen banana, cacao, and almond milk until thick.",
+      "Pour into a bowl, top with berries and granola."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sad-golden-turmeric-lentil-soup",
+    "mood": "sad",
+    "title": "Golden Turmeric Lentil Soup",
+    "description": "Warming red lentil soup with turmeric, ginger, and coconut milk.",
+    "why_it_fits": "Turmeric's curcumin has mood-lifting properties; warm soup provides emotional comfort.",
+    "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Indian",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 390,
+    "protein_g": 20,
+    "carbs_g": 48,
+    "fat_g": 10,
+    "ingredients": [
+      {
+        "name": "red lentils",
+        "qty": "1 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "coconut milk",
+        "qty": "400ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "turmeric",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "vegetable stock",
+        "qty": "500ml",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Sauté onion.",
+      "Add spices, lentils, stock.",
+      "Simmer 20 min.",
+      "Stir in coconut milk."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "happy-grilled-chicken-mango-salsa-bowl",
+    "mood": "happy",
+    "title": "Grilled Chicken & Mango Salsa Bowl",
+    "description": "Charred grilled chicken with a bright mango-lime salsa over jasmine rice.",
+    "why_it_fits": "A bright, colourful plate matches an upbeat mood and keeps the energy going without weighing you down.",
+    "image_url": "https://images.unsplash.com/photo-1596181367808-c7c64b779b46?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 20,
+    "calories": 470,
+    "protein_g": 36,
+    "carbs_g": 54,
+    "fat_g": 9,
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "qty": "200g",
+        "category": "Protein"
+      },
+      {
+        "name": "mango",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "red onion",
+        "qty": "2 tbsp",
+        "category": "Produce"
+      },
+      {
+        "name": "lime",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "cilantro",
+        "qty": "2 tbsp",
+        "category": "Produce"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      }
+    ],
+    "steps": [
+      "Grill chicken 6 min per side, slice.",
+      "Toss diced mango, red onion, lime juice, and cilantro for salsa.",
+      "Serve over rice, top with chicken and salsa."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "happy-grilled-chicken-fajita-bowl",
+    "mood": "happy",
+    "title": "Grilled Chicken Fajita Bowl",
+    "description": "Sizzled chicken and peppers with lime, served over rice with fresh salsa.",
+    "why_it_fits": "Bright citrus and lean protein match and sustain an already-good mood without weighing you down.",
+    "image_url": "https://images.unsplash.com/photo-1689774187968-0e6c29a1d82e?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Mexican",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 20,
+    "calories": 480,
+    "protein_g": 38,
+    "carbs_g": 46,
+    "fat_g": 12,
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "qty": "180g",
+        "category": "Protein"
+      },
+      {
+        "name": "bell peppers",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "red onion",
+        "qty": "1/2",
+        "category": "Produce"
+      },
+      {
+        "name": "lime",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      }
+    ],
+    "steps": [
+      "Sear sliced chicken and peppers with lime juice until charred at the edges.",
+      "Serve over rice with fresh salsa."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sluggish-hainanese-chicken-rice",
+    "mood": "sluggish",
+    "title": "Hainanese Chicken Rice",
+    "description": "Poached chicken and fragrant chicken-fat rice, served with chilli-ginger and dark soy dipping sauces.",
+    "why_it_fits": "Lean protein and easy carbs from the rice give a steady, sustained lift out of an energy slump.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Hainanese_Chicken_Rice.jpg/960px-Hainanese_Chicken_Rice.jpg",
+    "image_credit": "Wikimedia Commons contributor / Wikimedia Commons, CC BY 2.5",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Hainanese_Chicken_Rice.jpg",
+    "cuisine": "Singaporean",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 40,
+    "calories": 520,
+    "protein_g": 38,
+    "carbs_g": 55,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "250g",
+        "category": "Protein"
+      },
+      {
+        "name": "jasmine rice",
+        "qty": "1.5 cups",
+        "category": "Grains"
+      },
+      {
+        "name": "ginger",
+        "qty": "2 tbsp sliced",
+        "category": "Pantry"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "600ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "cucumber",
+        "qty": "1/2",
+        "category": "Produce"
+      },
+      {
+        "name": "light soy sauce",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Poach chicken gently in stock with ginger and garlic until just cooked.",
+      "Cook rice in the poaching stock.",
+      "Slice chicken, serve over rice with cucumber and dipping sauces."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "unfocused-herb-crusted-baked-cod-with-roasted-veg",
+    "mood": "unfocused",
+    "title": "Herb-Crusted Baked Cod with Roasted Veg",
+    "description": "Flaky baked cod with a herb crust, served with roasted seasonal vegetables.",
+    "why_it_fits": "Lean white fish and B-vitamin-rich vegetables support mental clarity and steady focus.",
+    "image_url": "https://images.unsplash.com/photo-1618153351015-e2f282e09d94?w=960&q=80&auto=format&fit=crop",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": "https://unsplash.com/photos/green-vegetable-on-white-ceramic-plate-XvDpZhoozBY",
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 400,
+    "protein_g": 32,
+    "carbs_g": 30,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "cod fillet",
+        "qty": "180g",
+        "category": "Protein"
+      },
+      {
+        "name": "parsley",
+        "qty": "2 tbsp chopped",
+        "category": "Produce"
+      },
+      {
+        "name": "breadcrumbs",
+        "qty": "3 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "carrots",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "zucchini",
+        "qty": "1",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Press herb-breadcrumb mix onto cod, bake 15 min at 200°C alongside roasted carrots and zucchini."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sluggish-high-protein-greek-salad-bowl",
+    "mood": "sluggish",
+    "title": "High-Protein Greek Salad Bowl",
+    "description": "Grilled chicken, chickpeas, cucumber, tomato, and feta on a bed of romaine.",
+    "why_it_fits": "High protein and iron from chicken + chickpeas combat fatigue and restore energy.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Greek_Salad_Choriatiki.jpg",
+    "image_credit": "Flickr user via Wikimedia Commons / Wikimedia Commons, CC BY 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Greek_Salad_Choriatiki.jpg",
+    "cuisine": "Mediterranean",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 15,
+    "calories": 420,
+    "protein_g": 42,
+    "carbs_g": 24,
+    "fat_g": 16,
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "qty": "150g",
+        "category": "Protein"
+      },
+      {
+        "name": "chickpeas",
+        "qty": "1/2 cup",
+        "category": "Protein"
+      },
+      {
+        "name": "romaine lettuce",
+        "qty": "2 cups",
+        "category": "Produce"
+      },
+      {
+        "name": "cucumber",
+        "qty": "1/2",
+        "category": "Produce"
+      },
+      {
+        "name": "cherry tomatoes",
+        "qty": "10",
+        "category": "Produce"
+      },
+      {
+        "name": "feta cheese",
+        "qty": "40g",
+        "category": "Dairy"
+      },
+      {
+        "name": "olive oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Grill chicken.",
+      "Combine all vegetables.",
+      "Top with chicken, chickpeas, feta.",
+      "Drizzle olive oil."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "stressed-lemon-herb-pasta-with-spinach",
+    "mood": "stressed",
+    "title": "Lemon Herb Pasta with Spinach",
+    "description": "A light, satisfying pasta with garlic, lemon zest, and wilted spinach.",
+    "why_it_fits": "Complex carbs boost serotonin; lemon and garlic aromas are calming.",
+    "image_url": "https://images.unsplash.com/photo-1587206668283-c21d974993c3?w=960&q=80&auto=format&fit=crop",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": "https://unsplash.com/photos/pasta-dish-on-black-ceramic-plate-ljVSRqHCP2U",
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 20,
+    "calories": 480,
+    "protein_g": 18,
+    "carbs_g": 62,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "spaghetti",
+        "qty": "200g",
+        "category": "Grains"
+      },
+      {
+        "name": "baby spinach",
+        "qty": "2 cups",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      },
+      {
+        "name": "lemon",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "parmesan",
+        "qty": "30g",
+        "category": "Dairy"
+      },
+      {
+        "name": "olive oil",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Boil pasta.",
+      "Sauté garlic in olive oil, add spinach until wilted.",
+      "Toss with pasta, lemon zest, and parmesan."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "anxious-mee-goreng",
+    "mood": "anxious",
+    "title": "Mee Goreng",
+    "description": "Spicy stir-fried noodles with chicken, egg, and vegetables in a sweet-savoury sauce.",
+    "why_it_fits": "The hands-on sizzle of stir-frying gives restless energy something immediate to focus on.",
+    "image_url": "https://images.unsplash.com/photo-1767324672643-c4979362f922?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 18,
+    "calories": 460,
+    "protein_g": 26,
+    "carbs_g": 54,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "yellow egg noodles",
+        "qty": "200g",
+        "category": "Grains"
+      },
+      {
+        "name": "chicken breast",
+        "qty": "150g",
+        "category": "Protein"
+      },
+      {
+        "name": "egg",
+        "qty": "1",
+        "category": "Protein"
+      },
+      {
+        "name": "dark soy sauce",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "bean sprouts",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "tomato",
+        "qty": "1",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Stir-fry chicken until cooked through.",
+      "Push aside and scramble the egg.",
+      "Add noodles and dark soy sauce, toss well, then fold in tomato and beansprouts."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "stressed-miso-glazed-salmon-with-steamed-rice",
+    "mood": "stressed",
+    "title": "Miso-Glazed Salmon with Steamed Rice",
+    "description": "Pan-seared salmon glazed with miso and honey, served over steamed rice.",
+    "why_it_fits": "Omega-3s in salmon help regulate cortisol; the umami glaze makes it deeply satisfying under stress.",
+    "image_url": "https://images.unsplash.com/photo-1641898378716-1f38ec04bb0f?w=960&q=80&auto=format&fit=crop",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": "https://unsplash.com/photos/a-piece-of-meat-sitting-on-top-of-a-black-plate-e7k2q18Aw5c",
+    "cuisine": "Japanese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 18,
+    "calories": 460,
+    "protein_g": 34,
+    "carbs_g": 32,
+    "fat_g": 20,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "qty": "180g",
+        "category": "Protein"
+      },
+      {
+        "name": "white miso paste",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "steamed rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "scallions",
+        "qty": "2",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Mix miso and honey, brush onto salmon.",
+      "Pan-sear 4 minutes each side.",
+      "Serve over rice, top with sliced scallions."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "anxious-nasi-lemak-with-chicken-sambal",
+    "mood": "anxious",
+    "title": "Nasi Lemak with Chicken Sambal",
+    "description": "Fragrant coconut rice with spicy sambal, crispy fried chicken, and all the classic sides.",
+    "why_it_fits": "The gentle ritual of a full, familiar plate and warming spice can settle a nervous, anxious mind.",
+    "image_url": "https://images.unsplash.com/photo-1770966485209-e20d97337f1a?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Malay",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 35,
+    "calories": 560,
+    "protein_g": 32,
+    "carbs_g": 58,
+    "fat_g": 22,
+    "ingredients": [
+      {
+        "name": "jasmine rice",
+        "qty": "1.5 cups",
+        "category": "Grains"
+      },
+      {
+        "name": "coconut milk",
+        "qty": "1 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "chicken thigh",
+        "qty": "200g",
+        "category": "Protein"
+      },
+      {
+        "name": "sambal chilli paste",
+        "qty": "3 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "dried anchovies",
+        "qty": "2 tbsp",
+        "category": "Protein"
+      },
+      {
+        "name": "roasted peanuts",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cucumber",
+        "qty": "1/2",
+        "category": "Produce"
+      },
+      {
+        "name": "hard-boiled egg",
+        "qty": "1",
+        "category": "Protein"
+      }
+    ],
+    "steps": [
+      "Cook rice with coconut milk.",
+      "Fry chicken until golden and crisp.",
+      "Fry sambal paste with anchovies until fragrant.",
+      "Plate rice with chicken, sambal, peanuts, cucumber, and egg."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "happy-pad-thai-with-prawns",
+    "mood": "happy",
+    "title": "Pad Thai with Prawns",
+    "description": "Stir-fried rice noodles with prawns, egg, tamarind, and crushed peanuts.",
+    "why_it_fits": "Bright tamarind and lime keep a good mood light instead of weighing it down.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Pam_Real_Thai_Las_Vegas.jpg/960px-Pam_Real_Thai_Las_Vegas.jpg",
+    "image_credit": "kennejima / Wikimedia Commons, CC BY 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Pam_Real_Thai_Las_Vegas.jpg",
+    "cuisine": "Thai",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 18,
+    "calories": 470,
+    "protein_g": 28,
+    "carbs_g": 52,
+    "fat_g": 16,
+    "ingredients": [
+      {
+        "name": "rice noodles",
+        "qty": "180g",
+        "category": "Grains"
+      },
+      {
+        "name": "prawns",
+        "qty": "150g",
+        "category": "Protein"
+      },
+      {
+        "name": "eggs",
+        "qty": "2",
+        "category": "Protein"
+      },
+      {
+        "name": "tamarind paste",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "beansprouts",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "crushed peanuts",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "lime",
+        "qty": "1",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Soak noodles until pliable.",
+      "Stir-fry prawns and egg, add noodles and tamarind sauce, toss well.",
+      "Fold in beansprouts, top with peanuts and lime."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "unfocused-salmon-roasted-sweet-potato-bowl",
+    "mood": "unfocused",
+    "title": "Salmon & Roasted Sweet Potato Bowl",
+    "description": "Omega-3 rich salmon fillet with caramelised sweet potato and steamed broccoli.",
+    "why_it_fits": "Omega-3s in salmon sharpen focus; complex carbs from sweet potato fuel sustained concentration.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Layla_and_Friends_Volume_13_with_Sons_%26_Daughters_-_Stierch.jpg/960px-Layla_and_Friends_Volume_13_with_Sons_%26_Daughters_-_Stierch.jpg",
+    "image_credit": "Missvain / Wikimedia Commons, CC BY 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Layla_and_Friends_Volume_13_with_Sons_%26_Daughters_-_Stierch.jpg",
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 510,
+    "protein_g": 38,
+    "carbs_g": 34,
+    "fat_g": 20,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "qty": "180g",
+        "category": "Protein"
+      },
+      {
+        "name": "sweet potato",
+        "qty": "1 medium",
+        "category": "Produce"
+      },
+      {
+        "name": "broccoli",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "olive oil",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "soy sauce",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "sesame seeds",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Roast sweet potato 25 min.",
+      "Pan-fry salmon 4 min each side.",
+      "Steam broccoli.",
+      "Assemble with soy drizzle."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "happy-smashed-avocado-poached-eggs-on-sourdough",
+    "mood": "happy",
+    "title": "Smashed Avocado & Poached Eggs on Sourdough",
+    "description": "Creamy avocado, perfectly poached eggs, chilli flakes on thick sourdough.",
+    "why_it_fits": "Healthy fats sustain your great energy; protein keeps the mood stable all morning.",
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 15,
+    "calories": 440,
+    "protein_g": 22,
+    "carbs_g": 38,
+    "fat_g": 22,
+    "ingredients": [
+      {
+        "name": "sourdough bread",
+        "qty": "2 slices",
+        "category": "Grains"
+      },
+      {
+        "name": "avocado",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "eggs",
+        "qty": "2",
+        "category": "Protein"
+      },
+      {
+        "name": "chilli flakes",
+        "qty": "pinch",
+        "category": "Pantry"
+      },
+      {
+        "name": "lemon juice",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Toast sourdough.",
+      "Smash avocado with lemon.",
+      "Poach eggs 3 min.",
+      "Assemble, top with chilli flakes."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sluggish-spiced-chickpea-sweet-potato-bowl",
+    "mood": "sluggish",
+    "title": "Spiced Chickpea & Sweet Potato Bowl",
+    "description": "Roasted sweet potato and spiced chickpeas over greens with tahini drizzle.",
+    "why_it_fits": "Complex carbs and plant protein provide a steady energy release without a sugar crash.",
+    "image_url": "https://images.unsplash.com/photo-1654199903998-e49181b41a95?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Middle Eastern",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 30,
+    "calories": 410,
+    "protein_g": 16,
+    "carbs_g": 56,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "chickpeas",
+        "qty": "1.5 cups",
+        "category": "Protein"
+      },
+      {
+        "name": "sweet potato",
+        "qty": "1 medium",
+        "category": "Produce"
+      },
+      {
+        "name": "baby spinach",
+        "qty": "2 cups",
+        "category": "Produce"
+      },
+      {
+        "name": "cumin",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "tahini",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Roast sweet potato and spiced chickpeas 25 min at 200°C.",
+      "Serve over spinach, drizzle with tahini."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sluggish-sweet-potato-black-bean-power-bowl",
+    "mood": "sluggish",
+    "title": "Sweet Potato & Black Bean Power Bowl",
+    "description": "Roasted sweet potato, black beans, and corn over rice with a lime-yoghurt drizzle.",
+    "why_it_fits": "Slow-digesting carbs and fibre-rich beans give a steady energy climb instead of a quick crash.",
+    "image_url": "https://images.unsplash.com/photo-1662743086910-38419bbf7f34?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 430,
+    "protein_g": 15,
+    "carbs_g": 68,
+    "fat_g": 9,
+    "ingredients": [
+      {
+        "name": "sweet potato",
+        "qty": "1 medium",
+        "category": "Produce"
+      },
+      {
+        "name": "black beans",
+        "qty": "1 cup",
+        "category": "Protein"
+      },
+      {
+        "name": "corn kernels",
+        "qty": "1/2 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "brown rice",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "plain yoghurt",
+        "qty": "2 tbsp",
+        "category": "Dairy"
+      },
+      {
+        "name": "lime",
+        "qty": "1",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Roast diced sweet potato 20 min at 200°C.",
+      "Warm black beans and corn.",
+      "Layer over rice, top with yoghurt and lime juice."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "unfocused-turmeric-chicken-quinoa-power-bowl",
+    "mood": "unfocused",
+    "title": "Turmeric Chicken & Quinoa Power Bowl",
+    "description": "Turmeric-spiced chicken over quinoa with roasted vegetables and a lemon-tahini drizzle.",
+    "why_it_fits": "Turmeric and complex carbs from quinoa support sustained mental clarity through the afternoon.",
+    "image_url": "https://images.unsplash.com/photo-1602881916963-5daf2d97c06e?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 460,
+    "protein_g": 38,
+    "carbs_g": 42,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "qty": "180g",
+        "category": "Protein"
+      },
+      {
+        "name": "quinoa",
+        "qty": "3/4 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "turmeric",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "broccoli",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "tahini",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Season chicken with turmeric, pan-sear until cooked.",
+      "Serve over quinoa with roasted broccoli and a tahini drizzle."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "stressed-turmeric-ginger-chicken-soup",
+    "mood": "stressed",
+    "title": "Turmeric Ginger Chicken Soup",
+    "description": "A warming, golden chicken soup with turmeric, ginger, and soft noodles.",
+    "why_it_fits": "Turmeric and ginger calm inflammation while a warm broth soothes a racing mind.",
+    "image_url": "https://images.unsplash.com/photo-1612966948332-81d747414a8f?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 380,
+    "protein_g": 30,
+    "carbs_g": 40,
+    "fat_g": 8,
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "qty": "200g",
+        "category": "Protein"
+      },
+      {
+        "name": "egg noodles",
+        "qty": "1 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "turmeric",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "3 cups",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Simmer chicken in stock with ginger and turmeric 15 min, shred.",
+      "Add carrot and noodles, cook 5 more minutes."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "anxious-walnut-berry-overnight-oats",
+    "mood": "anxious",
+    "title": "Walnut & Berry Overnight Oats",
+    "description": "Creamy oats soaked overnight, topped with mixed berries and walnuts.",
+    "why_it_fits": "Magnesium-rich walnuts and slow-release oats reduce cortisol and ease nervous tension.",
+    "image_url": "https://images.unsplash.com/photo-1571748982800-fa51082c2224?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 5,
+    "calories": 380,
+    "protein_g": 14,
+    "carbs_g": 52,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "rolled oats",
+        "qty": "80g",
+        "category": "Grains"
+      },
+      {
+        "name": "almond milk",
+        "qty": "200ml",
+        "category": "Dairy"
+      },
+      {
+        "name": "mixed berries",
+        "qty": "1/2 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "walnuts",
+        "qty": "30g",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "chia seeds",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Mix oats, milk, chia, honey.",
+      "Refrigerate overnight.",
+      "Top with berries and walnuts."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sad-warm-cinnamon-apple-crumble-oats",
+    "mood": "sad",
+    "title": "Warm Cinnamon Apple Crumble Oats",
+    "description": "Stovetop oats folded with cinnamon-stewed apple and a crunchy oat topping.",
+    "why_it_fits": "A warm, spiced comfort bowl gives a small ritual of self-care and a gentle serotonin lift from the carbs.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Apple_cinnamon_oatmeal.jpg/960px-Apple_cinnamon_oatmeal.jpg",
+    "image_credit": "Shisma / Wikimedia Commons, CC BY 4.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Apple_cinnamon_oatmeal.jpg",
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 15,
+    "calories": 360,
+    "protein_g": 10,
+    "carbs_g": 54,
+    "fat_g": 12,
+    "ingredients": [
+      {
+        "name": "rolled oats",
+        "qty": "1/2 cup",
+        "category": "Grains"
+      },
+      {
+        "name": "apple",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "cinnamon",
+        "qty": "1/2 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "walnuts",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "milk",
+        "qty": "1 cup",
+        "category": "Dairy"
+      }
+    ],
+    "steps": [
+      "Simmer oats in milk 5 min.",
+      "Sauté diced apple with cinnamon and honey until soft, fold through.",
+      "Top with crushed walnuts."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "anxious-warm-ginger-beef-noodle-soup",
+    "mood": "anxious",
+    "title": "Warm Ginger Beef Noodle Soup",
+    "description": "Comforting broth with tender beef, rice noodles, and fresh ginger.",
+    "why_it_fits": "A warm, slow-sipped broth gives restless energy something steady to settle into.",
+    "image_url": "https://images.unsplash.com/photo-1631709497146-a239ef373cf1?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Chinese",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 25,
+    "calories": 420,
+    "protein_g": 30,
+    "carbs_g": 40,
+    "fat_g": 12,
+    "ingredients": [
+      {
+        "name": "beef strips",
+        "qty": "150g",
+        "category": "Protein"
+      },
+      {
+        "name": "rice noodles",
+        "qty": "100g",
+        "category": "Grains"
+      },
+      {
+        "name": "beef broth",
+        "qty": "500ml",
+        "category": "Pantry"
+      },
+      {
+        "name": "ginger",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "bok choy",
+        "qty": "1 cup",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Simmer broth with ginger 10 min.",
+      "Add beef and bok choy, cook through.",
+      "Serve over rice noodles."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sad-baked-mac-and-cheese-with-crispy-top",
+    "mood": "sad",
+    "title": "Baked Mac and Cheese with Crispy Top",
+    "description": "Creamy three-cheese macaroni baked until the top turns golden and crisp.",
+    "why_it_fits": "The most classic comfort food there is — a slow bake gives you time to sit with how you feel before the reward arrives.",
+    "image_url": "https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 55,
+    "calories": 620,
+    "protein_g": 26,
+    "carbs_g": 58,
+    "fat_g": 32,
+    "ingredients": [
+      {
+        "name": "macaroni",
+        "qty": "250g",
+        "category": "Grains"
+      },
+      {
+        "name": "cheddar cheese",
+        "qty": "1.5 cups",
+        "category": "Dairy"
+      },
+      {
+        "name": "gruyere cheese",
+        "qty": "1/2 cup",
+        "category": "Dairy"
+      },
+      {
+        "name": "milk",
+        "qty": "2 cups",
+        "category": "Dairy"
+      },
+      {
+        "name": "breadcrumbs",
+        "qty": "1/2 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "butter",
+        "qty": "2 tbsp",
+        "category": "Dairy"
+      }
+    ],
+    "steps": [
+      "Make a cheese sauce with butter, milk, and cheeses.",
+      "Toss with cooked macaroni, top with breadcrumbs, and bake at 190°C for 25 minutes until golden."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sluggish-beef-short-rib-ragu-over-pappardelle",
+    "mood": "sluggish",
+    "title": "Beef Short Rib Ragu over Pappardelle",
+    "description": "Beef short ribs simmered for hours into a rich tomato ragu, tossed with wide pappardelle noodles.",
+    "why_it_fits": "Deeply savoury, iron-rich beef slow-cooked to tenderness gives sustained energy without needing to lift a finger while it cooks.",
+    "image_url": "https://images.unsplash.com/photo-1622973536968-3ead9e780960?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 100,
+    "calories": 680,
+    "protein_g": 44,
+    "carbs_g": 58,
+    "fat_g": 28,
+    "ingredients": [
+      {
+        "name": "beef short rib",
+        "qty": "400g",
+        "category": "Protein"
+      },
+      {
+        "name": "crushed tomatoes",
+        "qty": "2 cups",
+        "category": "Pantry"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "celery",
+        "qty": "1 stalk",
+        "category": "Produce"
+      },
+      {
+        "name": "pappardelle",
+        "qty": "200g",
+        "category": "Grains"
+      },
+      {
+        "name": "parmesan",
+        "qty": "30g",
+        "category": "Dairy"
+      }
+    ],
+    "steps": [
+      "Sear short ribs, then simmer with tomatoes, carrot, and celery for 2.5 hours until the meat shreds easily.",
+      "Toss through cooked pappardelle, top with parmesan."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "anxious-chamomile-braised-chicken-thighs-with-root-vegetables",
+    "mood": "anxious",
+    "title": "Chamomile-Braised Chicken Thighs with Root Vegetables",
+    "description": "Chicken thighs braised in chamomile-infused broth with carrots and turnip until tender.",
+    "why_it_fits": "A long, gentle braise mirrors the pace you need when anxious — nothing to rush, just a slow return to calm.",
+    "image_url": "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 70,
+    "calories": 520,
+    "protein_g": 38,
+    "carbs_g": 26,
+    "fat_g": 24,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "4",
+        "category": "Protein"
+      },
+      {
+        "name": "chamomile tea bags",
+        "qty": "2",
+        "category": "Pantry"
+      },
+      {
+        "name": "carrot",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "turnip",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "1.5 cups",
+        "category": "Pantry"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Steep chamomile in warm stock, remove bags.",
+      "Sear chicken thighs, then braise with vegetables and chamomile stock at 160°C for 70 minutes."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sluggish-herb-roasted-whole-chicken-with-stuffing",
+    "mood": "sluggish",
+    "title": "Herb-Roasted Whole Chicken with Stuffing",
+    "description": "A whole chicken roasted with garlic and herbs, served with a savoury bread stuffing.",
+    "why_it_fits": "A full roast dinner is the kind of meal that restores energy for the whole evening, not just the next hour.",
+    "image_url": "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 75,
+    "calories": 590,
+    "protein_g": 46,
+    "carbs_g": 36,
+    "fat_g": 24,
+    "ingredients": [
+      {
+        "name": "whole chicken",
+        "qty": "1.5kg",
+        "category": "Protein"
+      },
+      {
+        "name": "bread cubes",
+        "qty": "3 cups",
+        "category": "Grains"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "celery",
+        "qty": "1 stalk",
+        "category": "Produce"
+      },
+      {
+        "name": "thyme",
+        "qty": "1 tbsp",
+        "category": "Produce"
+      },
+      {
+        "name": "butter",
+        "qty": "3 tbsp",
+        "category": "Dairy"
+      }
+    ],
+    "steps": [
+      "Rub chicken with butter and herbs, roast at 190°C for 75 minutes.",
+      "Sauté onion and celery, mix with bread cubes and thyme, bake stuffing alongside for the last 25 minutes."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "happy-homemade-beef-lasagna",
+    "mood": "happy",
+    "title": "Homemade Beef Lasagna",
+    "description": "Layers of pasta, seasoned beef ragu, and melted mozzarella baked until bubbling.",
+    "why_it_fits": "A crowd-pleasing bake worth the effort — a great mood deserves a meal that feels like a celebration.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lasagna_%281%29.jpg/960px-Lasagna_%281%29.jpg",
+    "image_credit": "jeffreyw / Wikimedia Commons, CC BY 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Lasagna_%281%29.jpg",
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 75,
+    "calories": 650,
+    "protein_g": 40,
+    "carbs_g": 52,
+    "fat_g": 30,
+    "ingredients": [
+      {
+        "name": "lasagna sheets",
+        "qty": "9",
+        "category": "Grains"
+      },
+      {
+        "name": "ground beef",
+        "qty": "400g",
+        "category": "Protein"
+      },
+      {
+        "name": "crushed tomatoes",
+        "qty": "2 cups",
+        "category": "Pantry"
+      },
+      {
+        "name": "mozzarella",
+        "qty": "1.5 cups",
+        "category": "Dairy"
+      },
+      {
+        "name": "ricotta",
+        "qty": "1 cup",
+        "category": "Dairy"
+      },
+      {
+        "name": "basil",
+        "qty": "2 tbsp",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Brown beef with tomatoes for a ragu.",
+      "Layer with pasta sheets, ricotta, and mozzarella.",
+      "Bake at 190°C for 45 minutes until golden and bubbling."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "stressed-homemade-chicken-pot-pie",
+    "mood": "stressed",
+    "title": "Homemade Chicken Pot Pie",
+    "description": "A buttery, flaky crust over a creamy chicken and vegetable filling, baked until golden.",
+    "why_it_fits": "Rich, buttery comfort food that rewards the wait — a warm, familiar dish to come home to.",
+    "image_url": "https://images.unsplash.com/photo-1628642585518-2d63c2beab6b?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 60,
+    "calories": 610,
+    "protein_g": 38,
+    "carbs_g": 42,
+    "fat_g": 32,
+    "ingredients": [
+      {
+        "name": "chicken thigh",
+        "qty": "300g",
+        "category": "Protein"
+      },
+      {
+        "name": "puff pastry",
+        "qty": "1 sheet",
+        "category": "Pantry"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "peas",
+        "qty": "1/2 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "cream",
+        "qty": "1/2 cup",
+        "category": "Dairy"
+      },
+      {
+        "name": "chicken stock",
+        "qty": "1 cup",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Simmer chicken and vegetables in stock and cream until thickened.",
+      "Pour into a dish, top with pastry, and bake at 200°C for 25 minutes."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "stressed-slow-braised-lamb-shank-with-root-vegetables",
+    "mood": "stressed",
+    "title": "Slow-Braised Lamb Shank with Root Vegetables",
+    "description": "Lamb shank braised for hours until fall-off-the-bone tender, with carrots, parsnip, and pearl onions.",
+    "why_it_fits": "A slow, unhurried braise is its own kind of stress relief — there is nothing to rush, just time doing the work.",
+    "image_url": "https://images.unsplash.com/photo-1773417325310-cc9c9bef75e7?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 90,
+    "calories": 540,
+    "protein_g": 42,
+    "carbs_g": 28,
+    "fat_g": 26,
+    "ingredients": [
+      {
+        "name": "lamb shank",
+        "qty": "2",
+        "category": "Protein"
+      },
+      {
+        "name": "carrot",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "parsnip",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "pearl onions",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "beef stock",
+        "qty": "2 cups",
+        "category": "Pantry"
+      },
+      {
+        "name": "rosemary",
+        "qty": "2 sprigs",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Sear lamb shanks on all sides.",
+      "Add vegetables, stock, and rosemary.",
+      "Cover and braise at 160°C for 2.5 hours until tender."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "sad-slow-cooker-beef-stew",
+    "mood": "sad",
+    "title": "Slow-Cooker Beef Stew",
+    "description": "Chunks of beef, potato, and carrot simmered low and slow into a thick, hearty stew.",
+    "why_it_fits": "A stew that takes all afternoon is a small act of caring for yourself — something warm waiting at the end of a hard day.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Irish_Beef_Stew_%2834046928633%29.jpg/960px-Irish_Beef_Stew_%2834046928633%29.jpg",
+    "image_credit": "A Healthier Michigan / Wikimedia Commons, CC BY-SA 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Irish_Beef_Stew_%2834046928633%29.jpg",
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 100,
+    "calories": 560,
+    "protein_g": 40,
+    "carbs_g": 44,
+    "fat_g": 20,
+    "ingredients": [
+      {
+        "name": "beef chuck",
+        "qty": "400g",
+        "category": "Protein"
+      },
+      {
+        "name": "potato",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "carrot",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "beef stock",
+        "qty": "2 cups",
+        "category": "Pantry"
+      },
+      {
+        "name": "tomato paste",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "bay leaf",
+        "qty": "1",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Sear beef, then combine with vegetables, stock, tomato paste, and bay leaf.",
+      "Simmer on low for 3 hours until beef is fork-tender."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "unfocused-slow-roasted-beef-brisket-with-roasted-carrots",
+    "mood": "unfocused",
+    "title": "Slow-Roasted Beef Brisket with Roasted Carrots",
+    "description": "Beef brisket rubbed with spices and slow-roasted for hours until tender enough to shred.",
+    "why_it_fits": "A long, undistracted cook mirrors the focus you are looking to rebuild — one slow task instead of many scattered ones.",
+    "image_url": "https://images.unsplash.com/photo-1558030006-450675393462?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 100,
+    "calories": 610,
+    "protein_g": 44,
+    "carbs_g": 20,
+    "fat_g": 30,
+    "ingredients": [
+      {
+        "name": "beef brisket",
+        "qty": "500g",
+        "category": "Protein"
+      },
+      {
+        "name": "paprika",
+        "qty": "1 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "cumin",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "carrot",
+        "qty": "3",
+        "category": "Produce"
+      },
+      {
+        "name": "beef stock",
+        "qty": "1 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "garlic",
+        "qty": "3 cloves",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Rub brisket with spices and garlic.",
+      "Roast covered at 150°C with stock and carrots for 3 hours until fork-tender, then rest before slicing."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "anxious-slow-simmered-turkey-chili",
+    "mood": "anxious",
+    "title": "Slow-Simmered Turkey Chili",
+    "description": "Ground turkey simmered for over an hour with beans, tomatoes, and warming spices.",
+    "why_it_fits": "A chili that simmers for an hour gives restless energy somewhere useful to go while the smell fills the kitchen.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Chili_con_carne_%284431800858%29.jpg/960px-Chili_con_carne_%284431800858%29.jpg",
+    "image_credit": "cyclonebill from Copenhagen / Wikimedia Commons, CC BY-SA 2.0",
+    "image_credit_url": "https://commons.wikimedia.org/wiki/File:Chili_con_carne_%284431800858%29.jpg",
+    "cuisine": "Mexican",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 60,
+    "calories": 480,
+    "protein_g": 42,
+    "carbs_g": 38,
+    "fat_g": 14,
+    "ingredients": [
+      {
+        "name": "ground turkey",
+        "qty": "400g",
+        "category": "Protein"
+      },
+      {
+        "name": "kidney beans",
+        "qty": "1.5 cups",
+        "category": "Protein"
+      },
+      {
+        "name": "crushed tomatoes",
+        "qty": "2 cups",
+        "category": "Pantry"
+      },
+      {
+        "name": "cumin",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "paprika",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "onion",
+        "qty": "1",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Brown turkey with onion, add beans, tomatoes, and spices.",
+      "Simmer uncovered for 60 minutes, stirring occasionally, until thick."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "unfocused-walnut-crusted-baked-salmon-with-roasted-vegetables",
+    "mood": "unfocused",
+    "title": "Walnut-Crusted Baked Salmon with Roasted Vegetables",
+    "description": "Salmon fillet under a crunchy walnut crust, baked alongside roasted seasonal vegetables.",
+    "why_it_fits": "Omega-3s from salmon and walnuts are two of the best-studied nutrients for sustained mental clarity.",
+    "image_url": "https://images.unsplash.com/photo-1680404840959-3211731fbb52?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 45,
+    "calories": 490,
+    "protein_g": 36,
+    "carbs_g": 22,
+    "fat_g": 28,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "qty": "200g",
+        "category": "Protein"
+      },
+      {
+        "name": "walnuts",
+        "qty": "1/4 cup",
+        "category": "Pantry"
+      },
+      {
+        "name": "breadcrumbs",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "broccoli",
+        "qty": "1 cup",
+        "category": "Produce"
+      },
+      {
+        "name": "carrot",
+        "qty": "1",
+        "category": "Produce"
+      },
+      {
+        "name": "honey",
+        "qty": "1 tsp",
+        "category": "Pantry"
+      }
+    ],
+    "steps": [
+      "Crush walnuts with breadcrumbs and honey, press onto salmon.",
+      "Roast salmon and vegetables together at 200°C for 45 minutes until the crust is golden."
+    ],
+    "source": "original-catalog"
+  },
+  {
+    "id": "happy-whole-roasted-chicken-with-lemon-and-herbs",
+    "mood": "happy",
+    "title": "Whole Roasted Chicken with Lemon and Herbs",
+    "description": "A golden roasted chicken stuffed with lemon and fresh herbs, served with pan juices.",
+    "why_it_fits": "A bright, golden roast matches a bright mood, and it is the kind of dish worth savouring slowly.",
+    "image_url": "https://images.unsplash.com/photo-1518492104633-130d0cc84637?w=800",
+    "image_credit": "Photo from Unsplash",
+    "image_credit_url": null,
+    "cuisine": "Western",
+    "halal": true,
+    "is_free": false,
+    "servings": 2,
+    "prep_minutes": 80,
+    "calories": 570,
+    "protein_g": 48,
+    "carbs_g": 30,
+    "fat_g": 22,
+    "ingredients": [
+      {
+        "name": "whole chicken",
+        "qty": "1.5kg",
+        "category": "Protein"
+      },
+      {
+        "name": "lemon",
+        "qty": "2",
+        "category": "Produce"
+      },
+      {
+        "name": "garlic",
+        "qty": "1 head",
+        "category": "Produce"
+      },
+      {
+        "name": "rosemary",
+        "qty": "2 sprigs",
+        "category": "Produce"
+      },
+      {
+        "name": "olive oil",
+        "qty": "2 tbsp",
+        "category": "Pantry"
+      },
+      {
+        "name": "potato",
+        "qty": "4 small",
+        "category": "Produce"
+      }
+    ],
+    "steps": [
+      "Stuff chicken cavity with lemon, garlic, and rosemary.",
+      "Rub skin with olive oil, roast at 200°C for 80 minutes with potatoes around it, basting halfway."
+    ],
+    "source": "original-catalog"
   }
 ]
