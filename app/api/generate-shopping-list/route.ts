@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { currentWeekLabel } from "@/lib/format";
 import type { Ingredient } from "@/lib/types";
-import { getCurrentUserTier } from "@/lib/auth";
+import { getCurrentUserId, getCurrentUserTier } from "@/lib/auth";
+import { signInRequired } from "@/lib/sign-in";
 import { canAccessRecipe, getRecipeById } from "@/lib/recipes";
 
 export async function POST(req: Request) {
@@ -17,6 +18,8 @@ export async function POST(req: Request) {
   if (!checkinId) {
     return NextResponse.json({ error: "missing_checkin_id" }, { status: 400 });
   }
+
+  if (!(await getCurrentUserId())) return signInRequired();
 
   const supabase = await createClient();
 

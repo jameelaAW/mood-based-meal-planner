@@ -6,6 +6,7 @@ import { ensureMealRow, recipeToMeal } from "@/lib/recipe-meals";
 import { classifyMoodLabel, generateWhyItFits, interpretMood } from "@/lib/ai";
 import { canUseFreeText, guessMoodFromText, MOOD_LABELS, moodLabelsForTier } from "@/lib/moods";
 import { cookies } from "next/headers";
+import { signInRequired } from "@/lib/sign-in";
 import {
   ANON_USES_COOKIE,
   FREE_DAILY_LIMIT,
@@ -22,10 +23,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "invalid_json" }, { status: 400 });
   }
 
+  const userId = await getCurrentUserId();
+  if (!userId) return signInRequired();
+
   const userTier = await getCurrentUserTier();
   const allowedMoods = moodLabelsForTier(userTier);
   const supabase = await createClient();
-  const userId = await getCurrentUserId();
 
   // Free tier: FREE_DAILY_LIMIT suggestions per day (resets at SGT midnight).
   // Checked before any AI call so capped visitors cost nothing.

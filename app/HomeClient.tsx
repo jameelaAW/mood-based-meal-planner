@@ -6,15 +6,26 @@ import MoodPicker from "@/app/components/MoodPicker";
 import RecipeCard from "@/app/components/RecipeCard";
 import AuthNav from "@/app/components/AuthNav";
 import FeatureNav from "@/app/components/FeatureNav";
+import { SignInCard } from "@/app/components/SignInGate";
 import { moodAccent, moodOptionsForTier, type PlanTier } from "@/lib/moods";
 import type { Meal } from "@/lib/types";
 import { FREE_DAILY_LIMIT } from "@/lib/limits";
 import type { CatalogStats } from "@/lib/recipes";
 import { PAYHIP_PRODUCT_URL } from "@/lib/payhip-url";
 
-type Status = "idle" | "loading" | "ready" | "no_match" | "error" | "limit";
+type Status = "idle" | "loading" | "ready" | "no_match" | "error" | "limit" | "signin";
 
-export default function HomeClient({ tier, stats }: { tier: PlanTier; stats: CatalogStats }) {
+export default function HomeClient({
+  tier,
+  stats,
+  signedIn,
+  sampleMeal,
+}: {
+  tier: PlanTier;
+  stats: CatalogStats;
+  signedIn: boolean;
+  sampleMeal: Meal | null;
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [status, setStatus] = useState<Status>("idle");
@@ -33,6 +44,12 @@ export default function HomeClient({ tier, stats }: { tier: PlanTier; stats: Cat
   const justSubscribed = searchParams.get("checkout") === "success";
 
   async function handleSubmit(moodLabel: string, freeText: string) {
+    // Every plan — free included — needs an account; ask before calling the API.
+    if (!signedIn) {
+      setActiveMood(moodLabel);
+      setStatus("signin");
+      return;
+    }
     setStatus("loading");
     setErrorMsg(null);
     setActiveMood(moodLabel);
@@ -50,6 +67,10 @@ export default function HomeClient({ tier, stats }: { tier: PlanTier; stats: Cat
       });
       const data = await res.json();
 
+      if (res.status === 401 && data.error === "sign_in_required") {
+        setStatus("signin");
+        return;
+      }
       if (res.status === 404 && data.error === "no_match") {
         setStatus("no_match");
         return;
@@ -221,6 +242,21 @@ export default function HomeClient({ tier, stats }: { tier: PlanTier; stats: Cat
                 to unlock it here.
               </p>
             )}
+          </div>
+        )}
+
+        {status === "signin" && (
+          <div className="mt-8 animate-reveal-up">
+            <SignInCard next="/" />
+          </div>
+        )}
+
+        {!signedIn && sampleMeal && (status === "idle" || status === "signin") && (
+          <div className="mt-8">
+            <p className="mb-3 text-center font-mono text-xs uppercase tracking-wider text-paper-dim">
+              A taste of what you&rsquo;ll get
+            </p>
+            <RecipeCard meal={sampleMeal} onBuildList={() => setStatus("signin")} building={false} />
           </div>
         )}
 

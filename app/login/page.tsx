@@ -1,11 +1,21 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { safeNextPath } from "@/lib/next-path";
 import { createClient } from "@/lib/supabase/client";
 
 export default function LoginPage() {
+  return (
+    <Suspense>
+      <LoginForm />
+    </Suspense>
+  );
+}
+
+function LoginForm() {
   const router = useRouter();
+  const next = safeNextPath(useSearchParams().get("next"));
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "verifying" | "error">("idle");
@@ -36,7 +46,7 @@ export default function LoginPage() {
       setStatus("sent");
       return;
     }
-    router.push("/");
+    router.push(next);
     router.refresh();
   }
 
@@ -44,7 +54,7 @@ export default function LoginPage() {
     const supabase = createClient();
     await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
+      options: { redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}` },
     });
   }
 
@@ -53,9 +63,10 @@ export default function LoginPage() {
       <div className="w-full max-w-sm space-y-6">
         <div className="text-center">
           <p className="font-mono text-xs uppercase tracking-wider text-paper-dim">Mood-based meal planner</p>
-          <h1 className="mt-3 font-display text-3xl italic">Sign in</h1>
+          <h1 className="mt-3 font-display text-3xl italic">Sign in free</h1>
           <p className="mt-2 text-sm text-paper-dim">
-            Save your mood history and favourite meals. You don&rsquo;t need an account to use the app itself.
+            A free account gets you 3 meal ideas a day, the weekly plan and shopping lists, and saves your mood
+            history and favourites. Bought Full Access? Use the email you paid with.
           </p>
         </div>
 

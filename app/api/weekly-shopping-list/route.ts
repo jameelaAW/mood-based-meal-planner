@@ -4,6 +4,7 @@ import { getCurrentUserId, getCurrentUserTier } from "@/lib/auth";
 import { currentWeekLabel } from "@/lib/format";
 import { canAccessRecipe, getRecipeById } from "@/lib/recipes";
 import { mergeIngredients } from "@/lib/recipe-utils";
+import { signInRequired } from "@/lib/sign-in";
 
 const MAX_MEALS = 7;
 
@@ -33,6 +34,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "too_many_meals", message: "A week holds up to 7 meals." }, { status: 400 });
   }
 
+  const userId = await getCurrentUserId();
+  if (!userId) return signInRequired();
+
   const tier = await getCurrentUserTier();
   const recipes = [];
   for (const id of ids) {
@@ -52,7 +56,6 @@ export async function POST(req: Request) {
   }
 
   const supabase = await createClient();
-  const userId = await getCurrentUserId();
 
   const { data: list, error: listError } = await supabase
     .from("shopping_lists")

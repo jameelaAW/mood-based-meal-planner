@@ -70,10 +70,10 @@ export default function PricingClient({
               <li>• Weekly plan, cook from what you have & shopping lists</li>
             </ul>
             <a
-              href="/"
+              href={isPaid || userEmail ? "/" : "/login"}
               className="mt-6 rounded-lg border border-paper-dim/20 py-3 text-center text-sm font-medium hover:border-brand/40"
             >
-              {isPaid ? "Use the app" : "Your plan"}
+              {isPaid ? "Use the app" : userEmail ? "Your plan" : "Sign in free"}
             </a>
           </div>
 

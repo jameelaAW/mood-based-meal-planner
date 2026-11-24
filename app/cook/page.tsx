@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CookClient from "@/app/cook/CookClient";
-import { getCurrentUserTier } from "@/lib/auth";
+import { getCurrentUserId, getCurrentUserTier } from "@/lib/auth";
+import SignInGate from "@/app/components/SignInGate";
 import { ALL_RECIPES, canAccessRecipe, recipesForTier } from "@/lib/recipes";
 import { STAPLES } from "@/lib/recipe-utils";
 
@@ -10,6 +11,17 @@ export const metadata: Metadata = {
 };
 
 export default async function CookPage() {
+  if (!(await getCurrentUserId())) {
+    return (
+      <SignInGate
+        current="cook"
+        eyebrow="Cook from what you have"
+        title="What’s in your kitchen?"
+        blurb="Add the ingredients you already have and see which halal recipes you can cook now — and exactly what’s missing."
+        samples={recipesForTier("free").filter((r) => ["stressed-fish-porridge", "sad-chicken-macaroni-soup", "happy-roti-john"].includes(r.id))}
+      />
+    );
+  }
   const tier = await getCurrentUserTier();
   // For the upgrade prompt, free visitors get each locked recipe's title and
   // ingredient names only (to count matches) — never quantities or steps.
