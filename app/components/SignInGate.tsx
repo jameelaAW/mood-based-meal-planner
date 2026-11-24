@@ -60,7 +60,7 @@ export function SignInCard({ next, samples = [] }: { next: string; samples?: Rec
       )}
       <h2 className="font-display text-2xl italic">Sign in free to start</h2>
       <p className="mt-2 text-sm text-paper-dim">
-        A free account gets you 3 meal ideas a day, the weekly plan, cook-from-what-you-have and shopping lists.
+        A free account gets you 3 meal ideas a day, a 3-day meal plan, cook-from-what-you-have and shopping lists.
         It takes 30 seconds with Google or your email.
       </p>
       <Link

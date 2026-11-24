@@ -8,7 +8,6 @@ import RecipeDetails from "@/app/components/RecipeDetails";
 import RecipePhoto from "@/app/components/RecipePhoto";
 import { MOOD_OPTIONS, moodAccent, type PlanTier } from "@/lib/moods";
 import {
-  DAY_KEYS,
   DAY_NAMES,
   PANTRY_STORAGE_KEY,
   WEEK_PLAN_STORAGE_KEY,
@@ -17,6 +16,7 @@ import {
   normalizeIngredient,
   pantryHas,
   parseWeekPlan,
+  plannableDays,
   type Recipe,
 } from "@/lib/recipe-utils";
 
@@ -99,9 +99,15 @@ export default function CookClient({
         window.localStorage.getItem(WEEK_PLAN_STORAGE_KEY),
         new Set(recipes.map((r) => r.id)),
       );
-      const day = DAY_KEYS.find((k) => !plan.days[k]);
+      const day = plannableDays(tier).find((k) => !plan.days[k]);
       if (!day) {
-        setNotice((n) => ({ ...n, [recipe.id]: "Your week is full — remove a day in the weekly plan first." }));
+        setNotice((n) => ({
+          ...n,
+          [recipe.id]:
+            tier === "free"
+              ? "Your 3 free days are full — Full Access plans all 7."
+              : "Your week is full — remove a day in the weekly plan first.",
+        }));
         return;
       }
       plan.days[day] = { mood: recipe.mood, recipeId: recipe.id };

@@ -67,7 +67,7 @@ export default function PricingClient({
               <li>• 4 moods</li>
               <li>• {stats.free} recipes — {stats.freePerMood} per mood</li>
               <li>• 3 meal ideas per day</li>
-              <li>• Weekly plan, cook from what you have & shopping lists</li>
+              <li>• Plan 3 days a week, cook from what you have & shopping lists</li>
             </ul>
             <a
               href={isPaid || userEmail ? "/" : "/login"}
@@ -86,6 +86,7 @@ export default function PricingClient({
                 • All {stats.total} recipes — {stats.perMood} per mood ({stats.total - stats.free} more than Free)
               </li>
               <li>• Unlimited meal ideas per day</li>
+              <li>• Plan the full 7-day week</li>
               <li>• Describe any mood in your own words</li>
               <li>• Yours forever — no subscription</li>
             </ul>

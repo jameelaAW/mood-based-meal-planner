@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getCurrentUserId, getCurrentUserTier } from "@/lib/auth";
 import { currentWeekLabel } from "@/lib/format";
 import { canAccessRecipe, getRecipeById } from "@/lib/recipes";
-import { mergeIngredients } from "@/lib/recipe-utils";
+import { FREE_PLAN_DAYS, mergeIngredients } from "@/lib/recipe-utils";
 import { signInRequired } from "@/lib/sign-in";
 
 const MAX_MEALS = 7;
@@ -38,6 +38,12 @@ export async function POST(req: Request) {
   if (!userId) return signInRequired();
 
   const tier = await getCurrentUserTier();
+  if (tier === "free" && ids.length > FREE_PLAN_DAYS) {
+    return NextResponse.json(
+      { error: "plan_requires_paid", message: `Free accounts plan ${FREE_PLAN_DAYS} days — Full Access plans all 7.` },
+      { status: 403 },
+    );
+  }
   const recipes = [];
   for (const id of ids) {
     const recipe = getRecipeById(id);

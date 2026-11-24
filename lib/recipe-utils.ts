@@ -55,6 +55,20 @@ export const DAY_NAMES: Record<DayKey, string> = {
   sun: "Sunday",
 };
 
+/** Free accounts plan Monday–Wednesday; Full Access plans the whole week. */
+export const FREE_PLAN_DAYS = 3;
+
+export function plannableDays(tier: "free" | "paid"): DayKey[] {
+  return tier === "paid" ? [...DAY_KEYS] : DAY_KEYS.slice(0, FREE_PLAN_DAYS);
+}
+
+/** Drops days this visitor can't plan (e.g. a plan made before a refund, or edited storage). */
+export function restrictPlanToDays(plan: WeekPlan, days: DayKey[]): WeekPlan {
+  const kept: WeekPlan["days"] = {};
+  for (const d of days) if (plan.days[d]) kept[d] = plan.days[d];
+  return { ...plan, days: kept };
+}
+
 export interface PlanEntry {
   mood: string;
   recipeId: string;

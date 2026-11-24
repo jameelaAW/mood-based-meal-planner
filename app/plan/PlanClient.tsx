@@ -16,6 +16,8 @@ import {
   mondayOf,
   parseWeekPlan,
   pickRecipeForMood,
+  plannableDays,
+  restrictPlanToDays,
   planSignature,
   plannedRecipeIds,
   type DayKey,
@@ -41,13 +43,19 @@ export default function PlanClient({
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const moods = moodOptionsForTier(tier);
+  const openDays = plannableDays(tier);
   const byId = useMemo(() => new Map(recipes.map((r) => [r.id, r])), [recipes]);
 
   // The plan lives in this browser (localStorage) so it works without an
   // account, exactly like the anonymous mood check-in.
   useEffect(() => {
     try {
-      setPlan(parseWeekPlan(window.localStorage.getItem(WEEK_PLAN_STORAGE_KEY), new Set(recipes.map((r) => r.id))));
+      setPlan(
+        restrictPlanToDays(
+          parseWeekPlan(window.localStorage.getItem(WEEK_PLAN_STORAGE_KEY), new Set(recipes.map((r) => r.id))),
+          openDays,
+        ),
+      );
     } catch {
       /* storage unavailable (private mode) — plan just won't persist */
     }
@@ -65,6 +73,7 @@ export default function PlanClient({
   }
 
   function setDayMood(day: DayKey, mood: string) {
+    if (!openDays.includes(day)) return;
     const current = plan.days[day];
     const usedElsewhere = DAY_KEYS.filter((k) => k !== day)
       .map((k) => plan.days[k]?.recipeId)
@@ -85,7 +94,7 @@ export default function PlanClient({
   function fillWeek() {
     const days = { ...plan.days };
     const used = plannedRecipeIds(plan);
-    DAY_KEYS.forEach((day, i) => {
+    openDays.forEach((day, i) => {
       if (days[day]) return;
       // Rotate through the moods so the week covers a spread of them.
       const mood = moods[i % moods.length].label;
@@ -159,10 +168,10 @@ export default function PlanClient({
 
         <div className="mb-4 flex items-center justify-between gap-3">
           <span className="font-mono text-xs uppercase tracking-wider text-paper-dim">
-            {planned.length} / 7 days planned
+            {planned.length} / {openDays.length} {tier === "free" ? "free days" : "days"} planned
           </span>
           <div className="flex gap-2">
-            {planned.length < 7 && (
+            {planned.length < openDays.length && (
               <button
                 onClick={fillWeek}
                 disabled={!loaded}
@@ -193,6 +202,33 @@ export default function PlanClient({
             const moreForMood = entry ? recipes.filter((r) => r.mood === entry.mood).length > 1 : false;
             const lockedForMood = entry ? locked.filter((l) => l.mood === entry.mood).length : 0;
             const isOpen = openDay === day;
+
+            if (!openDays.includes(day)) {
+              return (
+                <li key={day} className="rounded-2xl border border-dashed border-paper-dim/20 bg-ink-soft/50 p-4">
+                  <div className="flex items-baseline justify-between">
+                    <h2 className="font-display text-lg italic text-paper-dim">
+                      {DAY_NAMES[day]}
+                      {isToday && (
+                        <span className="ml-2 rounded-full bg-brand/15 px-2 py-0.5 font-mono text-[10px] not-italic uppercase tracking-wider text-brand">
+                          Today
+                        </span>
+                      )}
+                    </h2>
+                    <span className="font-mono text-xs text-paper-dim">
+                      {date.toLocaleDateString("en-SG", { day: "numeric", month: "short" })}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-xs text-paper-dim">
+                    <span aria-hidden>🔒</span> Plan the full week with{" "}
+                    <Link href="/pricing" className="font-medium text-brand hover:underline">
+                      Full Access
+                    </Link>
+                    .
+                  </p>
+                </li>
+              );
+            }
 
             return (
               <li
